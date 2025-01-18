@@ -222,9 +222,20 @@ Commonly used kernels are:
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
         """)
 
-with st.expander('7.Evaluation '):
-    p1,p2=st.columns(2)
-    with p1.container():
-        st.write('hai')
-    with p2.container():
-        st.write('Hellow ')
+with st.expander('7.Evaluation'):
+    options = ["F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
+        
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=="F1 score":
+        st.markdown("""The Fl score is the harmonic mean of precision and recall and is used to evaluate the balance between precision and recall in a classification model.
+        """)
+    if selection=="R-squared":
+        st.markdown("""R-squared is a statistical measure that represents the proportion of the variance for a dependent variable that is explained by an independent variable in a regression model.""")
+    if selection=="AOC & AUC":
+        st.markdown("""The ROC curve is a graphical representation of a classifier's performance, 
+        plotting the true positive rate against the false positive rate. 
+        AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve.
+        """)
+if selection=="Root Mean Square Error":
+        st.markdown("""The Root Mean Square Error is a commonly used metric for evaluating the accuracy of a regression model by measuring the differences between the predicted values and the actual values.
+        """)
