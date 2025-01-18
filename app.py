@@ -222,7 +222,7 @@ Commonly used kernels are:
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
         """)
 
-with st.expander('8.Evaluation '):
+with st.expander('7.Evaluation '):
     p1,p2=st.columns(2)
     with p1.container():
         st.write('hai')
