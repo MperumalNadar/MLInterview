@@ -7,7 +7,7 @@ with st.expander('2.Project Explanation'):
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
-    options = ["DS", "ML", "WHY ML", "Python",'AWS']
+    options = ["DS", "ML", "WHY ML",'Supervised & Unsupervised learning', "Python",'AWS']
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='DS':
@@ -37,6 +37,21 @@ with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
 4. Revolutionizing Industries: Healthcare, Finance, Retail
         """)
+    if selection=='Supervised & Unsupervised learning':
+        st.markdown("""*Supervised learning algorithms are trained using labeled data.
+*Supervised learning model predicts the output.
+*Supervised learning can be categorized in Classification and Regression problems.
+*It includes various algorithms such as 
+Linear Regression, Logistic Regression, Support Vector Machine, Multi-class Classification, Decision tree, 
+Bayesian Logic, etc.
+
+*Unsupervised learning algorithms are trained using unlabeled data.
+*Unsupervised learning model finds the hidden patterns in data.
+*Unsupervised Learning can be classified in Clustering and Associations problems.
+*it includes various algorithms such as Clustering, KNN, and Apriori algorithm.
+
+        """)
+
 
 with st.expander('4.AWS'):
     st.write('hai')
