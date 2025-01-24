@@ -240,8 +240,11 @@ Commonly used kernels are:
 with st.expander('7.Evaluation'):
     st.markdown("""
                 **True Positive(TP):** In this case, the prediction outcome is true, and it is true in reality, also.
+                
                 **True Negative(TN):** in this case, the prediction outcome is false, and it is false in reality, also.
+                
                 **False Positive(FP):** In this case, prediction outcomes are true, but they are false in actuality.
+                
                 **False Negative(FN):** In this case, predictions are false, and they are true in actuality.
                 """)
     options = ["Accuracy","confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
