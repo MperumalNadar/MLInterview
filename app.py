@@ -241,13 +241,27 @@ with st.expander('7.Evaluation'):
     options = ["confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
         
     selection = st.segmented_control("", options, selection_mode="single")
+    if selection=="Accuracy":
+        st.markdown("""The accuracy metric is one of the simplest Classification metrics to implement, 
+                    and it can be determined as the number of correct predictions to the total number of predictions.
+
+                    **from sklearn.metrics import accuracy_score**
+                    
+
+                    
+        """)
     if selection=="confusion matrix":
         st.markdown("""A confusion matrix is a table used to evaluate the performance of a classification model. 
                     It shows the counts of true positives, true negatives, false positives, and false negatives.
         """)
     if selection=="precision and recall":
-        st.markdown("""Precision is the ratio of true positives to the sum of true and false positives, 
-        while recall is the ratio of true positives to the sum of true positives and false negatives.
+        st.markdown("""Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
+        
+        ******ratio of true positives to the sum of true Positive and false positives********* 
+
+        Recall is a measure of how many of the actual positive instances in the dataset were correctly predicted by the model.
+        
+        *******ratio of true positives to the sum of true positives and false negatives.***********
         """)
     if selection=="F1 score":
         st.markdown("""The Fl score is the harmonic mean of precision and recall and is used to evaluate the balance between precision and recall in a classification model.
