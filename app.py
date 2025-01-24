@@ -238,15 +238,29 @@ Commonly used kernels are:
         """)
 
 with st.expander('7.Evaluation'):
-    options = ["confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
+    st.markdown("""
+                **True Positive(TP):** In this case, the prediction outcome is true, and it is true in reality, also.
+                **True Negative(TN):** in this case, the prediction outcome is false, and it is false in reality, also.
+                **False Positive(FP):** In this case, prediction outcomes are true, but they are false in actuality.
+                **False Negative(FN):** In this case, predictions are false, and they are true in actuality.
+                """)
+    options = ["Accuracy","confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Accuracy":
         st.markdown("""The accuracy metric is one of the simplest Classification metrics to implement, 
                     and it can be determined as the number of correct predictions to the total number of predictions.
 
-                    **from sklearn.metrics import accuracy_score**
-                    
+                    **from sklearn.metrics import accuracy_score
+
+                    **When to Use Accuracy?**
+                    when the target variable classes in data are approximately balanced. 
+                    For example, if 60% of classes in a fruit dataset are of Apple, 40% are Mango.In this Case we can use Accuracy 
+
+                    **When not to use Accuracy?**
+                    when the target variable majorly belongs to one class. 
+                    For example, Suppose there is a model for a disease prediction in which, out of 100 people, 
+                    only five people have a disease, and 95 people don't have one. In this case we can use Accuracy .
 
                     
         """)
@@ -257,11 +271,11 @@ with st.expander('7.Evaluation'):
     if selection=="precision and recall":
         st.markdown("""Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
         
-        ******ratio of true positives to the sum of true Positive and false positives********* 
+        **ratio of true positives to the sum of true Positive and false positives**
 
         Recall is a measure of how many of the actual positive instances in the dataset were correctly predicted by the model.
         
-        *******ratio of true positives to the sum of true positives and false negatives.***********
+        **ratio of true positives to the sum of true positives and false negatives.**
         """)
     if selection=="F1 score":
         st.markdown("""The Fl score is the harmonic mean of precision and recall and is used to evaluate the balance between precision and recall in a classification model.
