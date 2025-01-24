@@ -258,12 +258,15 @@ with st.expander('7.Evaluation'):
         
                     When to Use Accuracy?
                     when the target variable classes in data are approximately balanced. 
-                    For example, if 60% of classes in a fruit dataset are of Apple, 40% are Mango.In this Case we can use Accuracy 
+                    For example, if 60% of classes in a fruit dataset are of Apple, 
+                    40% are Mango.In this Case we can use Accuracy 
         
                     When not to use Accuracy?
                     when the target variable majorly belongs to one class. 
-                    For example, Suppose there is a model for a disease prediction in which, out of 100 people, 
-                    only five people have a disease, and 95 people don't have one. In this case we can use Accuracy .
+                    For example, 
+                    Suppose there is a model for a disease prediction in which, 
+                    out of 100 people, only five people have a disease, 
+                    and 95 people don't have one. In this case we can use Accuracy .
 
                     """)
     if selection=="confusion matrix":
