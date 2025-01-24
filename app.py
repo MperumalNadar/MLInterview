@@ -7,7 +7,7 @@ with st.expander('2.Project Explanation'):
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
-    options = ["DS", "ML", "WHY ML",'Supervised & Unsupervised learning', "Python",'AWS']
+    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='DS':
@@ -53,8 +53,8 @@ Bayesian Logic, etc.
         """)
 
 
-with st.expander('4.AWS'):
-    st.write('hai')
+# with st.expander('4.AWS'):
+#     st.write('hai')
 with st.expander('5.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data']
     
