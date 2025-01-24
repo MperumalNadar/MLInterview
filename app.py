@@ -254,9 +254,9 @@ with st.expander('7.Evaluation'):
         st.markdown("""The accuracy metric is one of the simplest Classification metrics to implement, 
                     and it can be determined as the number of correct predictions to the total number of predictions.
 
-                    **from sklearn.metrics import accuracy_score
+                    :blue-background[from sklearn.metrics import accuracy_score]
 
-                    **When to Use Accuracy?**
+                    :blue-background[When to Use Accuracy?]
                     when the target variable classes in data are approximately balanced. 
                     For example, if 60% of classes in a fruit dataset are of Apple, 40% are Mango.In this Case we can use Accuracy 
 
