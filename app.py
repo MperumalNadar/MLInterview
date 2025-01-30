@@ -132,35 +132,39 @@ Missing data can be handled by techniques such as mean/median imputation, mode i
 or using advanced methods like multiple imputation or K-Nearest Neighbors imputation.
          """)
     if selection=='Cross-validation':
-        st.markdown("""Cross-validation is a technique used in machine learning to evaluate how well a model performs on unseen data.
-        It helps ensure that the model isn't just memorizing the training data but can generalize to new data.
-
-???????How It Works:???????
-1.Split the Data: 
-The entire dataset is divided into several parts or "folds." A common choice is 5 or 10 folds.
-
-2.Training and Testing:
-
-In each iteration, one fold is used for testing, and the remaining folds are used for training.
-This process repeats until each fold has been used as a test set.
-
-3.Evaluation: 
-The performance scores from each fold are averaged to get a more reliable measure of how well the model will perform.
-
-?????? Example: ??????
-If you use 5-fold cross-validation:
-
-The data is split into 5 parts.
-The model trains on 4 parts and tests on the 1 remaining part.
-This repeats 5 times, rotating the test set each time.
-??????Why Use It???????
-Better Model Evaluation: It gives a more accurate estimate of the model's performance compared to a simple train-test split.
-Reduces Overfitting: By testing the model on different portions of data, it ensures the model isn't too tuned to just one dataset.
-Types of Cross-Validation:
-k-Fold Cross-Validation: Most common type.
-Stratified k-Fold: Ensures each fold has a similar distribution of target classes.
-Leave-One-Out (LOOCV): Each data point becomes a test set once.
-         """)
+            options = ["why", ]
+    
+        selection = st.segmented_control("1.Linear Regression and Logistic Regression", options, selection_mode="single")
+            if selection=='why':
+                st.markdown("""Cross-validation is a technique used in machine learning to evaluate how well a model performs on unseen data.
+                It helps ensure that the model isn't just memorizing the training data but can generalize to new data.
+                
+                ???????How It Works:???????
+                1.Split the Data: 
+                The entire dataset is divided into several parts or "folds." A common choice is 5 or 10 folds.
+                
+                2.Training and Testing:
+                
+                In each iteration, one fold is used for testing, and the remaining folds are used for training.
+                This process repeats until each fold has been used as a test set.
+                
+                3.Evaluation: 
+                The performance scores from each fold are averaged to get a more reliable measure of how well the model will perform.
+                
+                ?????? Example: ??????
+                If you use 5-fold cross-validation:
+                
+                The data is split into 5 parts.
+                The model trains on 4 parts and tests on the 1 remaining part.
+                This repeats 5 times, rotating the test set each time.
+                ??????Why Use It???????
+                Better Model Evaluation: It gives a more accurate estimate of the model's performance compared to a simple train-test split.
+                Reduces Overfitting: By testing the model on different portions of data, it ensures the model isn't too tuned to just one dataset.
+                Types of Cross-Validation:
+                k-Fold Cross-Validation: Most common type.
+                Stratified k-Fold: Ensures each fold has a similar distribution of target classes.
+                Leave-One-Out (LOOCV): Each data point becomes a test set once.
+                         """)
 with st.expander('6.ML Algorithms'):    
     options = ["Regression", "Linear regression", "Logistic regression"]
     # st.header('Linear Regression and Logistic Regression')
