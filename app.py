@@ -3,7 +3,40 @@ import streamlit as st
 with st.expander('1.Self introduction'):
     st.write('hai')
 with st.expander('2.Project Explanation'):
-    st.write('hai')
+    options = ["emails as spam or not spam"]
+        
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=='emails as spam or not spam':
+        st.markdown("""
+        1. Start with the Problem Statement
+
+    "The goal of my project was to build a model to classify emails as spam or not spam to improve email filtering efficiency for users."
+
+2. Explain the Dataset
+
+    "I used a labeled dataset containing 5,000 emails, with features like subject line, word frequencies, and sender details. The data was collected from public repositories."
+
+3. Describe Your Approach
+
+    "I chose a Naive Bayes classifier because it's fast, works well with text data, and is effective for binary classification."
+
+4. Mention Challenges and Solutions
+
+ "One challenge was handling imbalanced data since there were more non-spam emails than spam. I used techniques like oversampling the minority class to balance the dataset."
+
+5. Share Results and Impact
+
+"The model achieved 95% accuracy with a precision of 92% and recall of 90%. This significantly reduced false positives, ensuring users didn’t miss important emails."
+
+6. Highlight Tools and Skills Used
+
+"I used Python, libraries like pandas and scikit-learn for preprocessing and modeling, and matplotlib for visualizing results."
+
+7. Relate it to Real-World Use
+
+ "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
+
+        """)
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
@@ -149,6 +182,7 @@ This process repeats until each fold has been used as a test set.
 The performance scores from each fold are averaged to get a more reliable measure of how well the model will perform.
                 
 ?????? Example: ??????
+
 If you use 5-fold cross-validation:
                 
 The data is split into 5 parts.
@@ -156,10 +190,11 @@ The model trains on 4 parts and tests on the 1 remaining part.
 This repeats 5 times, rotating the test set each time.
 
 ??????Why Use It???????
-Better Model Evaluation: 
+
+1.Better Model Evaluation: 
 It gives a more accurate estimate of the model's performance compared to a simple train-test split.
                 
-Reduces Overfitting: 
+2.Reduces Overfitting: 
 By testing the model on different portions of data, it ensures the model isn't too tuned to just one dataset.
                 
 ?????Types of Cross-Validation:????
