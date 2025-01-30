@@ -22,19 +22,19 @@ with st.expander('2.Project Explanation'):
 
 4. Mention Challenges and Solutions
 
- "One challenge was handling imbalanced data since there were more non-spam emails than spam. I used techniques like oversampling the minority class to balance the dataset."
+     "One challenge was handling imbalanced data since there were more non-spam emails than spam. I used techniques like oversampling the minority class to balance the dataset."
 
 5. Share Results and Impact
 
-"The model achieved 95% accuracy with a precision of 92% and recall of 90%. This significantly reduced false positives, ensuring users didn’t miss important emails."
+    "The model achieved 95% accuracy with a precision of 92% and recall of 90%. This significantly reduced false positives, ensuring users didn’t miss important emails."
 
 6. Highlight Tools and Skills Used
 
-"I used Python, libraries like pandas and scikit-learn for preprocessing and modeling, and matplotlib for visualizing results."
+    "I used Python, libraries like pandas and scikit-learn for preprocessing and modeling, and matplotlib for visualizing results."
 
 7. Relate it to Real-World Use
 
- "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
+     "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
 
         """)
 #####################################################################################
