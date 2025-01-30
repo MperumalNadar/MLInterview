@@ -56,7 +56,7 @@ Bayesian Logic, etc.
 # with st.expander('4.AWS'):
 #     st.write('hai')
 with st.expander('5.Data Preprocessing'):
-    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data']
+    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Bias & Varience':
