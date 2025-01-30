@@ -132,11 +132,8 @@ Missing data can be handled by techniques such as mean/median imputation, mode i
 or using advanced methods like multiple imputation or K-Nearest Neighbors imputation.
          """)
     if selection=='Cross-validation':
-            options = ["why", ]
-    
-        selection = st.segmented_control("1.Linear Regression and Logistic Regression", options, selection_mode="single")
-            if selection=='why':
-                st.markdown("""Cross-validation is a technique used in machine learning to evaluate how well a model performs on unseen data.
+
+        st.markdown("""Cross-validation is a technique used in machine learning to evaluate how well a model performs on unseen data.
                 It helps ensure that the model isn't just memorizing the training data but can generalize to new data.
                 
                 ???????How It Works:???????
