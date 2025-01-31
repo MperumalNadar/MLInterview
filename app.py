@@ -383,7 +383,7 @@ with st.expander('6.ML Algorithms'):
                     and a third on spending patterns. 
                     The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
-     if selection2=='Advantage and DisAdvantage':
+    if selection2=='Advantage and DisAdvantage':
          st.markdown("""
                      Advantages
                     - Doesn't Overfit
