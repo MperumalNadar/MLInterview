@@ -404,7 +404,7 @@ with st.expander('6.ML Algorithms'):
                     - Biased in multiclass classification problems towards more frequent classes.
         """)
         if selection2=='Feature Scaling is required?':
-        st.write("NO")
+            st.write("NO")
 #########################################################################
     options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
