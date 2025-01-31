@@ -247,7 +247,7 @@ Stratified k-Fold: Ensures each fold has a similar distribution of target classe
 Leave-One-Out (LOOCV): Each data point becomes a test set once.
                          """)
 with st.expander('6.ML Algorithms'):    
-    options = ["Regression", "Linear regression",'Feature Scaling is required?','Advantage and DisAdvantage']
+    options = ["Regression", "Linear regression",'Advantage and DisAdvantage','Feature Scaling is required?']
     
     selection = st.segmented_control("1.Linear Regression", options, selection_mode="single")
     if selection=='Regression':
@@ -289,7 +289,7 @@ with st.expander('6.ML Algorithms'):
 ################################################################################################################
 
 
-    options = [ "Logistic regression",'Feature Scaling is required?','Advantage and DisAdvantage']
+    options = [ "Logistic regression",'Advantage and DisAdvantage','Feature Scaling is required?']
     
     selection = st.segmented_control("2 Logistic Regression", options, selection_mode="single")
     
