@@ -384,7 +384,7 @@ with st.expander('6.ML Algorithms'):
         The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
      if selection1=='Advantage and DisAdvantage':
-        st.markdown("""
+         st.markdown("""
                     Advantages
                     - Doesn't Overfit
 
