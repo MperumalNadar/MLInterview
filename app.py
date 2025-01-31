@@ -247,7 +247,7 @@ Stratified k-Fold: Ensures each fold has a similar distribution of target classe
 Leave-One-Out (LOOCV): Each data point becomes a test set once.
                          """)
 with st.expander('6.ML Algorithms'):    
-    options = ["Regression", "Linear regression"]
+    options = ["Regression", "Linear regression",'Feature Scaling is required?','Advantage and DisAdvantage']
     
     selection = st.segmented_control("1.Linear Regression", options, selection_mode="single")
     if selection=='Regression':
@@ -268,6 +268,25 @@ with st.expander('6.ML Algorithms'):
         For example, if a student studies for 6 hours (X = 6), 
         we can estimate their exam score by plugging the value into the equation: Y = 10 * 6 + 50 = 110.
         """)
+    if selection=='Advantage and DisAdvantage':
+        st.markdown("""
+                    Advantages 
+            
+                    - Linear regression performs exceptionally well for linearly separable data
+                    - Easy to implement and train the model
+                    - It can handle overfitting using dimensionlity reduction techniques and cross validation and regularization
+        """)
+        st.markdown("""
+                    Disadvantages
+                    
+                    - Sometimes Lot of Feature Engineering Is required
+                    - If the independent features are correlated it may affect performance
+                    - It is often quite prone to noise and overfitting
+        """)
+    if selection=='Feature Scaling is required?':
+        st.write("Yes")
+
+################################################################################################################
 
 
     options = [ "Logistic regression",'Feature Scaling is required?','Advantage and DisAdvantage']
