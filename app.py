@@ -249,7 +249,7 @@ Leave-One-Out (LOOCV): Each data point becomes a test set once.
 with st.expander('6.ML Algorithms'):    
     options = ["Regression", "Linear regression"]
     
-    selection = st.segmented_control("1.Linear Regression, options, selection_mode="single")
+    selection = st.segmented_control("1.Linear Regression", options, selection_mode="single")
     if selection=='Regression':
         st.markdown("""
         Regression is a method to find the relationship between two or more variables.
@@ -325,7 +325,7 @@ with st.expander('6.ML Algorithms'):
         
 ##############################################################################
     options1 = ["Decision Tree", "Real_Word eg","Advantage and DisAdvantage", "How Choose Root Node", "Entropy Formula"]
-    selection1 = st.segmented_control("2.Decision Trea", options1, selection_mode="single")
+    selection1 = st.segmented_control("3.Decision Trea", options1, selection_mode="single")
     if selection1=='Decision Tree':
         st.markdown("""
         A decision tree Algorithm is a supervised Learning Algorithms,
@@ -369,7 +369,7 @@ with st.expander('6.ML Algorithms'):
         """)
 ####################################################################
     options2 = ["Random Forest",'Advantage and DisAdvantage','Feature Scaling is required?']
-    selection2 = st.segmented_control("3.Random Forest", options2, selection_mode="single")
+    selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
         st.markdown("""
         A Random Forest is a powerful and versatile machine learning algorithm 
@@ -407,7 +407,7 @@ with st.expander('6.ML Algorithms'):
         st.write("NO")
 #########################################################################
     options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?']
-    selection2 = st.segmented_control("4.Support Vector Machines (SVMs)", options2, selection_mode="single")
+    selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
 
@@ -446,7 +446,7 @@ Commonly used kernels are:
 
 ################################################################################################
     options5 = ["Naive Bayes",'Advantage and DisAdvantage','Feature Scaling is required?']
-    selection5 = st.segmented_control("5.Naive Bayes", options5, selection_mode="single")
+    selection5 = st.segmented_control("6.Naive Bayes", options5, selection_mode="single")
     if selection5=='Naive Bayes':
         st.markdown("""Naive Bayes is a simple yet powerful classification algorithm based on Bayes' theorem. 
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
