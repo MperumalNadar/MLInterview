@@ -84,42 +84,43 @@ Bayesian Logic, etc.
 *it includes various algorithms such as Clustering, KNN, and Apriori algorithm.
 
         """)
-
-
+#####################################################################################
 with st.expander('4.AWS'):
-    options = ["Sagemaker"]
-    selection = st.segmented_control("", options, selection_mode="single")
-    if selection=="Sagemaker":
+    options3 = ["Sagemaker"]
+    selectio = st.segmented_control("", options3, selection_mode="single")
+    if selectio=="Sagemaker":
         st.markdown("""
         AWS SageMaker is a fully managed service that helps data scientists and developers build, train, and deploy machine learning models quickly and efficiently. 
         It removes the heavy lifting from machine learning tasks by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
 
-Key features include:
+    Key features include:
+    
+    1. Model Building: 
+    
+    SageMaker Studio offers a fully integrated development environment (IDE) 
+    for creating machine learning models with built-in data preparation tools and notebook environments.
+    
+    
+    2. Model Training: 
+    
+    SageMaker provides automatic model training and tuning using distributed infrastructure, 
+    which significantly reduces the time required for training large datasets.
+    
+    
+    3. Model Deployment:
+    
+    Once trained, models can be deployed at scale using SageMaker endpoints for real-time or batch predictions.
+    
+    
 
-1. Model Building: 
-
-SageMaker Studio offers a fully integrated development environment (IDE) for creating machine learning models with built-in data preparation tools and notebook environments.
-
-
-2. Model Training: 
-
-SageMaker provides automatic model training and tuning using distributed infrastructure, which significantly reduces the time required for training large datasets.
-
-
-3. Model Deployment:
-
-Once trained, models can be deployed at scale using SageMaker endpoints for real-time or batch predictions.
-
-
-
-Additionally, SageMaker includes features like model monitoring, explainability tools, and 
-support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
+    Additionally, SageMaker includes features like model monitoring, explainability tools, and 
+    support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
 
 It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
 
         
         """)
-        
+#####################################################################################        
 with st.expander('5.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation']
     
