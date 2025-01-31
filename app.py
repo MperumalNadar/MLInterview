@@ -383,9 +383,9 @@ with st.expander('6.ML Algorithms'):
         and a third on spending patterns. 
         The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
-     if selection1=='Advantage and DisAdvantage':
+     if selection2=='Advantage and DisAdvantage':
          st.markdown("""
-                    Advantages
+         Advantages
                     - Doesn't Overfit
 
                     - Favourite algorithm for Kaggle competition
@@ -403,7 +403,7 @@ with st.expander('6.ML Algorithms'):
 
                     - Biased in multiclass classification problems towards more frequent classes.
         """)
-        if selection1=='Feature Scaling is required?':
+        if selection2=='Feature Scaling is required?':
         st.write("NO")
 #########################################################################
     options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?']
