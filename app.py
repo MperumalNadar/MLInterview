@@ -384,7 +384,7 @@ with st.expander('6.ML Algorithms'):
                     The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
     if selection2=='Advantage and DisAdvantage':
-         st.markdown("""
+        st.markdown("""
                      Advantages
                     - Doesn't Overfit
 
@@ -398,7 +398,8 @@ with st.expander('6.ML Algorithms'):
                     - Suitable for any kind of ML problems
                     """)
         st.markdown("""
-                    Disadvantages of Decision Trees
+                    Disadvantages
+                    
                     - Biased With features having many categories
 
                     - Biased in multiclass classification problems towards more frequent classes.
