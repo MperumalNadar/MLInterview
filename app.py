@@ -93,7 +93,7 @@ Bayesian Logic, etc.
 
         """)
 #####################################################################################
-    with st.expander('4.AWS'):
+with st.expander('4.AWS'):
         options3 = ["Sagemaker"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="Sagemaker":
