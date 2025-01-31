@@ -62,13 +62,21 @@ with st.expander('3.Defination Python,ML,DL,DL,NL'):
         st.markdown("""
         Machine Learning is essential because it enables systems to automatically improve their performance and adapt to changing conditions without human intervention. It is used in various fields to solve complex problems, such as:
 
-1. Automation: Reducing manual tasks by automating decision-making processes.
+1. Automation: 
 
-2. Predictive Analytics: Making accurate predictions based on historical data, such as stock market trends or customer behavior.
+Reducing manual tasks by automating decision-making processes.
 
-3. Personalization: Customizing user experiences in areas like marketing, content recommendations, and product suggestions.
+2. Predictive Analytics: 
 
-4. Revolutionizing Industries: Healthcare, Finance, Retail
+Making accurate predictions based on historical data, such as stock market trends or customer behavior.
+
+3. Personalization: 
+
+Customizing user experiences in areas like marketing, content recommendations, and product suggestions.
+
+4. Revolutionizing Industries: 
+
+Healthcare, Finance, Retail
         """)
     if selection=='Supervised & Unsupervised learning':
         st.markdown("""*Supervised learning algorithms are trained using labeled data.
@@ -85,41 +93,41 @@ Bayesian Logic, etc.
 
         """)
 #####################################################################################
-with st.expander('4.AWS'):
-    options3 = ["Sagemaker"]
-    selectio = st.segmented_control("", options3, selection_mode="single")
-    if selectio=="Sagemaker":
-        st.markdown("""
-        AWS SageMaker is a fully managed service that helps data scientists and developers build, train, and deploy machine learning models quickly and efficiently. 
-        It removes the heavy lifting from machine learning tasks by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
-
-    Key features include:
+    with st.expander('4.AWS'):
+        options3 = ["Sagemaker"]
+        selectio = st.segmented_control("", options3, selection_mode="single")
+        if selectio=="Sagemaker":
+            st.markdown("""
+            AWS SageMaker is a fully managed service that helps data scientists and developers build, train, and deploy machine learning models quickly and efficiently. 
+            It removes the heavy lifting from machine learning tasks by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
     
-    1. Model Building: 
-    
-    SageMaker Studio offers a fully integrated development environment (IDE) 
-    for creating machine learning models with built-in data preparation tools and notebook environments.
-    
-    
-    2. Model Training: 
-    
-    SageMaker provides automatic model training and tuning using distributed infrastructure, 
-    which significantly reduces the time required for training large datasets.
-    
-    
-    3. Model Deployment:
-    
-    Once trained, models can be deployed at scale using SageMaker endpoints for real-time or batch predictions.
-    
-    
-
-    Additionally, SageMaker includes features like model monitoring, explainability tools, and 
-    support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
-
-It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
-
+        Key features include:
         
-        """)
+        1. Model Building: 
+        
+        SageMaker Studio offers a fully integrated development environment (IDE) 
+        for creating machine learning models with built-in data preparation tools and notebook environments.
+        
+        
+        2. Model Training: 
+        
+        SageMaker provides automatic model training and tuning using distributed infrastructure, 
+        which significantly reduces the time required for training large datasets.
+        
+        
+        3. Model Deployment:
+        
+        Once trained, models can be deployed at scale using SageMaker endpoints for real-time or batch predictions.
+        
+        
+    
+        Additionally, SageMaker includes features like model monitoring, explainability tools, and 
+        support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
+    
+    It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
+    
+            
+            """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation']
