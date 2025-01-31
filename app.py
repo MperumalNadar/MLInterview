@@ -372,20 +372,20 @@ with st.expander('6.ML Algorithms'):
     selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
         st.markdown("""
-        A Random Forest is a powerful and versatile machine learning algorithm 
-        mainly used for classification and regression tasks. 
-        It's based on the concept of "ensemble learning,
-        " where multiple models are combined to produce better results than individual models.
-
-        Real-World Example:
-        Imagine a bank wants to predict if a customer will default on a loan. 
-        One decision tree might focus heavily on income, another on credit history, 
-        and a third on spending patterns. 
-        The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
+                    A Random Forest is a powerful and versatile machine learning algorithm 
+                    mainly used for classification and regression tasks. 
+                    It's based on the concept of "ensemble learning,
+                    " where multiple models are combined to produce better results than individual models.
+            
+                    Real-World Example:
+                    Imagine a bank wants to predict if a customer will default on a loan. 
+                    One decision tree might focus heavily on income, another on credit history, 
+                    and a third on spending patterns. 
+                    The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
      if selection2=='Advantage and DisAdvantage':
          st.markdown("""
-         Advantages
+                     Advantages
                     - Doesn't Overfit
 
                     - Favourite algorithm for Kaggle competition
@@ -396,7 +396,7 @@ with st.expander('6.ML Algorithms'):
 
                     -  No feature scaling (standardization and normalization) required in case of Random Forest as it uses DEcision Tree internally
                     - Suitable for any kind of ML problems
-        """)
+                    """)
         st.markdown("""
                     Disadvantages of Decision Trees
                     - Biased With features having many categories
@@ -430,7 +430,7 @@ Commonly used kernels are:
 
                     - Works well with even unstructured and semi structured data like text, Images and trees.
                     - Risk of over-fitting is less in SVM.
-        """)
+                    """)
         st.markdown("""
                     Disadvantages of SVMs
                     - More Training Time is required for larger dataset.
