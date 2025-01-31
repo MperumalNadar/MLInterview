@@ -98,15 +98,18 @@ with st.expander('4.AWS'):
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="Sagemaker":
             st.markdown("""
-            AWS SageMaker is a fully managed service that helps data scientists and developers build, train, and deploy machine learning models quickly and efficiently. 
-            It removes the heavy lifting from machine learning tasks by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
+            AWS SageMaker is a fully managed service that helps data scientists and developers 
+            build, train, and deploy machine learning models quickly and efficiently. 
+            It removes the heavy lifting from machine learning tasks 
+            by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
     
         Key features include:
         
         1. Model Building: 
         
         SageMaker Studio offers a fully integrated development environment (IDE) 
-        for creating machine learning models with built-in data preparation tools and notebook environments.
+        for creating machine learning models with built-in data preparation tools and 
+        notebook environments.
         
         
         2. Model Training: 
@@ -244,55 +247,117 @@ Stratified k-Fold: Ensures each fold has a similar distribution of target classe
 Leave-One-Out (LOOCV): Each data point becomes a test set once.
                          """)
 with st.expander('6.ML Algorithms'):    
-    options = ["Regression", "Linear regression", "Logistic regression"]
-    # st.header('Linear Regression and Logistic Regression')
-    selection = st.segmented_control("1.Linear Regression and Logistic Regression", options, selection_mode="single")
+    options = ["Regression", "Linear regression"]
+    
+    selection = st.segmented_control("1.Linear Regression, options, selection_mode="single")
     if selection=='Regression':
-        st.markdown("""Regression is a method to find the relationship between two or more variables.
-         It helps us make predictions by drawing a straight line through data points. 
+        st.markdown("""
+        Regression is a method to find the relationship between two or more variables.
+        It helps us make predictions by drawing a straight line through data points. 
         It's like having a ruler to estimate values based on known information.
         """)
     if selection=='Linear regression':
-        st.markdown("""Linear regression is a method to find the best straight line that fits data points. 
+        st.markdown("""
+        Linear regression is a method to find the best straight line that fits data points. 
         It helps us understand how one variable changes with another. 
         This line allows us to make predictions and see the overall trend in the data.
         """)
         st.write('#########')
-        st.markdown("""With the line equation (Y = 10x + 50), we can make predictions. 
+        st.markdown("""
+        With the line equation (Y = 10x + 50), we can make predictions. 
         For example, if a student studies for 6 hours (X = 6), 
         we can estimate their exam score by plugging the value into the equation: Y = 10 * 6 + 50 = 110.
         """)
+
+
+    options = [ "Logistic regression",'Feature Scaling is required?','Advantage and DisAdvantage']
+    
+    selection = st.segmented_control("2 Logistic Regression", options, selection_mode="single")
+    
     if selection=='Logistic regression':
-        st.markdown("""Logistic regression is a statistical technique used for binary classification tasks, 
-        where the goal is to predict one of two outcomes (e.g., yes or no, spam or not spam). 
-        It models the relationship between independent variables (features) and the probability of a binary outcome, using the sigmoid function to map the predictions to probabilities between 0 and 1. The result is a decision boundary that separates the two classes and allows us to make probabilistic predictions.
+        st.markdown("""
+        Logistic Regression is a popular machine learning algorithm used for binary classification tasks, 
+        where the goal is to predict one of two possible outcomes, 
+        such as whether an email is spam or not, or whether a customer will churn or stay.
+
+        "Real-World Example:"  
+        
+        Imagine predicting whether a customer will buy a product (yes/no). 
+        Logistic regression would take features like age, income, and browsing behavior and
+        output the probability of the customer making a purchase. 
+        If the probability is greater than a threshold (say 0.7), we predict they will buy the product.
+        
         """)
+    if selection=='Advantage and DisAdvantage':
+        st.markdown("""
+                    Advantages 
+            
+                    - Logistic Regression Are very easy to understand
+                    - It requires less training
+                    - Good accuracy for many simple data sets and it performs well when the dataset is linearly separable.
+                    - It makes no assumptions about distributions of classes in feature space.
+                    - Logistic regression is less inclined to over-fitting but it can overfit in high dimensional datasets.One may consider Regularization (L1 and L2) techniques to avoid over-fittingin these scenarios.
+                    - Logistic regression is easier to implement, interpret, and very efficient to train.
+        """)
+        st.markdown("""
+                    Disadvantages
+                    
+                    - Sometimes Lot of Feature Engineering Is required
+                    
+                    - If the independent features are correlated it may affect performance
+                    
+                    - It is often quite prone to noise and overfitting
+                    
+                    - If the number of observations is lesser than the number of features, Logistic Regression should not be used, otherwise,
+                    it may lead to overfitting.
+                    
+                    - Non-linear problems can’t be solved with logistic regression because it has a linear decision surface. 
+                    Linearly separable data is rarely found in real-world scenarios.
+                    
+                    - It is tough to obtain complex relationships using logistic regression. 
+                    More powerful and compact algorithms such as Neural Networks can easily outperform this algorithm.
+                    
+                    - In Linear Regression independent and dependent variables are related linearly. 
+                    But Logistic Regression needs that independent variables are linearly related to the log odds (log(p/(1-p)).
+        """)
+    if selection=='Feature Scaling is required?':
+        st.write("Yes")
+        
 ##############################################################################
     options1 = ["Decision Tree", "Real_Word eg","Advantage and DisAdvantage", "How Choose Root Node", "Entropy Formula"]
     selection1 = st.segmented_control("2.Decision Trea", options1, selection_mode="single")
     if selection1=='Decision Tree':
-        st.markdown("""A decision tree Algorithm is a supervised Learning Algorithms,
+        st.markdown("""
+        A decision tree Algorithm is a supervised Learning Algorithms,
         is a flowchart-like model that makes decisions by asking questions based on data features,
         leading to clear outcomes at the end. 
         It's a simple and intuitive tool used in machine learning for classification and regression tasks.
         """)
  
     if selection1=='Real_Word eg':
-        st.markdown(""" In the Decion Tree we can classify the data in different like the FLOWERS with DIFFERENT features
+        st.markdown("""
+        In the Decion Tree we can classify the data in different like the FLOWERS with DIFFERENT features
         like sample length red length to classify the Data to different groups
         """)
     if selection1=='Advantage and DisAdvantage':
         st.markdown("""
                     Advantages
-                    - Decision Trees are easy to understand.
-                    - They often do not require any preprocessing.
-                    - Decision Trees can learn from both numerical and categorical data.
+                    - Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand
+                    - Decision Tree can be used for both classification and regression problems.
+                    - Decision Tree can handle both continuous and categorical variables.
+                    - No feature scaling required: like(standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
+                    - Decision Tree can automatically handle missing values.
+                    - Decision Tree is usually robust to outliers and can handle them automatically.
+                    - Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest.
         """)
         st.markdown("""
                     Disadvantages of Decision Trees
-                    - Decision trees sometimes become complex, which do not generalize well and leads to overfitting. Overfitting can be addressed by placing the least number of samples needed at a leaf node or placing the highest depth of the tree.
+                    - Decision trees sometimes become complex, which do not generalize well and leads to overfitting.
+                    Overfitting can be addressed by placing the least number of samples needed at a leaf node or placing the highest depth of the tree.
 
-                    -A small variation in data can result in a completely different tree. This problem can be addressed by using decision trees within an ensemble.
+                    -If data size is large, then one single tree may grow complex and lead to overfitting. 
+                    So in this case, we should use Random Forest instead of a single Decision Tree.
+                    
         """)
 
     if selection1=='How Choose Root Node':
@@ -303,14 +368,45 @@ with st.expander('6.ML Algorithms'):
         st.markdown(""" Entropy is formula is Negation of Summation of the Probability of Instance into Log of Probability
         """)
 ####################################################################
-    options2 = ["Random Forest"]
+    options2 = ["Random Forest",'Advantage and DisAdvantage','Feature Scaling is required?']
     selection2 = st.segmented_control("3.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
-        st.markdown("""Random Forest is an ensemble learning method that constructs multiple decision trees during training and outputs 
-        the mode of the classes or the mean prediction of the individual trees for classification and regression tasks, respectively.
+        st.markdown("""
+        A Random Forest is a powerful and versatile machine learning algorithm 
+        mainly used for classification and regression tasks. 
+        It's based on the concept of "ensemble learning,
+        " where multiple models are combined to produce better results than individual models.
+
+        Real-World Example:
+        Imagine a bank wants to predict if a customer will default on a loan. 
+        One decision tree might focus heavily on income, another on credit history, 
+        and a third on spending patterns. 
+        The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
         """)
+     if selection1=='Advantage and DisAdvantage':
+        st.markdown("""
+                    Advantages
+                    - Doesn't Overfit
+
+                    - Favourite algorithm for Kaggle competition
+
+                    - Less Parameter Tuning required
+
+                    - Decision Tree can handle both continuous and categorical variables.
+
+                    -  No feature scaling (standardization and normalization) required in case of Random Forest as it uses DEcision Tree internally
+                    - Suitable for any kind of ML problems
+        """)
+        st.markdown("""
+                    Disadvantages of Decision Trees
+                    - Biased With features having many categories
+
+                    - Biased in multiclass classification problems towards more frequent classes.
+        """)
+        if selection1=='Feature Scaling is required?':
+        st.write("NO")
 #########################################################################
-    options2 = ["SVM",'Advantage and DisAdvantage']
+    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?']
     selection2 = st.segmented_control("4.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
@@ -331,23 +427,50 @@ Commonly used kernels are:
                     - SVM algorithms are memory efficient.
 
                     - SVMs are versatile, and a different kernel can be used by a decision function.
+
+                    - Works well with even unstructured and semi structured data like text, Images and trees.
+                    - Risk of over-fitting is less in SVM.
         """)
         st.markdown("""
                     Disadvantages of SVMs
-                    - SVMs do not perform well on high dimensional data with many samples.
+                    - More Training Time is required for larger dataset.
 
                     - SVMs work better only with Preprocessed data.
 
-                    - They are harder to visualize.
+                    - difficult to choose a good kernel function.
+                    - It is not that easy to fine-tune these hyper-parameters.
         """)
+    if selection2=='Feature Scaling is required?':
+        st.write("Yes")
+        
 
-
-    options5 = ["Naive Bayes"]
-    selection5 = st.segmented_control("5.Random Forest", options5, selection_mode="single")
+################################################################################################
+    options5 = ["Naive Bayes",'Advantage and DisAdvantage','Feature Scaling is required?']
+    selection5 = st.segmented_control("5.Naive Bayes", options5, selection_mode="single")
     if selection5=='Naive Bayes':
         st.markdown("""Naive Bayes is a simple yet powerful classification algorithm based on Bayes' theorem. 
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
+
+        Real-World Example:
+        
+        Imagine classifying emails as spam or not. 
+        Naive Bayes will calculate the probability of an email being spam based on the frequency of certain words in the email,
+        assuming that the presence of each word is independent of the others.
         """)
+    if selection5=='Advantage and DisAdvantage':
+        st.markdown("""
+                    Advantages 
+                    - Work Very well with many number of features
+                    - Works Well with Large training Dataset
+                    - It converges faster when we are training the model
+                    - It also performs well with categorical features
+        """)
+        st.markdown("""
+                    Disadvantages 
+                    - Correlated features affects performance
+        """)
+    if selection5=='Feature Scaling is required?':
+        st.write("NO")
 
 with st.expander('7.Evaluation'):
     st.markdown("""
