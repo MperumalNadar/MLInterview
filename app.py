@@ -104,7 +104,7 @@ with st.expander('4.AWS'):
             provides services for broad range of applications such as: 
 
             """)
-            if selectio=="What is cloud computing ":
+        if selectio=="What is cloud computing ":
             st.markdown("""   
             Cloud computing is the on-demand delivery of services such as compute 
             and storage over the Internet with pay-as-you-go pricing. 
@@ -112,7 +112,7 @@ with st.expander('4.AWS'):
             Simply put, instead of buying a physical server or a computer, you can lease it!
 
             """)
-            if selectio=="WHAT IS A REGION?":
+        if selectio=="WHAT IS A REGION?":
             st.markdown("""   
             An AWS Region is a geographical location that contains a number of availability zones (data centers).
             
