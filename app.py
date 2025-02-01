@@ -94,8 +94,40 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker"]
+        options3 = ["Sagemaker","What is AWS","What is cloud computing ","WHAT IS A REGION?",]
         selectio = st.segmented_control("", options3, selection_mode="single")
+        if selectio=="What is AWS":
+            st.markdown("""
+            Amazon Web Services (AWS) is the world’s top cloud platform. 
+            offers more than 165 fully featured services . 
+            adopted by millions of customers globally including small and large scale enterprises. 
+            provides services for broad range of applications such as: 
+
+            """)
+            if selectio=="What is cloud computing ":
+            st.markdown("""   
+            Cloud computing is the on-demand delivery of services such as compute 
+            and storage over the Internet with pay-as-you-go pricing. 
+            
+            Simply put, instead of buying a physical server or a computer, you can lease it!
+
+            """)
+            if selectio=="WHAT IS A REGION?":
+            st.markdown("""   
+            An AWS Region is a geographical location that contains a number of availability zones (data centers).
+            
+            Every region is physically separate from all other regions. 
+            
+            Every region has its own independent power and water supply.
+            
+            Regions are important to ensure:
+             	(1) Data compliance
+            	(2) Latency (data centers are 	placed close to users to reduce 	latency)  
+             
+            us-east-1 is the largest AWS region and contains of five zones. 
+
+
+            """)
         if selectio=="Sagemaker":
             st.markdown("""
             AWS SageMaker is a fully managed service that helps data scientists and developers 
