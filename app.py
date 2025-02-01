@@ -643,6 +643,67 @@ Commonly used kernels are:
     if selection5=='Feature Scaling is required?':
         st.write("NO")
 
+########################################################################################
+
+    options = ["XGBOOST",'Advantage and DisAdvantage']
+        
+    selection = st.segmented_control("XGBOOST", options, selection_mode="single")
+    if selection5=='XGBOOST':
+        st.markdown("""
+        XGBoost or Extreme gradient boosting is the algorithm of choice for many data scientists and 
+        could be used for regression and classification tasks. 
+        
+        XGBoost is a supervised learning algorithm and implements gradient boosted trees algorithm. 
+        
+        The algorithm work by combining an ensemble of predictions from several weak models.
+        
+        It is robust to many data distributions and relationships and offers many hyperparameters to tune model performance.
+        
+        Xgboost offers increased speed and enhanced memory utilization.
+
+        """)
+    if selection5=='Advantage and DisAdvantage':
+        st.markdown("""
+                    Advantages 
+                    * No need to perform any feature scaling
+
+                    * Can work well with missing data
+
+                    * Robust to outliers in the data
+
+                    * Can work well for both regression and classification
+
+                    * Computationally efficient and produce fast predictions
+
+                    * Works with distributed training: AWS can distribute the training process and data on many machines
+        """)
+        st.markdown("""
+                    Disadvantages 
+                    * Poor extrapolation characteristics
+
+                    * Need extensive tuning
+
+                    * Slow training
+        """)
+    if selection5=='WHAT IS BOOSTING?':
+        st.markdown("""
+        - Boosting works by learning from previous mistakes to come up with better future predictions. 
+
+        - Boosting is an ensemble machine learning technique that works by training weak models in a sequentialy.
+        
+        - Each model is trying to learn from the previous weak model and become better at making predictions. 
+        - Boosting algorithms work by building a model from the training data, then the second model is built based on the mistakes 
+         of the first model. 
+         The algorithm repeats until the maximum number of models have been created or until the model provides good predictions.
+
+        
+
+        
+        """)
+        
+
+#################################################################################################
+
 with st.expander('7.Evaluation'):
     st.markdown("""
                 **True Positive(TP):** In this case, the prediction outcome is true, and it is true in reality, also.
