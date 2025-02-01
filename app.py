@@ -94,7 +94,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","What is AWS","What is cloud computing ","WHAT IS A REGION?",]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -128,32 +128,47 @@ with st.expander('4.AWS'):
 
 
             """)
+        if selectio=="AVAILABILITY ZONE":
+            st.markdown("""   
+            An AWS availability zone is a logical data center that is located in a certain region. 
+
+            There are two or more availability zones in every AWS region. 
+
+            Note: A data center consists of bunch of servers
+
+            """)
         if selectio=="Sagemaker":
             st.markdown("""
-            AWS SageMaker is a fully managed service that helps data scientists and developers 
-            build, train, and deploy machine learning models quickly and efficiently. 
-            It removes the heavy lifting from machine learning tasks 
-            by providing easy access to scalable computing resources, integrated tools, and pre-built algorithms.
+            Amazon SageMaker is a fully-managed machine learning workflow platform that provides services on data labeling, 
+            model building, training, tuning and deployment.
+            
+            SageMaker allows data scientists and developers to build scalable AI/ML models easily and efficiently.
+            
+            Models could be deployed in production at a much faster rate and with a fraction of the cost. 
+
     
         Key features include:
         
         1. Model Building: 
         
-        SageMaker Studio offers a fully integrated development environment (IDE) 
-        for creating machine learning models with built-in data preparation tools and 
-        notebook environments.
-        
+        * SageMaker offers data labeling service
+
+        * Prebuilt available notebooks with state of the art algorithms on AWS marketplace
         
         2. Model Training: 
         
-        SageMaker provides automatic model training and tuning using distributed infrastructure, 
-        which significantly reduces the time required for training large datasets.
-        
-        
+        * Train models using EC2 instances (on-demand and spot)
+
+        * Manage environments for training
+
+        * Hyperparameters optimization for model tuning
+
+    
         3. Model Deployment:
         
-        Once trained, models can be deployed at scale using SageMaker endpoints for real-time or batch predictions.
-        
+        * Easily deploy and scale models
+
+        * Autoscaling with 75% savings
         
     
         Additionally, SageMaker includes features like model monitoring, explainability tools, and 
@@ -161,6 +176,25 @@ with st.expander('4.AWS'):
     
     It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
     
+            
+            """)
+        if selectio=="Sagemaker_COMPONENTS":
+            st.markdown("""
+            Two components are present in Amazon SageMaker: 
+                Model training 
+                Model deployment.
+                
+            To start training an ML model using Amazon SageMaker, we will need to create a training job.
+            
+                Amazon S3 bucket URL (training data): where the training data is located.
+                Compute resources: Amazon SageMaker will train the model using instances managed by Amazon SageMaker.
+                Amazon S3 bucket URL (Output): this bucket will host the output from the training.
+                Amazon Elastic Container Registry path: where the training code is stored. 
+                
+            SageMaker launches an ML compute instances once a training job is initiated. 
+            SageMaker uses: (1) training code and (2) training dataset to train the model. 
+            SageMaker saves the trained model artifacts in an S3 bucket.
+
             
             """)
 #####################################################################################        
