@@ -426,7 +426,7 @@ with st.expander('6.ML Algorithms'):
         if selection2=='Feature Scaling is required?':
             st.write("NO")
 #########################################################################
-    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','']
+    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','Linear SVM','non_linear SVM']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
@@ -510,7 +510,7 @@ Commonly used kernels are:
                     svm_model = SVC(kernel='rbf', C=1, gamma='scale')
                     svm_model.fit(X_train, y_train)
 
-        """
+        """)
     if selection2=='Feature Scaling is required?':
         st.write("Yes")
         
