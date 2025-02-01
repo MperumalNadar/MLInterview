@@ -426,7 +426,7 @@ with st.expander('6.ML Algorithms'):
         if selection2=='Feature Scaling is required?':
             st.write("NO")
 #########################################################################
-    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?']
+    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
@@ -460,6 +460,57 @@ Commonly used kernels are:
                     - difficult to choose a good kernel function.
                     - It is not that easy to fine-tune these hyper-parameters.
         """)
+    if selection2=='Linear SVM':
+        st.markdown("""
+                    A Linear Support Vector Machine (SVM) is a supervised learning algorithm primarily used for classification tasks. 
+                    It finds the optimal hyperplane that separates data points into distinct classes by maximizing the margin between them.
+
+                    How It Works
+                    - 1 Hyperplane: In a 2D space, it's a straight line that separates the classes; in higher dimensions,
+                    it's a hyperplane.
+                    - 2 Support Vectors: Data points closest to the hyperplane that determine its position.
+                    - 3 Margin Maximization: SVM seeks to maximize the distance between the support vectors and the hyperplane.
+
+                    from sklearn.model_selection import train_test_split
+                    from sklearn.svm import SVC
+                    from sklearn.metrics import accuracy_score
+                    
+                    # Train-test split
+                    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+                    # Train Linear SVM
+                    clf = SVC(kernel='linear')
+                    clf.fit(X_train, y_train)
+                    
+                    # Predictions
+                    y_pred = clf.predict(X_test)
+                    
+                    # Accuracy
+                    print("Accuracy:", accuracy_score(y_test, y_pred))
+        """)
+    if selection2=='non_linear SVM':
+        st.markdown("""
+                    where the data is not linearly separable. 
+                    It achieves this by transforming the original feature space into a higher-dimensional space using kernel functions
+
+                    How Non-Linear SVM Works:
+                    
+                    Kernel Trick: 
+                    Instead of mapping the data explicitly to higher dimensions, SVM uses kernel functions to compute the inner products of transformed features efficiently.
+
+                    Common Kernel Functions:
+                        
+                        RBF (Radial Basis Function or Gaussian Kernel):
+                        
+                        Polynomial Kernel:
+                        
+                        Sigmoid Kernel:    
+                    # Create and train a non-linear SVM using RBF kernel
+                    
+                    svm_model = SVC(kernel='rbf', C=1, gamma='scale')
+                    svm_model.fit(X_train, y_train)
+
+        """
     if selection2=='Feature Scaling is required?':
         st.write("Yes")
         
