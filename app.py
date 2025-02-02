@@ -321,7 +321,7 @@ if multiple services communicate with each other, Then create one AWS IAM ROLE
             1 Aws Lambda is a Serverless, Compute Service.that lets you run code for virtually 
             any type of application or backend service without managing Servers.
 
-            2 you can trigger. Lambda From wer 200 Aws services and only pay for what you use.
+        2 you can trigger. Lambda From wer 200 Aws services and only pay for what you use.
 Benefits:
 
 1 No need for managing the server.
@@ -329,7 +329,7 @@ Benefits:
 3 pay as you Go
 4 Performance optimization.
 
-Interview Question
+                Interview Question
 
 Difference between EC2 and Lambda?
 
