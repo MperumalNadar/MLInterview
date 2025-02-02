@@ -645,7 +645,7 @@ Commonly used kernels are:
 
 ########################################################################################
 
-    options = ["XGBOOST",'Advantage and DisAdvantage','WHAT IS BOOSTING?','WHAT IS ENSEMBLE LEARNING?','EC2 INSTANCE']
+    options = ["XGBOOST",'Advantage and DisAdvantage','WHAT IS BOOSTING?','WHAT IS ENSEMBLE LEARNING?','EC2 INSTANCE','HYPERPARAMETERS']
         
     selection5 = st.segmented_control("XGBOOST", options, selection_mode="single")
     if selection5=='XGBOOST':
