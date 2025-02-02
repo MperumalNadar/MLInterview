@@ -148,7 +148,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -293,6 +293,28 @@ No, we can upload 5 TB at one time
 
 Ans
 1oo, bucket we can create in l aws account , But that we can extend with raise the ticket with from AWS.
+            """)
+        if selectio=="AWS S3":
+            st.markdown("""
+            AWS IAM (Identity and access management
+
+All the access relates to with help of AWS IAM
+
+1 USER
+
+-- Authentication with user creation
+
+2 Policies--"
+
+if you user, you required S3 Bucket Access with the help of policies you can attached .
+
+3 Group
+
+suppose your working in Big organisation The devops engineer will create department wise group. and required Access to the that group.
+
+4 ROLE
+
+if multiple services communicate with each other, Then create one AWS IAM ROLE
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
