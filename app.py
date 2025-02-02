@@ -645,7 +645,7 @@ Commonly used kernels are:
 
 ########################################################################################
 
-    options = ["XGBOOST",'Advantage and DisAdvantage','WHAT IS BOOSTING?']
+    options = ["XGBOOST",'Advantage and DisAdvantage','WHAT IS BOOSTING?','WHAT IS ENSEMBLE LEARNING?','EC2 INSTANCE']
         
     selection5 = st.segmented_control("XGBOOST", options, selection_mode="single")
     if selection5=='XGBOOST':
@@ -695,8 +695,47 @@ Commonly used kernels are:
         - Boosting algorithms work by building a model from the training data, then the second model is built based on the mistakes 
          of the first model. 
          The algorithm repeats until the maximum number of models have been created or until the model provides good predictions.
+        """)
+    if selection5=='WHAT IS ENSEMBLE LEARNING?':
+        st.markdown("""
+                    Ensemble techniques such as bagging and boosting can offer an extremely powerful algorithm 
+                    by combining a group of relatively weak ones. 
+            
+                    For example, you can combine several decision trees to create a powerful random forest algorithm.
 
+            """)
+    if selection5=='EC2 INSTANCE':
+        st.markdown("""
+                    XGBoost currently only trains using CPUs.
+                    
+                    XGboost is memory intensive algorithm so it does not require much compute.
+                    
+                    M4: General-purpose compute instance is recommended. 
+            """)
+    if selection5=='HYPERPARAMETERS':
+        st.markdown("""
+        over 40 hyperparameters to tune Xgboost algorithm with AWS SageMaker 
         
+        most important ones:
+        
+        Max_depth (0 – inf):
+        is critical to ensure that you have the right balance between bias and variance. 
+        If the max_depth is set too small, will underfit the training data.
+        
+        If you increase the max_depth, the model will become more complex and will overfit the training data. Default value is 6.
+        
+        Gamma (0 – inf):
+        Minimum loss reduction needed to add more partitions to the tree.
+        
+        Eta (0 – 1):
+        step size shrinkage used in update to prevents overfitting and make the boosting process more conservative. 
+        After each boosting step, you can directly get the weights of new features, and eta shrinks the feature weights.
+        
+        Alpha: L1 regularization term on weights. regularization term to avoid overfitting. 
+        The higher the gamma the higher the regularization. If gamma is set to zero, no regularization is put in place.
+        
+        Lambda: L2 regularization
+
 
         
         """)
