@@ -148,7 +148,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -294,7 +294,7 @@ No, we can upload 5 TB at one time
 Ans
 1oo, bucket we can create in l aws account , But that we can extend with raise the ticket with from AWS.
             """)
-        if selectio=="AWS S3":
+        if selectio=="AWS IAM":
             st.markdown("""
             AWS IAM (Identity and access management
 
@@ -315,6 +315,30 @@ suppose your working in Big organisation The devops engineer will create departm
 4 ROLE
 
 if multiple services communicate with each other, Then create one AWS IAM ROLE
+            """)
+        if selectio=="AWS Lambda":
+            st.markdown("""
+            1 Aws Lambda is a Serverless, Compute Service.that lets you run code for virtually 
+            any type of application or backend service without managing Servers.
+
+            2 you can trigger. Lambda From wer 200 Aws services and only pay for what you use.
+Benefits:
+
+1 No need for managing the server.
+2 Auto Scalling
+3 pay as you Go
+4 Performance optimization.
+
+Interview Question
+
+Difference between EC2 and Lambda?
+
+EC2 instance is server Computation engine we try to create a server and we only manage all the servers
+
+IN THE CASE OF LAMBDA.
+
+serverless computation engine, dont worry about any server creation, 
+and every thing managed by AWS only we can only focus on code and run with help of AWS.
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
