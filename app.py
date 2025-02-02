@@ -199,7 +199,7 @@ with st.expander('4.AWS'):
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
-    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation']
+    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Bias & Varience':
@@ -312,6 +312,21 @@ k-Fold Cross-Validation: Most common type.
 Stratified k-Fold: Ensures each fold has a similar distribution of target classes.
 Leave-One-Out (LOOCV): Each data point becomes a test set once.
                          """)
+    if selection=='REGULARIZATION L1 L2':
+        st.markdown("""
+        Regularization techniques are used to avoid networks overfitting
+
+        When to choose L1 LASSO REGRESSION ? 
+        
+        If you believe that some features are not important and you can afford to lose them, then L1 regularization is a good choice. 
+        The output might become sparse since some features might have been removed.
+        
+        When to choose L2 RIDGE REGRESSION? 
+        
+        If you believe that all features are important and you’d like to keep them but weigh them accordingly.
+
+
+        """)
 with st.expander('6.ML Algorithms'):    
     options = ["Regression", "Linear regression",'Advantage and DisAdvantage','Feature Scaling is required?']
     
