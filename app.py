@@ -1,10 +1,36 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    st.write('hai')
+    options = ["introduction about me "]     
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=='introduction about me':
+        st.markdown("""
+        Hi, I am Murugan from Tamil nadu . I have completed my Bachelor Degree in Commerce from [Mumbai University in 2016.and
+I hold a AWS ML certified. 
+
+I have been working as an IT analyst at TCS for the past two and half years. Overalls 6+ years of the Experience in the IT field .
+
+My job deals with Parle Application Rollout .
+This involved Desktop and Mobile application services which is targeted to the Distributors in the Client market.
+As Desktop application holds the Database sequences and make the Product 
+distribution hierarchy smoother with the resellers data. Also having the DMS consoles, 
+Database installation procedure to help out client market process. Mobile application used to collect market data and 
+to proceed it to DMS application.
+
+I have good knowledge in the ML Algorithms ,Python Pandas,Data pre-processing and MySQL . 
+
+My key strengths are leadership skills, time management and I tend to be team oriented and trustworthy.
+
+Reading books and playing cricket are my favorite hobbies. 
+I have excellent communication skills and I am fluent in Tamil,English,Hindi and MArathi.
+
+I'm looking for an opportunity to expand my career in Machine learning field. 
+which is why I'm selected  Wings2 Machine learning Job path .
+
+That's a brief about me, and thanks for this opportunity.
+        """)
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam"]
-        
+    options = ["emails as spam or not spam"]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""
