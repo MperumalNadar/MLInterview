@@ -148,7 +148,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -248,8 +248,51 @@ with st.expander('4.AWS'):
             SageMaker launches an ML compute instances once a training job is initiated. 
             SageMaker uses: (1) training code and (2) training dataset to train the model. 
             SageMaker saves the trained model artifacts in an S3 bucket.
+            """)
+        if selectio=="AWS S3":
+            st.markdown("""
+            AWS S3 (Simple storage services)
+* AWS s3 is a most popular storage services most of the organisation they uses. as storage of S3
+Use Cases
 
-            
+1 Data Backup and archiving: 
+
+s3 is commonly used for data backup and long-term archiving due to its durability and reliability.
+organisations can store backup copies of their data to protect against data loss
+
+2 Data storage for Application :-
+
+S3 serves as a data repository for application, enabling them to store and.
+retrieve files, assets, and other resovaces.
+  This can include content for websites, mobile apps, and software.
+
+3) Log and Event storage. :-
+
+Application and systems can use S3 to Store logs, events, and telemetry data.
+This data can later be analyzed for monitoring, purposes. , troubleshooting, and compliance purpose.
+
+4) media storage and streaming:
+
+S3 is used to store media files Such as video and audio that need to be accessed and streamed by users globally.
+
+        Question and ANS 
+      
+1)S3 is global service but why do we require region selection?
+
+Ans
+
+it is the global service, for fastes performance and low letergy.
+
+2) S3 can we upload - 10TB data at one time if it allows unlimited data upload.
+
+Ans
+
+No, we can upload 5 TB at one time
+
+3) How many Bucket we can create in aws account ?
+
+Ans
+1oo, bucket we can create in l aws account , But that we can extend with raise the ticket with from AWS.
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
