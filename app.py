@@ -148,7 +148,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS Athena"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -339,6 +339,56 @@ IN THE CASE OF LAMBDA.
 
 serverless computation engine, dont worry about any server creation, 
 and every thing managed by AWS only we can only focus on code and run with help of AWS.
+            """)
+        if selectio=="AWS Athena":
+            st.markdown("""
+Amazon Athena is query service that makes easy to analyze data directly from:
+S3 using Standard SQL
+
+-- Athena is not database or not dada warehousy
+
+-- it is designed to allow you write fast Sql query data without having to move it.
+
+        pricing
+
+with pert query billing, you can get started quickly and pay only for the data Scanned by queries you run
+
+You are charged for the number of bytes scanned per query, rounded up to the nearest megabyte, with a 10 MB minimum per query.
+            """)
+        if selectio=="AWS Athena":
+            st.markdown("""
+            Amazon kinesis
+
+1 Amazon kinesis Data Streams to collect and process large streams of data record in real time.
+
+2 you Can use kinesis Data Streams for rapid and continuous data in take and aggregation
+
+3 Amazon kinesis Data used case include:-
+
+        1 IT infrastructure log data,
+        
+        2 application bgs,
+        
+        3 Social media,
+        
+        4 market data feeds and
+        
+        5 web click stream data
+        
+            Type of kinesis 
+
+1 kinesis streams:-
+
+generally we collect and process real time data.
+
+2 kinesis firehouse:-
+
+generally we collect and process near real time data
+because of (6o sec) and stored in different Services, ex S3.
+
+3 Kinesis Analytics:-
+
+Supposed real time data coming and based on that certain analysis in that kind on Scenario we can use this kinesis Analytics.
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
