@@ -148,7 +148,7 @@ Bayesian Logic, etc.
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS Athena"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
@@ -355,7 +355,7 @@ with pert query billing, you can get started quickly and pay only for the data S
 
 You are charged for the number of bytes scanned per query, rounded up to the nearest megabyte, with a 10 MB minimum per query.
             """)
-        if selectio=="AWS Athena":
+        if selectio=="AWS kinesis":
             st.markdown("""
             Amazon kinesis
 
