@@ -910,7 +910,7 @@ Commonly used kernels are:
         Instead of testing every possible combination, random search randomly samples hyperparameters from the grid.
         It’s faster and sometimes effective at finding the right set of parameters.
 
-        from sklearn.model_selection import GridSearchCV
+            from sklearn.model_selection import GridSearchCV
             from sklearn.svm import SVC
             
             # Define the parameter grid
