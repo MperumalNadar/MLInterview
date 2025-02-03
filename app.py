@@ -392,7 +392,7 @@ Supposed real time data coming and based on that certain analysis in that kind o
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
-    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2']
+    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Bias & Varience':
@@ -554,6 +554,58 @@ Leave-One-Out (LOOCV): Each data point becomes a test set once.
                   ridge.fit(X_train, y_train)
 
 
+        """)
+    if selection=='outliers':
+        st.markdown("""
+        Outliers are data points that significantly differ from the majority of the data in a dataset. 
+        These data points are unusual or exceptional in some way and can have a 
+        substantial impact on data analysis and statistical modelin
+
+
+        Removing outliers 
+        from data is an important step to ensure the quality and accuracy of machine learning models.
+
+        IQR (Interquartile Range) Method
+How It Works: The IQR is the range between the 25th (Q1) and 75th (Q3) percentiles of the data. Outliers are typically considered to be any points outside the range:
+Lower bound: 𝑄1−1.5×𝐼𝑄𝑅
+
+Upper bound:  Q3+1.5×IQR
+
+How to Apply:
+Calculate the IQR.
+Remove data points below the lower bound or above the upper bound.
+
+        # Calculate Q1, Q3, and IQR
+        Q1 = np.percentile(data, 25)
+        Q3 = np.percentile(data, 75)
+        IQR = Q3 - Q1
+        
+        # Define bounds
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        
+        # Identify outliers
+        outliers = (data < lower_bound) | (data > upper_bound)
+        
+        # Remove outliers
+        cleaned_data = data[~outliers]
+        print("Cleaned data:", cleaned_data)           
+
+
+        A boxplot is a quick way to visualize the spread of data and identify potential outliers. 
+        Points that fall outside the "whiskers" of the boxplot can be considered outliers.
+        
+            You can use matplotlib or seaborn to plot a boxplot.
+            
+            import seaborn as sns
+            import matplotlib.pyplot as plt
+            
+            # Example data
+            data = [10, 12, 14, 18, 19, 100, 23, 22, 21]
+            
+            # Create a boxplot
+            sns.boxplot(data=data)
+            plt.show()
         """)
 with st.expander('6.ML Algorithms'):    
     options = ["Regression", "Linear regression",'Advantage and DisAdvantage','Feature Scaling is required?']
