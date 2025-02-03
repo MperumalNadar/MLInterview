@@ -392,7 +392,7 @@ Supposed real time data coming and based on that certain analysis in that kind o
             """)
 #####################################################################################        
 with st.expander('5.Data Preprocessing'):
-    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers']
+    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Bias & Varience':
@@ -607,16 +607,31 @@ Remove data points below the lower bound or above the upper bound.
             sns.boxplot(data=data)
             plt.show()
         """)
+    if selection=='Ensemble learning':
+        st.markdown("""
+        Ensemble learning involves combining multiple individual models 
+        to improve the overall performance and predictive power of the learning algorithm.
+        """)
+    if selection=='Bagging & boosting':
+        st.markdown("""
+        Bagging involves training each model in the ensemble with a subset of the data,
+        while boosting focuses on training each model sequentially, giving more weight to the misclassified data points.
+        """)
+    if selection=='Hyperparameter tuning':
+        st.markdown("""
+        Hyperparameter tuning involves finding the best set of hyperparameters 
+        for a machine learning model to optimise its performance and generalisation.
+        
+        """)
 with st.expander('6.ML Algorithms'):    
-    options = ["Regression", "Linear regression",'Advantage and DisAdvantage','Feature Scaling is required?']
+    st.markdown("""
+    Classification is used to predict discrete categories 
+    while regression is used to predict continuous quantities.
+        """)
+    options = ["Linear regression",'Advantage and DisAdvantage','Feature Scaling is required?']
     
     selection = st.segmented_control("1.Linear Regression", options, selection_mode="single")
-    if selection=='Regression':
-        st.markdown("""
-        Regression is a method to find the relationship between two or more variables.
-        It helps us make predictions by drawing a straight line through data points. 
-        It's like having a ruler to estimate values based on known information.
-        """)
+ 
     if selection=='Linear regression':
         st.markdown("""
         Linear regression is a method to find the best straight line that fits data points. 
@@ -704,7 +719,7 @@ with st.expander('6.ML Algorithms'):
         st.write("Yes")
         
 ##############################################################################
-    options1 = ["Decision Tree", "Real_Word eg","Advantage and DisAdvantage", "How Choose Root Node", "Entropy Formula"]
+    options1 = ["Decision Tree", "Real_Word eg","Advantage and DisAdvantage", "How Choose Root Node", "Entropy Formula","Gini index"]
     selection1 = st.segmented_control("3.Decision Trea", options1, selection_mode="single")
     if selection1=='Decision Tree':
         st.markdown("""
@@ -747,6 +762,11 @@ with st.expander('6.ML Algorithms'):
     if selection1=='Entropy Formula':
         st.markdown(""" Entropy is formula is Negation of Summation of the Probability of Instance into Log of Probability
         """)
+    if selection1=='Gini index':
+        st.markdown(""" 
+        The Gini index is used to measure the impurity or the homogeneity of a node in a decision tree, 
+        helping to determine the best split for creating a more accurate decision tree.
+        """)
 ####################################################################
     options2 = ["Random Forest",'Advantage and DisAdvantage','Feature Scaling is required?']
     selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
@@ -787,7 +807,7 @@ with st.expander('6.ML Algorithms'):
         if selection2=='Feature Scaling is required?':
             st.write("NO")
 #########################################################################
-    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','Linear SVM','non_linear SVM']
+    options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','Linear SVM','non_linear SVM','hyperparameters']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
@@ -874,6 +894,22 @@ Commonly used kernels are:
         """)
     if selection2=='Feature Scaling is required?':
         st.write("Yes")
+    if selection2=='hyperparameters':
+        st.markdown("""
+        Machine learning models usually have default hyperparameters, but tuning them can significantly improve the model’s performance. 
+        It's important because, without tuning, the model might not generalize well or might not be as accurate as it could be.
+
+        Grid Search:
+
+        This is an exhaustive method where you specify a grid of hyperparameter values and the model is trained and 
+        evaluated for every combination.
+        Example: Trying different values of C, kernel types, etc. for an SVM.
+
+        Random Search:
+        
+        Instead of testing every possible combination, random search randomly samples hyperparameters from the grid.
+        It’s faster and sometimes effective at finding the right set of parameters.
+        """)
         
 
 ################################################################################################
