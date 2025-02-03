@@ -909,6 +909,29 @@ Commonly used kernels are:
         
         Instead of testing every possible combination, random search randomly samples hyperparameters from the grid.
         It’s faster and sometimes effective at finding the right set of parameters.
+
+        from sklearn.model_selection import GridSearchCV
+            from sklearn.svm import SVC
+            
+            # Define the parameter grid
+            param_grid = {
+                'C': [0.1, 1, 10],
+                'kernel': ['linear', 'rbf'],
+                'gamma': [0.01, 0.1, 1]
+            }
+            
+            # Create the SVM model
+            svm = SVC()
+            
+            # Setup the grid search
+            grid_search = GridSearchCV(svm, param_grid, cv=5, scoring='accuracy')
+            
+            # Fit the model to the data
+            grid_search.fit(X_train, y_train)
+            
+            # Print the best parameters
+            print("Best parameters:", grid_search.best_params_)
+
         """)
         
 
