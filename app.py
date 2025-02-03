@@ -439,21 +439,22 @@ regularisation, early stopping, and reducing model complexity.
 Oversampling is used when the quantity of data is insufficient. 
 It tries to balance dataset by increasing the size of rare samples
 
-from imblearn.over_sampling import SMOTE
-smote = SMOTE(random_state=42)
-X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+        from imblearn.over_sampling import SMOTE
+        smote = SMOTE(random_state=42)
+        X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
 
 
          """)
         st.markdown("""UNDER SAMPLING
 
 This method is used when quantity of data is sufficient. 
-By keeping all samples in the rare class and randomly selecting an equal number of samples in the abundant class, 
+By keeping all samples in the rare class and
+randomly selecting an equal number of samples in the abundant class, 
 a balanced new dataset can be retrieved for further modelling.
 
-from imblearn.under_sampling import RandomUnderSampler
-rus = RandomUnderSampler(random_state=42)
-X_resampled, y_resampled = rus.fit_resample(X_train, y_train)
+         from imblearn.under_sampling import RandomUnderSampler
+         rus = RandomUnderSampler(random_state=42)
+         X_resampled, y_resampled = rus.fit_resample(X_train, y_train)
 
          """)
     if selection=='FEATURE SCALING NORMALI-STANDARDIZATION':
@@ -470,15 +471,12 @@ It's like changing all your ingredients to be on a scale from 0 to 1,
 where O means the smallest amount, and 1 means the largest amount. 
 Just like making sure all your ingredients are in a similar range.
 
-import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
-# Initializing MinMaxScaler
-scaler = MinMaxScaler()
-# Applying normalization
-normalized_data = scaler.fit_transform(data)
-# Converting back to DataFrame
-normalized_df = pd.DataFrame(normalized_data, columns=data.columns)
-print("Normalized Data:\n", normalized_df)
+
+          from sklearn.preprocessing import MinMaxScaler
+          scaler = MinMaxScaler()
+          normalized_data = scaler.fit_transform(data)
+          normalized_df = pd.DataFrame(normalized_data, columns=data.columns)
+          print("Normalized Data:\n", normalized_df)
          """)
         st.markdown("""Z-score SCALING (STANDARDIZATION)
 
@@ -486,14 +484,11 @@ Standardization transforms features to have a mean of 0 and a standard deviation
 This one makes all your ingredients have an average (mean) of 0 and a standard deviation of 1. 
 It's like making sure all your ingredients are centered around a common point and have similar Grow spreads.
 
-from sklearn.preprocessing import StandardScaler
-# Initializing StandardScaler
-scaler = StandardScaler()
-# Applying normalization
-standardized_data = scaler.fit_transform(data)
-# Converting back to DataFrame
-standardized_df = pd.DataFrame(standardized_data, columns=data.columns)
-print("Standardized Data:\n", standardized_df)
+        from sklearn.preprocessing import StandardScaler
+        scaler = StandardScaler()
+        standardized_data = scaler.fit_transform(data)
+        standardized_df = pd.DataFrame(standardized_data, columns=data.columns)
+         print("Standardized Data:\n", standardized_df)
          """)
     if selection=='Missing Data':
         st.markdown("""
