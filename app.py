@@ -542,10 +542,16 @@ Leave-One-Out (LOOCV): Each data point becomes a test set once.
         
         If you believe that some features are not important and you can afford to lose them, then L1 regularization is a good choice. 
         The output might become sparse since some features might have been removed.
+                  from sklearn.linear_model import Lasso
+                  lasso = Lasso(alpha=0.1)  # Regularization strength, adjust alpha as needed
+                  lasso.fit(X_train, y_train)
         
         When to choose L2 RIDGE REGRESSION? 
         
         If you believe that all features are important and you’d like to keep them but weigh them accordingly.
+                  from sklearn.linear_model import Ridge
+                  ridge = Ridge(alpha=1.0)  # Regularization strength, adjust alpha as needed
+                  ridge.fit(X_train, y_train)
 
 
         """)
