@@ -1163,6 +1163,7 @@ with st.expander('8.Visualization'):
     if selection=="Bar Graphs":
         st.markdown("""
     hen to Use?
+    
                 Comparing sales figures across different regions. 
                 When comparing values across different categories, such as
                 sales by region or survey responses by category
