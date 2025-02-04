@@ -1152,10 +1152,9 @@ with st.expander('7.Evaluation'):
         plotting the true positive rate against the false positive rate. 
         AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve.
         """)
-if selection=="Root Mean Square Error":
+    if selection=="Root Mean Square Error":
         st.markdown("""The Root Mean Square Error is a commonly used metric for evaluating the accuracy of a regression model by measuring the differences between the predicted values and the actual values.
         """)
-
 with st.expander('8.Visualization'):
     
     options = ["Bar Graphs"]
