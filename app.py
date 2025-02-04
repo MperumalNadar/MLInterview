@@ -1157,7 +1157,7 @@ with st.expander('7.Evaluation'):
         """)
 with st.expander('8.Visualization'):
     
-    options = ["Bar Graphs"]
+    options = ["Bar Graphs","Line Chart","Pie Chart","Scatter Chart","Histogram","Heatmap"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Bar Graphs":
@@ -1167,7 +1167,58 @@ with st.expander('8.Visualization'):
                 Comparing sales figures across different regions. 
                 When comparing values across different categories, such as
                 sales by region or survey responses by category
-                
-
         """)
-        
+    if selection=="Line Chart":
+        st.markdown("""
+    hen to Use?
+    
+                When visualizing trend over time, 
+                Such as tracking website & stock prices
+    Examples:
+    
+                Displaying monthly revenue over the
+                course of a year
+        """)
+    if selection=="Pie Chart":
+        st.markdown("""
+    hen to Use?
+    
+                When displaying proportions of a whole, 
+                such as market share or budget allocation
+    Examples:
+    
+                Showing the market share of different products.
+        """)
+    if selection=="Scatter Chart":
+        st.markdown("""
+    hen to Use?
+    
+                When analyzing relationships between two variables, such as
+                advertising spend versus sales revenue.
+    Examples:
+    
+                Exploring the relationship between
+                advertising spend and sales revenue
+        """)
+    if selection=="Histogram":
+        st.markdown("""
+    hen to Use?
+    
+                When showing the distribution of asingle variable, such as customer
+                ages or transaction amounts.
+    Examples:
+    
+                Displaying the distribution of customer ages.
+        """)
+        if selection=="Heatmap":
+        st.markdown("""
+    hen to Use?
+    
+                When visualizing data density or intensity, such as website click
+                activity or sales performance across regions.
+    Examples:
+    
+                Showing data density, such as
+                website click activity.
+        """)
+                
