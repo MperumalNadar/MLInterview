@@ -1155,3 +1155,23 @@ with st.expander('7.Evaluation'):
 if selection=="Root Mean Square Error":
         st.markdown("""The Root Mean Square Error is a commonly used metric for evaluating the accuracy of a regression model by measuring the differences between the predicted values and the actual values.
         """)
+
+with st.expander('8.Visualization'):
+    
+    options = ["Bar Graphs"]
+        
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=="Bar Graphs":
+        st.markdown("""
+        When to Use?
+                Comparing sales
+                figures across
+                different regions.
+                When comparing values across
+                different categories, such as
+                sales by region or survey
+                responses by category
+        Examples:
+                Comparing sales figures across different regions.
+        """)
+        
