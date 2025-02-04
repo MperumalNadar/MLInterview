@@ -1202,7 +1202,7 @@ with st.expander('8.Visualization'):
         """)
     if selection=="Histogram":
         st.markdown("""
-    hen to Use?
+    when to Use?
     
                 When showing the distribution of asingle variable, such as customer
                 ages or transaction amounts.
@@ -1210,9 +1210,9 @@ with st.expander('8.Visualization'):
     
                 Displaying the distribution of customer ages.
         """)
-        if selection=="Heatmap":
+    if selection=="Heatmap":
         st.markdown("""
-    hen to Use?
+    when to Use?
     
                 When visualizing data density or intensity, such as website click
                 activity or sales performance across regions.
