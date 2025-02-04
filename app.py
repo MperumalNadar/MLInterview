@@ -1162,15 +1162,11 @@ with st.expander('8.Visualization'):
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Bar Graphs":
         st.markdown("""
-        When to Use?
-                Comparing sales
-                figures across
-                different regions.
-                When comparing values across
-                different categories, such as
-                sales by region or survey
-                responses by category
-        Examples:
-                Comparing sales figures across different regions.
+    hen to Use?
+                Comparing sales figures across different regions. 
+                When comparing values across different categories, such as
+                sales by region or survey responses by category
+                
+
         """)
         
