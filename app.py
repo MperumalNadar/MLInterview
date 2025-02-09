@@ -443,6 +443,10 @@ regularisation, early stopping, and reducing model complexity.
          """)
     if selection=='Balancen & Imbalance':
         st.markdown("""
+        Imbalanced classes occur when one class (e.g., "yes") has significantly more samples than another class (e.g., "no").
+
+        Example: Detecting fraud: 98% of transactions are genuine, only 2% are fraudulent.
+        
         Imbalanced datasets can be handled using techniques like 
 
                 - oversampling, 
@@ -629,13 +633,45 @@ Remove data points below the lower bound or above the upper bound.
         """)
     if selection=='Ensemble learning':
         st.markdown("""
+    
         Ensemble learning involves combining multiple individual models 
         to improve the overall performance and predictive power of the learning algorithm.
         """)
     if selection=='Bagging & boosting':
         st.markdown("""
-        Bagging involves training each model in the ensemble with a subset of the data,
-        while boosting focuses on training each model sequentially, giving more weight to the misclassified data points.
+        What is Bagging ?
+        。Stands for Bootstrap Aggregating.
+
+        。Creates multiple models by training them on different random 
+        subsets of the data (with replacement).
+
+        。Each model makes a prediction, and their results are averaged (for regression) 
+        or voted on (for classification).
+
+        **Example:** 
+         imagine you dividing your classroom into group and giving each group a problem. 
+         and whatever answer each group comes up with . you average their answers
+         this method is going to reduce the variance and it is also going to make final model most stable .
+         Random forest is a classic example of bagging .
+
+                  
+        """)
+        st.markdown("""
+        What is Bootinng 
+        
+        。Combines models sequentially, where each model corrects 
+        the errors of the previous one.
+
+        。Focuses more on hard-to-predict data points.
+
+        。 Models are trained one after another, with more weight given 
+        to data points that were previously misclassified.
+
+        where a teacher is helping the students. who struggle the most in the last test. 
+        now in the boosting is going to be a very great way of correcting the bias and weak models .right
+        so whichever the student  struggled in the last test . 
+        are going to be train separately. and help improve in the next exam .
+        Gradient Boosting, AdaBoost. is the example of boosting .
         """)
     if selection=='Hyperparameter tuning':
         st.markdown("""
@@ -788,7 +824,7 @@ with st.expander('6.ML Algorithms'):
         helping to determine the best split for creating a more accurate decision tree.
         """)
 ####################################################################
-    options2 = ["Random Forest",'Advantage and DisAdvantage','Feature Scaling is required?']
+    options2 = ["Random Forest",'Advantage and DisAdvantage','Hyperparameters in Random Forest','Feature Scaling is required?']
     selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
         st.markdown("""
@@ -824,15 +860,39 @@ with st.expander('6.ML Algorithms'):
 
                     - Biased in multiclass classification problems towards more frequent classes.
         """)
+        if selection2=='Hyperparameters in Random Forest':
+            st.markdown("""
+                        Key Hyperparameters in Random Forest
+
+                            1. Number of Trees (n_estimators):
+                            How many decision trees to use.
+                            
+                            2. Max Depth: 
+                            Controls how deep each tree grows.
+                            
+                            3. Min Samples Split/Leaf: 
+                            Minimum data points required for splitting or keeping a leaf.
+                            
+                            4. Max Features: 
+                            Number of features used to split nodes
+            """)
         if selection2=='Feature Scaling is required?':
             st.write("NO")
 #########################################################################
     options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','Linear SVM','non_linear SVM','hyperparameters']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
-        st.markdown("""Support Vector Machines (SVMs) separates data points based on decision planes, which separates objects belonging to different classes in a higher dimensional space.
+        st.markdown("""
+        It separates data points into categories by drawing the "best possible line" (or boundary).
 
-SVM algorithm uses the best suitable kernel, which is capable of separating data points into two or more classes.
+        Works well for both simple and complex data.
+
+        The algorithm chooses the line that leaves the largest gap (margin) between data points of different categories.
+
+        The data points closest to the boundary are called support vectors, and they influence where the line is drawn.
+
+        If data can't be separated with a straight line, SVM uses mathematical functions (kernels) 
+        to transform it into a higher dimension where a boundary can be drawn
 
 Commonly used kernels are:
                 - linear
