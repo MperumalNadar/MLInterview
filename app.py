@@ -396,13 +396,29 @@ with st.expander('5.Data Preprocessing'):
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Bias & Varience':
-        st.markdown("""BIAS
+        st.markdown("""
+        The bias-variance trade-off is the balance between two sources of error in machine learning models: bias and variance.
+
+        As bias decreases, variance increases, and vice versa.
+
+        The goal is to find a balance where both bias and variance are minimized for the best generalization.
+
+        --Too Simple (High Bias): 
+        Poor training and test performance.
+
+        --Too Complex (High Variance):
+        Good training but poor test performance.
+        """)
+        st.markdown("""
+        
+        BIAS
 
 In a machine learning model, bias means the model consistently predicts values or outcomes that are differentnd Grow from the true values in the data. 
 A model with high bias might be too simple or have wrong assumptions,
  causing it to underperform and make inaccurate predictions.
         """)
-        st.markdown("""VARIANCE
+        st.markdown("""
+        VARIANCE
 
 In a machine learning model, high variance means that it's sensitive to the specific data it's trained on. 
 If you give it slightly different datasets, it might give wildly different predictions. 
@@ -536,7 +552,11 @@ Leave-One-Out (LOOCV): Each data point becomes a test set once.
                          """)
     if selection=='REGULARIZATION L1 L2':
         st.markdown("""
-        Regularization techniques are used to avoid networks overfitting
+        Regularization is a technique used to prevent overfitting by adding a penalty to the model's complexity during training.
+
+        Regularization helps the model generalize better to new data.
+
+        their is two type Regularization is L1 and L2.
 
         When to choose L1 LASSO REGRESSION ? 
         
@@ -942,23 +962,23 @@ Commonly used kernels are:
         st.markdown("""Naive Bayes is a simple yet powerful classification algorithm based on Bayes' theorem. 
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
 
-        P(A∣B) is the posterior probability of class A given predictor 𝐵.      
+        **P(A∣B)** is the posterior probability of class A given predictor 𝐵.      
          
-        P(B∣A) is the likelihood of predictor B given class 𝐴.          
+        **P(B∣A)** is the likelihood of predictor B given class 𝐴.          
         
-        P(A) is the prior probability of class 𝐴. 
+        **P(A)** is the prior probability of class 𝐴. 
         
-        P(B) is the prior probability of predictor 𝐵.
+        **P(B)** is the prior probability of predictor 𝐵.
         
-        Types of Naive Bayes Classifiers:
+        **Types of Naive Bayes Classifiers:**
         
-        Gaussian Naive Bayes: For continuous data (assumes Gaussian distribution).
+        **Gaussian Naive Bayes:** For continuous data (assumes Gaussian distribution).
         
-        Multinomial Naive Bayes: Suitable for discrete data (commonly used for text data).
+        **Multinomial Naive Bayes:** Suitable for discrete data (commonly used for text data).
         
-        Bernoulli Naive Bayes: For binary data (e.g., spam vs. non-spam).
+        **Bernoulli Naive Bayes:** For binary data (e.g., spam vs. non-spam).
 
-        Real-World Example:
+        **Real-World Example:**
         
         Imagine classifying emails as spam or not. 
         Naive Bayes will calculate the probability of an email being spam based on the frequency of certain words in the email,
@@ -1130,20 +1150,36 @@ with st.expander('7.Evaluation'):
 
                     """)
     if selection=="confusion matrix":
-        st.markdown("""A confusion matrix is a table used to evaluate the performance of a classification model. 
+        st.markdown("""
+                    A confusion matrix is a table used to evaluate the performance of a classification model. 
                     It shows the counts of true positives, true negatives, false positives, and false negatives.
+
+                    It shows correct and incorrect predictions in an organized way.
+
+                    Useful for understanding the types of mistakes the model makes
         """)
     if selection=="precision and recall":
-        st.markdown("""Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
+        st.markdown("""
+        Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
         
-        **ratio of true positives to the sum of true Positive and false positives**
+        ratio of true positives to the sum of true Positive and false positives
 
         Recall is a measure of how many of the actual positive instances in the dataset were correctly predicted by the model.
         
-        **ratio of true positives to the sum of true positives and false negatives.**
+        ratio of true positives to the sum of true positives and false negatives.
         """)
     if selection=="F1 score":
-        st.markdown("""The Fl score is the harmonic mean of precision and recall and is used to evaluate the balance between precision and recall in a classification model.
+        st.markdown("""
+        The F1 score is a metric that combines precision and recall into a single number.
+
+        It provides a balance between precision and recall
+
+        The F1 score ranges from 0 to 1, where 1 indicates perfect precision and recall.
+
+        Formula:
+                2*precision *recall
+           F1= --------------------
+                precision +recall
         """)
     if selection=="R-squared":
         st.markdown("""R-squared is a statistical measure that represents the proportion of the variance for a dependent variable that is explained by an independent variable in a regression model.""")
