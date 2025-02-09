@@ -860,8 +860,8 @@ with st.expander('6.ML Algorithms'):
 
                     - Biased in multiclass classification problems towards more frequent classes.
         """)
-        if selection2=='Hyperparameters in Random Forest':
-            st.markdown("""
+    if selection2=='Hyperparameters in Random Forest':
+        st.markdown("""
                         Key Hyperparameters in Random Forest
 
                             1. Number of Trees (n_estimators):
@@ -876,8 +876,8 @@ with st.expander('6.ML Algorithms'):
                             4. Max Features: 
                             Number of features used to split nodes
             """)
-        if selection2=='Feature Scaling is required?':
-            st.write("NO")
+    if selection2=='Feature Scaling is required?':
+        st.write("NO")
 #########################################################################
     options2 = ["SVM",'Advantage and DisAdvantage','Feature Scaling is required?','Linear SVM','non_linear SVM','hyperparameters']
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
