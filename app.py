@@ -114,23 +114,19 @@ with st.expander('3.Defination Python,ML,DL,DL,NL'):
         """)
     if selection=='WHY ML':
         st.markdown("""
-        Machine Learning is essential because it enables systems to automatically improve their performance and adapt to changing conditions without human intervention. It is used in various fields to solve complex problems, such as:
+        machine learning is basically teaching computers to learn on their own. right
+        so what machine learning basically done is 
+        it will show the computer hundreds of pictures of say apples and oranges ok 
+        so machine learning is basically to pick these two fruits and show them to the computer now what machine learning is doing here is basically it's not telling that apples are going to be red and a round
+        similarly, for oranges are there going to be Orange in color and also going to be a round.
+        instead of giving certain rules
+        it is going to let the computer figure out by itself it is going through hundreds of images and pattern by itself so this a new kind of apple a new kind of orange is shown to the computer is going to be able to figure out them.
+        so this the basic idea of behind of machine learning 
+        basically reduces the repetitive manual work like. so say you want to filter out the spam emails. right 
+        so you don't need to do that manually rather machine learning is going to do that.
+        based on certain key words .so basically on email contains like free and offers keywords like that so based on that machine learning is going to help you identify. that these events could be spam machine learning reduces repetitive manual work. it has businesses make data driven decisions it powers personalized recommendations like Netflix and Amazon. notice every time you open Netflix. will Suggested movie series of the Other based on your previous watches. that is again machine learning behind it drives innovations like self-driving Cars and medical diagnosis. again it is not just limited to the basic applications we see like Netflix. infect it is seen every ware like.
+        Self-driving Cars and medical diagnosis.
 
-1. Automation: 
-
-Reducing manual tasks by automating decision-making processes.
-
-2. Predictive Analytics: 
-
-Making accurate predictions based on historical data, such as stock market trends or customer behavior.
-
-3. Personalization: 
-
-Customizing user experiences in areas like marketing, content recommendations, and product suggestions.
-
-4. Revolutionizing Industries: 
-
-Healthcare, Finance, Retail
         """)
     if selection=='Supervised & Unsupervised learning':
         st.markdown("""*Supervised learning algorithms are trained using labeled data.
