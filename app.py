@@ -92,9 +92,9 @@ with st.expander('2.Project Explanation'):
 
         """)
 #####################################################################################
-with st.expander('3.Defination Python,ML,DL,DL,NL','PYTHON','Numpy'):
+with st.expander('3.Defination Python,ML,DL,DL,NL):
 
-    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning"]
+    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy']
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='DS':
@@ -162,35 +162,35 @@ Bayesian Logic, etc.
         """)
     if selection=='Numpy':
         st.markdown("""
-NumPy stands for Numerical Python.
-
-when was created as a centralized library for working with arrays. 
-it also has functions for working in domains of linear algebra matrices and etc. .
-
-traditionally python as list that can serve purpose of array but as slow to process.
-
- something which Numpy addresses providing an array object that is up to 50 times faster than a traditional Python list.
-
- the array object in Numpy is called as nd-array and as a host of supporting functions that are very easy to work with .
-
-numpy  stored in  singular continuous place in memory  like traditional Python list .
-
-so process can access manipulating array a lot more effectively . they can making process faster 
-
-as it is optimized to work with the latest CPU architectures and libraries are predominantly returned in C or C plus plus. 
-
-numpy support varies Data type .such as  integer Boolean float date string amongst other .
-
-users create array define data type convert data type on an existing array .
-
-check whether arrays have their own data .
-
-check the shape of an array combine or split arrays.
-
- and many such features, Numpy enables sorting of an array in ascending or descending 
-
-where the values could be numeric or alphabetical.
-""")
+        NumPy stands for Numerical Python.
+        
+        when was created as a centralized library for working with arrays. 
+        it also has functions for working in domains of linear algebra matrices and etc. .
+        
+        traditionally python as list that can serve purpose of array but as slow to process.
+        
+         something which Numpy addresses providing an array object that is up to 50 times faster than a traditional Python list.
+        
+         the array object in Numpy is called as nd-array and as a host of supporting functions that are very easy to work with .
+        
+        numpy  stored in  singular continuous place in memory  like traditional Python list .
+        
+        so process can access manipulating array a lot more effectively . they can making process faster 
+        
+        as it is optimized to work with the latest CPU architectures and libraries are predominantly returned in C or C plus plus. 
+        
+        numpy support varies Data type .such as  integer Boolean float date string amongst other .
+        
+        users create array define data type convert data type on an existing array .
+        
+        check whether arrays have their own data .
+        
+        check the shape of an array combine or split arrays.
+        
+         and many such features, Numpy enables sorting of an array in ascending or descending 
+        
+        where the values could be numeric or alphabetical.
+        """)
 #####################################################################################
 with st.expander('4.AWS'):
         options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
