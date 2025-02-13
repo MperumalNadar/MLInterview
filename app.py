@@ -92,7 +92,7 @@ with st.expander('2.Project Explanation'):
 
         """)
 #####################################################################################
-with st.expander('3.Defination Python,ML,DL,DL,NL):
+with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
     options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy']
         
