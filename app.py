@@ -92,7 +92,7 @@ with st.expander('2.Project Explanation'):
 
         """)
 #####################################################################################
-with st.expander('3.Defination Python,ML,DL,DL,NL'):
+with st.expander('3.Defination Python,ML,DL,DL,NL','PYTHON','Numpy'):
 
     options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning"]
         
@@ -142,6 +142,55 @@ Bayesian Logic, etc.
 *it includes various algorithms such as Clustering, KNN, and Apriori algorithm.
 
         """)
+    if selection=='PYTHON':
+        st.markdown("""
+        python is object oriented and high level programming language that has become the de factor standard for data science 
+        computational applications 
+        it is designed to be highly readable language which uses a lot of English keywords 
+        it also has pure syntactical Constructions compared to other programming languages
+
+        it is an integrated language which means that it is processed at runtime by the interpreter .
+        and there is no need to compile the programs before execution it is interactive and object oriented 
+        which enables the users to encapsulate code within objects .
+
+        python is portable an as cross-platform compatibility on various operating systems 
+        it can be run on different hardware platforms and has the same interface on all platforms
+
+         Python also support graphical user interface applications on various operating systems.
+
+         its provide optimize  structure and support large and scalable programming .
+        """)
+    if selection=='Numpy':
+        st.markdown("""
+NumPy stands for Numerical Python.
+
+when was created as a centralized library for working with arrays. 
+it also has functions for working in domains of linear algebra matrices and etc. .
+
+traditionally python as list that can serve purpose of array but as slow to process.
+
+ something which Numpy addresses providing an array object that is up to 50 times faster than a traditional Python list.
+
+ the array object in Numpy is called as nd-array and as a host of supporting functions that are very easy to work with .
+
+numpy  stored in  singular continuous place in memory  like traditional Python list .
+
+so process can access manipulating array a lot more effectively . they can making process faster 
+
+as it is optimized to work with the latest CPU architectures and libraries are predominantly returned in C or C plus plus. 
+
+numpy support varies Data type .such as  integer Boolean float date string amongst other .
+
+users create array define data type convert data type on an existing array .
+
+check whether arrays have their own data .
+
+check the shape of an array combine or split arrays.
+
+ and many such features, Numpy enables sorting of an array in ascending or descending 
+
+where the values could be numeric or alphabetical.
+""")
 #####################################################################################
 with st.expander('4.AWS'):
         options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
