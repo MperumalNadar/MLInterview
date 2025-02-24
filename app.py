@@ -435,7 +435,14 @@ because of (6o sec) and stored in different Services, ex S3.
 
 Supposed real time data coming and based on that certain analysis in that kind on Scenario we can use this kinesis Analytics.
             """)
-#####################################################################################        
+#####################################################################################  
+with st.expander('5.Data Analysis(pandas,Numpy)'):
+    options = ['login']
+    
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=='login':
+        st.write('Hai')
+#####################################################################
 with st.expander('5.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
     
