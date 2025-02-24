@@ -437,11 +437,89 @@ Supposed real time data coming and based on that certain analysis in that kind o
             """)
 #####################################################################################  
 with st.expander('5.Data Analysis(pandas,Numpy)'):
-    options = ['login']
+    options = ['Python','Pandas','NumPy','DataFrame and a Series','Matplotlib','data cleaning','histogram','data cleaning','data visualization','loc and iloc','one-hot encoding','map() function']
     
     selection = st.segmented_control("", options, selection_mode="single")
-    if selection=='login':
-        st.write('Hai')
+    if selection=='Python':
+        st.markdown("""
+        Python is a high-level programming language known for its simplicity and readability.
+        It's widely used in data analytics due to its rich ecosystem of libraries such as Pandas,
+        NumPy, and Matplotlib, which make data manipulation, analysis, and visualization more
+        accessible.
+        """)
+    if selection=='Pandas':
+        st.markdown("""
+        Pandas is a Python library used for data manipulation and analysis. It provides data
+        structures like DataFrame and Series, which allow for easy handling and analysis of
+        tabular data.
+
+        """)
+    if selection=='NumPy':
+        st.markdown("""
+        NumPy is a Python library used for numerical computing. It provides support for large,
+        multi-dimensional arrays and matrices, along with a collection of mathematical functions
+        to operate on these arrays efficiently.
+        """)
+    if selection=='DataFrame and a Series':
+        st.markdown("""
+        A DataFrame is a 2-dimensional labeled data structure with columns of potentially
+        different types. It can be thought of as a table with rows and columns. A Series, on the
+        other hand, is a 1-dimensional labeled array capable of holding any data type.
+                    """)
+    if selection=='Matplotlib':
+        st.markdown("""
+        Matplotlib is a Python library used for data visualization. It provides a wide variety of
+        plots and charts to visualize data, including line plots, bar plots, histograms, and scatter
+        plots.
+
+        import matplotlib.pyplot as plt
+
+        """)
+    if selection=='data cleaning':
+        st.markdown("""
+        Data cleaning is the process of identifying and correcting errors, inconsistencies, and
+        missing values in a dataset to improve its quality and reliability for analysis. It involves
+        tasks such as removing duplicates, handling missing data, and correcting formatting
+        issues.
+
+                    """)
+    if selection=='histogram':
+        st.markdown("""
+        A histogram is a graphical representation of the distribution of numerical data. It
+        consists of a series of bars, where each bar represents a range of values and the height of
+        the bar represents the frequency of values within that range. Histograms are commonly
+        used to visualize the frequency distribution of a dataset.
+
+        import matplotlib.pyplot as plt
+         plt.hist(data, bins=10) 
+        """)
+    if selection=='data visualization':
+        st.markdown("""
+        The purpose of data visualization is to communicate information and insights from
+        data effectively through graphical representations. It allows analysts to explore patterns,
+        trends, and relationships in the data, as well as to communicate findings to stakeholders
+        in a clear and compelling manner
+                    """)
+    if selection=='loc and iloc':
+        st.markdown("""
+        loc is used for label-based indexing, where you specify the row and column labels,
+        while iloc is used for integer-based indexing, where you specify the row and column
+        indices.
+        """)
+    if selection=='one-hot encoding':
+        st.markdown("""
+        One-hot encoding in Pandas can be performed using the get_dummies() function,
+        which converts categorical variables into dummy/indicator variables, where each
+        category is represented as a binary feature.
+                    """)
+        if selection=='map() function':
+        st.markdown("""
+        The map() function applies a given function to each item of an iterable and returns a
+        list of the results. In data analysis, it's useful for applying functions element-wise to data
+        structures like lists or Pandas Series.
+        """)
+        
+        
 #####################################################################
 with st.expander('5.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
