@@ -521,7 +521,7 @@ with st.expander('5.Data Analysis(pandas,Numpy)'):
         
         
 #####################################################################
-with st.expander('5.Data Preprocessing'):
+with st.expander('6.Data Preprocessing'):
     options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
     
     selection = st.segmented_control("", options, selection_mode="single")
@@ -809,7 +809,7 @@ Remove data points below the lower bound or above the upper bound.
         for a machine learning model to optimise its performance and generalisation.
         
         """)
-with st.expander('6.ML Algorithms'):    
+with st.expander('7.ML Algorithms'):    
     st.markdown("""
     Classification is used to predict discrete categories 
     while regression is used to predict continuous quantities.
@@ -1307,7 +1307,7 @@ Commonly used kernels are:
 
 #################################################################################################
 
-with st.expander('7.Evaluation'):
+with st.expander('8.Evaluation'):
     st.markdown("""
                 **True Positive(TP):** In this case, the prediction outcome is true, and it is true in reality, also.
                 
@@ -1381,7 +1381,7 @@ with st.expander('7.Evaluation'):
     if selection=="Root Mean Square Error":
         st.markdown("""The Root Mean Square Error is a commonly used metric for evaluating the accuracy of a regression model by measuring the differences between the predicted values and the actual values.
         """)
-with st.expander('8.Visualization'):
+with st.expander('9.Visualization'):
     
     options = ["Bar Graphs","Line Chart","Pie Chart","Scatter Chart","Histogram","Heatmap"]
         
