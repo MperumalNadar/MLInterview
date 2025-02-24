@@ -512,7 +512,7 @@ with st.expander('5.Data Analysis(pandas,Numpy)'):
         which converts categorical variables into dummy/indicator variables, where each
         category is represented as a binary feature.
                     """)
-        if selection=='map() function':
+    if selection=='map() function':
         st.markdown("""
         The map() function applies a given function to each item of an iterable and returns a
         list of the results. In data analysis, it's useful for applying functions element-wise to data
