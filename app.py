@@ -1149,26 +1149,27 @@ Commonly used kernels are:
     options5 = ["Naive Bayes",'Advantage and DisAdvantage','Feature Scaling is required?']
     selection5 = st.segmented_control("6.Naive Bayes", options5, selection_mode="single")
     if selection5=='Naive Bayes':
-        st.markdown("""Naive Bayes is a simple yet powerful classification algorithm based on Bayes' theorem. 
+        st.markdown("""
+        Naive Bayes is a simple yet powerful classification algorithm based on Bayes' theorem. 
         It is widely used for tasks such as text classification, spam filtering, sentiment analysis, and more.
 
-        **P(A∣B)** is the posterior probability of class A given predictor 𝐵.      
+        P(A∣B) is the posterior probability of class A given predictor 𝐵.      
          
-        **P(B∣A)** is the likelihood of predictor B given class 𝐴.          
+        P(B∣A) is the likelihood of predictor B given class 𝐴.          
         
-        **P(A)** is the prior probability of class 𝐴. 
+        P(A) is the prior probability of class 𝐴. 
         
-        **P(B)** is the prior probability of predictor 𝐵.
+        P(B) is the prior probability of predictor 𝐵.
         
-        **Types of Naive Bayes Classifiers:**
+        Types of Naive Bayes Classifiers:
         
-        **Gaussian Naive Bayes:** For continuous data (assumes Gaussian distribution).
+        Gaussian Naive Bayes: For continuous data (assumes Gaussian distribution).
         
-        **Multinomial Naive Bayes:** Suitable for discrete data (commonly used for text data).
+        Multinomial Naive Bayes: Suitable for discrete data (commonly used for text data).
         
-        **Bernoulli Naive Bayes:** For binary data (e.g., spam vs. non-spam).
+        Bernoulli Naive Bayes: For binary data (e.g., spam vs. non-spam).
 
-        **Real-World Example:**
+        Real-World Example:
         
         Imagine classifying emails as spam or not. 
         Naive Bayes will calculate the probability of an email being spam based on the frequency of certain words in the email,
