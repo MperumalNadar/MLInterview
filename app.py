@@ -1452,42 +1452,63 @@ with st.expander('9.Visualization'):
 
 
 import streamlit as st
-import pandas as pd
 
-# Sample data for the search engine
-data = {
-    'Title': ['Python Basics', 'Advanced Python', 'Streamlit Guide', 'Web Development 101'],
-    'Content': [
-        'Learn the basics of Python programming.',
-        'Master advanced Python topics and techniques.',
-        'A complete guide to building apps with Streamlit.',
-        'Understand the basics of web development.'
-    ]
-}
+# Initialize session state for conversation history
+if 'conversation' not in st.session_state:
+    st.session_state.conversation = []
 
-# Convert the data into a pandas DataFrame
-df = pd.DataFrame(data)
+# Function to display conversation history
+def display_conversation():
+    for message in st.session_state.conversation:
+        if message['role'] == 'user':
+            st.markdown(f"<div class='p-4 my-2 bg-blue-100 text-left rounded-lg'>{message['text']}</div>", unsafe_allow_html=True)
+        else:
+            st.markdown(f"<div class='p-4 my-2 bg-gray-100 text-right rounded-lg'>{message['text']}</div>", unsafe_allow_html=True)
 
-# Function to search content
-def search(query):
-    # Filter the data based on the query
-    results = df[df['Title'].str.contains(query, case=False, na=False) | 
-                 df['Content'].str.contains(query, case=False, na=False)]
-    return results
+# Tailwind CSS (via CDN) for styling
+st.markdown("""
+    <style>
+        .stTextArea>textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.25rem;
+            border-radius: 0.375rem;
+        }
+        .stButton>button {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.25rem;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 0.375rem;
+        }
+        .stTextArea>textarea, .stButton>button {
+            margin-top: 1rem;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-# Streamlit app layout
-st.title('Simple Search Engine')
+# Full-width layout for Streamlit UI
+st.markdown("<div class='w-full flex flex-col h-screen p-8'>", unsafe_allow_html=True)
 
-# Text input for search query
-query = st.text_input('Enter your search query:')
+# Conversation history
+display_conversation()
 
-# Display search results
-if query:
-    results = search(query)
-    if not results.empty:
-        st.write(f"Found {len(results)} result(s):")
-        st.dataframe(results)
-    else:
-        st.write("No results found.")
+# Input field for the user
+user_input = st.text_area("Type your message:", height=200)
 
-                
+# Button to send the message
+if st.button("Ask the AI"):
+    if user_input:
+        # Add the user's message to the conversation history
+        st.session_state.conversation.append({'role': 'user', 'text': user_input})
+
+        # Simulate AI response (replace this with actual AI call in a real application)
+        ai_response = f"AI Response to: {user_input}"
+        st.session_state.conversation.append({'role': 'assistant', 'text': ai_response})
+
+        # Clear the input field after sending the message
+        user_input = ""
+
+# Close layout div
+st.markdown("</div>", unsafe_allow_html=True)
