@@ -1448,4 +1448,46 @@ with st.expander('9.Visualization'):
                 Showing data density, such as
                 website click activity.
         """)
+
+
+
+import streamlit as st
+import pandas as pd
+
+# Sample data for the search engine
+data = {
+    'Title': ['Python Basics', 'Advanced Python', 'Streamlit Guide', 'Web Development 101'],
+    'Content': [
+        'Learn the basics of Python programming.',
+        'Master advanced Python topics and techniques.',
+        'A complete guide to building apps with Streamlit.',
+        'Understand the basics of web development.'
+    ]
+}
+
+# Convert the data into a pandas DataFrame
+df = pd.DataFrame(data)
+
+# Function to search content
+def search(query):
+    # Filter the data based on the query
+    results = df[df['Title'].str.contains(query, case=False, na=False) | 
+                 df['Content'].str.contains(query, case=False, na=False)]
+    return results
+
+# Streamlit app layout
+st.title('Simple Search Engine')
+
+# Text input for search query
+query = st.text_input('Enter your search query:')
+
+# Display search results
+if query:
+    results = search(query)
+    if not results.empty:
+        st.write(f"Found {len(results)} result(s):")
+        st.dataframe(results)
+    else:
+        st.write("No results found.")
+
                 
