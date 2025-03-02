@@ -1453,19 +1453,22 @@ with st.expander('9.Visualization'):
 
 import streamlit as st
 
-# Initialize session state for conversation history
-if 'conversation' not in st.session_state:
-    st.session_state.conversation = []
+# Sample list of items (You can replace this with your own data)
+item_list = [
+    "Learn Python basics",
+    "Master advanced Python topics",
+    "Streamlit for building apps",
+    "Web development with Flask",
+    "AI and machine learning basics",
+    "Introduction to TensorFlow",
+    "Building a web app with React"
+]
 
-# Function to display conversation history
-def display_conversation():
-    for message in st.session_state.conversation:
-        if message['role'] == 'user':
-            st.markdown(f"<div class='p-4 my-2 bg-blue-100 text-left rounded-lg'>{message['text']}</div>", unsafe_allow_html=True)
-        else:
-            st.markdown(f"<div class='p-4 my-2 bg-gray-100 text-right rounded-lg'>{message['text']}</div>", unsafe_allow_html=True)
+# Function to search through the list
+def search_list(query, items):
+    return [item for item in items if query.lower() in item.lower()]
 
-# Tailwind CSS (via CDN) for styling
+# Layout: full-width layout using Tailwind CSS
 st.markdown("""
     <style>
         .stTextArea>textarea {
@@ -1482,8 +1485,11 @@ st.markdown("""
             color: white;
             border-radius: 0.375rem;
         }
-        .stTextArea>textarea, .stButton>button {
-            margin-top: 1rem;
+        .stTextInput>input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.25rem;
+            border-radius: 0.375rem;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -1491,24 +1497,24 @@ st.markdown("""
 # Full-width layout for Streamlit UI
 st.markdown("<div class='w-full flex flex-col h-screen p-8'>", unsafe_allow_html=True)
 
-# Conversation history
-display_conversation()
+# Search input
+search_query = st.text_input("Search the list", "")
 
-# Input field for the user
-user_input = st.text_area("Type your message:", height=200)
-
-# Button to send the message
+# Button to trigger AI action
 if st.button("Ask the AI"):
-    if user_input:
-        # Add the user's message to the conversation history
-        st.session_state.conversation.append({'role': 'user', 'text': user_input})
+    if search_query:
+        # Perform the search
+        search_results = search_list(search_query, item_list)
 
-        # Simulate AI response (replace this with actual AI call in a real application)
-        ai_response = f"AI Response to: {user_input}"
-        st.session_state.conversation.append({'role': 'assistant', 'text': ai_response})
-
-        # Clear the input field after sending the message
-        user_input = ""
+        # Show search results if any
+        if search_results:
+            st.write("### Search Results:")
+            for result in search_results:
+                st.markdown(f"<div class='p-4 my-2 bg-gray-100 rounded-lg'>{result}</div>", unsafe_allow_html=True)
+        else:
+            st.write("No results found.")
+    else:
+        st.write("Please enter a search term.")
 
 # Close layout div
 st.markdown("</div>", unsafe_allow_html=True)
