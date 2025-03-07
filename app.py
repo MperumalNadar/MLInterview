@@ -63,15 +63,15 @@ with st.expander('2.Project Explanation'):
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
         
-    My role involved designing and implementing the machine learning pipeline
-    including data preprocessing, feature extraction, training and evaluating models, and fine-tuning them for better accuracy.
+My role involved designing and implementing the machine learning pipeline
+including data preprocessing, feature extraction, training and evaluating models, and fine-tuning them for better accuracy.
         
-    Key challenges we solved include dealing with the imbalance between spam and non-spam emails
-    handling noisy and unstructured email content, and improving the efficiency of the model without compromising on false positives.
+Key challenges we solved include dealing with the imbalance between spam and non-spam emails
+handling noisy and unstructured email content, and improving the efficiency of the model without compromising on false positives.
         
-    We learned the importance of feature selection and engineering in improving model performance and 
-    how to fine-tune algorithms like Naive Bayes and Random Forest for better classification. Additionally
-    we gained insights into evaluating models effectively using precision, recall, and F1-score metrics to ensure optimal email filtering for users.
+We learned the importance of feature selection and engineering in improving model performance and 
+how to fine-tune algorithms like Naive Bayes and Random Forest for better classification. Additionally
+we gained insights into evaluating models effectively using precision, recall, and F1-score metrics to ensure optimal email filtering for users.
         
 1. Start with the Problem Statement
 
