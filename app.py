@@ -103,7 +103,7 @@ we gained insights into evaluating models effectively using precision, recall, a
      "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
 
         """)
-        if selection=="ML life cycle":
+    if selection=="ML life cycle":
         st.markdown("""
 1. Problem Definition
 Objective: Define the problem you want to solve.
