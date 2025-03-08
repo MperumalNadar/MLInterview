@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'ML life cycle']     
+    options = ["emails as spam or not spam","ML life cycle"]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -103,7 +103,7 @@ we gained insights into evaluating models effectively using precision, recall, a
      "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
 
         """)
-    if selection=='ML life cycle':
+        if selection=="ML life cycle":
         st.markdown("""
 1. Problem Definition
 Objective: Define the problem you want to solve.
