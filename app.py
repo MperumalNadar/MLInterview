@@ -521,7 +521,7 @@ Supposed real time data coming and based on that certain analysis in that kind o
             """)
 #####################################################################################  
 with st.expander('5.Data Analysis(pandas,Numpy)'):
-    options = ['Python','Pandas','NumPy','DataFrame and a Series','Matplotlib','data cleaning','histogram','data cleaning','data visualization','loc and iloc','one-hot encoding','map() function']
+    options = ['Python','Pandas','NumPy','DataFrame and a Series','Matplotlib','data cleaning','histogram','data cleaning','data visualization','loc and iloc','one-hot encoding','map() function',"Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Python':
@@ -605,10 +605,7 @@ with st.expander('5.Data Analysis(pandas,Numpy)'):
         
         
 #####################################################################
-with st.expander('6.Data Preprocessing'):
-    options = ["Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
-    
-    selection = st.segmented_control("", options, selection_mode="single")
+
     if selection=='Bias & Varience':
         st.markdown("""
         The bias-variance trade-off is the balance between two sources of error in machine learning models: bias and variance.
