@@ -1409,19 +1409,19 @@ with st.expander('8.Evaluation'):
         st.markdown("""The accuracy metric is one of the simplest Classification metrics to implement, 
                     and it can be determined as the number of correct predictions to the total number of predictions.
 
-                    from sklearn metrics import accuracy score
+from sklearn metrics import accuracy score
         
-                    **When to Use Accuracy?**
-                    when the target variable classes in data are approximately balanced. 
-                    For example, if 60% of classes in a fruit dataset are of Apple, 
-                    40% are Mango.In this Case we can use Accuracy 
+**When to Use Accuracy?**
+when the target variable classes in data are approximately balanced. 
+For example, if 60% of classes in a fruit dataset are of Apple, 
+40% are Mango.In this Case we can use Accuracy 
         
-                    **When not to use Accuracy?**
-                    when the target variable majorly belongs to one class. 
-                    For example, 
-                    Suppose there is a model for a disease prediction in which, 
-                    out of 100 people, only five people have a disease, 
-                    and 95 people don't have one. In this case we can use Accuracy .
+**When not to use Accuracy?**
+when the target variable majorly belongs to one class. 
+For example, 
+Suppose there is a model for a disease prediction in which, 
+out of 100 people, only five people have a disease, 
+and 95 people don't have one. In this case we can use Accuracy .
 
                     """)
     if selection=="confusion matrix":
@@ -1533,8 +1533,8 @@ with st.expander('9.Visualization'):
                 website click activity.
         """)
 
-with st.expander('8.Python'):
-    options = ["OOPS","overloading in Python","List","tuple()","overloading in Python","overriding in Python","difference between a class method and an instance method",]
+with st.expander('10.Python'):
+    options = ["OOPS","overloading in Python","List","tuple()","List comprehension","lambda function","overloading in Python","overriding in Python","difference between a class method and an instance method",]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="overloading in Python":
@@ -1610,6 +1610,40 @@ squared_numbers = [x** x numbers] 
 print # Output: [1, 4, 9, 16,
 25]
         """)
+
+    if selection=="List comprehension":
+        st.markdown("""
+List comprehension is a concise way to create lists in
+Python based on existing lists or other iterables. It
+combines the creation of a new list with a loop and
+optional conditional statements. For example:
+Ans:
+numbers = [ , , , , ] 
+squared_numbers = [x** x numbers] 
+(squared_numbers)
+1 2 3 4 5
+2 for in
+print # Output: [1, 4, 9, 16,
+25]
+
+numbers = [ ] 
+even_numbers = [x x numbers if x % ==
+] 
+(even_numbers)
+        """)
+    if selection=="lambda function":
+        st.markdown("""
+A lambda function is an anonymous function defined
+using the lambda keyword. It is typically used for
+short, one-line functions. For example:
+Ans:
+square = x: x**
+(square( ))
+lambda 2 
+print 3 # Output: 9
+        """)
+    
+    
 
 
 
