@@ -178,7 +178,7 @@ Example: After deploying the model, you observe that it’s performing well init
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
-    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy']
+    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict']
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='DS':
@@ -274,6 +274,39 @@ Bayesian Logic, etc.
          and many such features, Numpy enables sorting of an array in ascending or descending 
         
         where the values could be numeric or alphabetical.
+        """)
+    if selection=='Scikit-learn':
+        st.markdown("""
+Scikit-learn is a popular machine learning library in
+Python that provides a wide range of algorithms and
+tools for various tasks such as classification,
+regression, clustering, dimensionality reduction, and
+model evaluation. It is widely used for building
+machine learning models and pipelines.
+        """)
+    if selection=='joblib':
+        st.markdown("""
+You can save a trained Scikit-learn model to disk
+using the joblib module's dump() function. To load
+a saved model, you can use the load() function.
+For example:
+Ans:
+from sklearn.externals import joblib  
+# Save the model 
+joblib.dump(model, )  
+# Load the model 
+loaded_model = joblib.load( )
+        """)
+    if selection=='predict':
+        st.markdown("""
+
+Once you have trained a model in Scikit-learn, you
+can make predictions on new data using the
+predict() method. For example:
+
+model = LinearRegression() 
+model.fit(X_train, y_train) 
+predictions = model.predict(X_test)
         """)
 #####################################################################################
 with st.expander('4.AWS'):
