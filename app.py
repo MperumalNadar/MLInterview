@@ -1533,5 +1533,83 @@ with st.expander('9.Visualization'):
                 website click activity.
         """)
 
+with st.expander('8.Python'):
+    options = ["OOPS","overloading in Python","List","tuple()","overloading in Python","overriding in Python","difference between a class method and an instance method",]
+        
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=="overloading in Python":
+        st.markdown("""
+Method overloading in Python refers to defining
+multiple methods with the same name but different
+parameters within a class. However, Python does not
+support method overloading by default as it does in
+languages like Java. In Python, you can achieve a
+similar effect by using default arguments or using
+variable-length arguments.
+        """)
+    if selection=="OOPS":
+        st.markdown("""
+Object-Oriented Programming (OOPS) is a
+programming paradigm that uses objects to
+represent real-world entities. In Python, OOPS is
+implemented through classes and objects. Classes
+are blueprints for creating objects, and objects are
+instances of a class.
+
+The four principles of OOPS are:
+ Encapsulation: bundling of data and methods that
+operate on that data within a single
+unit (class).
+ Inheritance: ability of a class to inherit properties
+and methods from its parent class.
+ Polymorphism: ability of an object to take on
+different forms or behaviors based on the
+context.
+ Abstraction: representing essential features and
+hiding unnecessary details to simplify
+the
+complexity.
+        """)
+    if selection=="overriding in Python":
+        st.markdown("""
+Method overriding in Python refers to defining a
+method in a child class that already exists in its
+parent class with the same name and signature. The
+method in the child class overrides the method in the
+parent class, providing a different implementation.
+        """)
+    if selection=="difference between a class method and an instance method":
+        st.markdown("""
+class method is a method bound to the class and
+not the instance of the class. It is defined using the
+@classmethod decorator and can access only classlevel
+variables. On the other hand, an instance
+method is bound to the instance of the class and can
+access both instance and class-level variables.
+        """)
+    if selection=="tuple()":
+        st.markdown("""
+A tuple in Python is an ordered and immutable
+collection of elements. It is defined using parentheses
+() or the tuple() constructor. For example:
+
+        
+        """)
+    if selection=="List":
+        st.markdown("""
+List comprehension is a concise way to create lists in
+Python based on existing lists or other iterables. It
+combines the creation of a new list with a loop and
+optional conditional statements. For example:
+Ans:
+numbers = [ , , , , ] 
+squared_numbers = [x** x numbers] 
+(squared_numbers)
+1 2 3 4 5
+2 for in
+print # Output: [1, 4, 9, 16,
+25]
+        """)
+
 
 
