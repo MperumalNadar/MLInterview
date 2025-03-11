@@ -314,9 +314,8 @@ print('Training artifacts will be uploaded to: {}'.format(output_location))
 
 
 **This code is used to get the training container of sagemaker built-in algorithms
-all we have to do is to specify the name of the algorithm, that we want to use
-
-Let's obtain a reference to the linearLearner container image
+all we have to do is to specify the name of the algorithm, that we want to use**
+**Let's obtain a reference to the linearLearner container image
 Note that all regression models are named estimators
 You don't have to specify (hardcode) the region, get_image_uri will get the current region name using boto3.Session**
 
@@ -325,9 +324,9 @@ from sagemaker.amazon.amazon_estimator import get_image_uri
 
 container = get_image_uri(boto3.Session().region_name, 'linear-learner')
 
-# We have pass in the container, the type of instance that we would like to use for training 
-# output path and sagemaker session into the Estimator. 
-# We can also specify how many instances we would like to use for training
+**We have pass in the container, the type of instance that we would like to use for training 
+output path and sagemaker session into the Estimator.**
+**We can also specify how many instances we would like to use for training**
 
 linear = sagemaker.estimator.Estimator(container,
                                        role, 
@@ -338,8 +337,8 @@ linear = sagemaker.estimator.Estimator(container,
 
 
 **We can tune parameters like the number of features that we are passing in, type of predictor like 'regressor' or 
-'classifier', mini batch size, epochs
-**Train 32 different versions of the model and will get the best out of them (built-in parameters optimization!)
+'classifier', mini batch size, epochs**
+**Train 32 different versions of the model and will get the best out of them (built-in parameters optimization!)**
 
 linear.set_hyperparameters(feature_dim = 8,
                            predictor_type = 'regressor',
