@@ -661,6 +661,94 @@ No, we can upload 5 TB at one time
 Ans
 1oo, bucket we can create in l aws account , But that we can extend with raise the ticket with from AWS.
             """)
+        if selectio=="S3 Type":
+            st.markdown("""
+
+
+1. Standard Bucket (S3 Standard)
+
+Purpose: General-purpose storage for frequently accessed data.
+
+Use Case: Websites, mobile applications, real-time big data analytics.
+
+Durability: 99.999999999% (11 nines).
+
+Availability: 99.99%.
+
+
+
+2. S3 Intelligent-Tiering
+
+Purpose: Automatically moves data between two access tiers (frequent and infrequent access) based on usage patterns.
+
+Use Case: Unpredictable data access patterns.
+
+Durability: 99.999999999%.
+
+Availability: 99.9%.
+
+Cost-Effective: Reduces cost by automatically shifting data to the cheaper tier when not accessed.
+
+
+3. S3 Standard-IA (Infrequent Access)
+
+Purpose: For data that is less frequently accessed but still requires rapid access when needed.
+
+Use Case: Backup, disaster recovery, long-term data storage.
+
+Durability: 99.999999999%.
+
+Availability: 99.9%.
+
+Lower Storage Cost: Higher retrieval cost.
+
+
+4. S3 One Zone-IA (Infrequent Access)
+
+Purpose: Similar to Standard-IA but data is stored in a single Availability Zone (AZ).
+
+Use Case: Secondary backups, easily re-creatable data.
+
+Durability: 99.999999999%.
+
+Availability: 99.5%.
+
+Lower Cost: Lower availability and resiliency.
+
+
+5. S3 Glacier
+
+Purpose: Long-term archival storage with low retrieval frequency.
+
+Use Case: Compliance data, long-term backups, historical records.
+
+Retrieval Time: Minutes to hours depending on the retrieval option.
+
+Durability: 99.999999999%.
+
+
+
+6. S3 Glacier Deep Archive
+
+Purpose: Lowest-cost storage for long-term retention of data that is rarely accessed.
+
+Use Case: Regulatory archives, digital preservation.
+
+Retrieval Time: Up to 12 hours.
+
+Durability: 99.999999999%.
+
+
+7. S3 Outposts
+
+Purpose: For customers who require data to remain on-premise due to compliance or low-latency needs.
+
+Use Case: Local data processing and storage.
+
+Durability: Same as other S3 classes, but within the user's data center.
+
+            
+            """)
         if selectio=="AWS IAM":
             st.markdown("""
             AWS IAM (Identity and access management
