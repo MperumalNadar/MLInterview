@@ -515,7 +515,7 @@ predictions = model.predict(X_test)
         """)
 #####################################################################################
 with st.expander('4.AWS'):
-        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
+        options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","S3 Type","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
         selectio = st.segmented_control("", options3, selection_mode="single")
         if selectio=="What is AWS":
             st.markdown("""
