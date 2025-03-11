@@ -176,7 +176,7 @@ Objective: Monitor the model’s performance over time and retrain it as necessa
 Example: After deploying the model, you observe that it’s performing well initially, but after a few months, its predictions become less accurate. This could be due to changes in customer behavior or external factors. Therefore, you need to retrain the model with new data periodically to ensure it remains accurate.
         """)
     if selection=='ML syndex':
-        code="""
+        st.markdown("""
         import pandas as pd
         import numpy as np
         import seaborn as sns
@@ -242,10 +242,9 @@ Example: After deploying the model, you observe that it’s performing well init
 
         print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 =', adj_r2) 
         
-        """
-        st.code(code,language='python')
-    if selection=='AWS ML syndex':
-        code="""
+        """)
+        if selection=='AWS ML syndex':
+        st.markdown("""
         # Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
 # Boto3 allows Python developer to write software that makes use of services like Amazon S3 and Amazon EC2
 
@@ -263,7 +262,7 @@ prefix = 'linear_learner' # prefix is the subfolder within the bucket.
 # Note that AWS Identity and Access Management (IAM) role that Amazon SageMaker can assume to perform tasks on your behalf (for example, reading training results, called model artifacts, from the S3 bucket and writing training results to Amazon S3). 
 role = sagemaker.get_execution_role()
 print(role)
-        """
+        """)
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
