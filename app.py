@@ -181,8 +181,89 @@ Example: After deploying the model, you observe that it’s performing well init
         import numpy as np
         import seaborn as sns
         import matplotlib.pyplot as plt
+
+        df = pd.read_csv('insurance.csv')#read CSV file
+        # check if there are any Null values
+        sns.heatmap(insurance_df.isnull(), yticklabels = False, cbar = False, cmap="Blues")
+        # check if there are any Null values
+        df.isnull().sum()
+        # Check the dataframe info
+        df.info()
+        # Grouping by region to see any relationship between region and charges
+        # Seems like south east region has the highest charges and body mass index
+        df_region = df.groupby(by='region').mean()
+        df_region
+        # Check unique values in the 'sex' column
+        insurance_df['sex'].unique()
+        # convert categorical variable to numerical
+        insurance_df['sex'] = insurance_df['sex'].apply(lambda x: 0 if x == 'female' else 1)
+
+        X = insurance_df.drop(columns =['charges'])
+        y = insurance_df['charges']
+        X.shape
+        y.shape
+        
+        X = np.array(X).astype('float32')
+        y = np.array(y).astype('float32')
+
+        from sklearn.model_selection import train_test_split
+
+        X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=42)
+
+        #scaling the data before feeding the model
+        from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+        scaler_x = StandardScaler()
+        X_train = scaler_x.fit_transform(X_train)
+        X_test = scaler_x.transform(X_test)
+
+        scaler_y = StandardScaler()
+        y_train = scaler_y.fit_transform(y_train)
+        y_test = scaler_y.transform(y_test)
+
+        # using linear regression model
+        from sklearn.linear_model import LinearRegression
+        from sklearn.metrics import mean_squared_error, accuracy_score
+
+        regresssion_model_sklearn = LinearRegression()
+        regresssion_model_sklearn.fit(X_train, y_train)
+
+        regresssion_model_sklearn_accuracy = regresssion_model_sklearn.score(X_test, y_test)
+        regresssion_model_sklearn_accuracy
+
+        y_predict_orig = scaler_y.inverse_transform(y_predict)
+        y_test_orig = scaler_y.inverse_transform(y_test)
+
+        from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+        from math import sqrt
+
+        RMSE = float(format(np.sqrt(mean_squared_error(y_test_orig, y_predict_orig)),'.3f'))
+        MSE = mean_squared_error(y_test_orig, y_predict_orig)
+
+        print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 =', adj_r2) 
+        
         """
         st.code(code,language='python')
+    if selection=='AWS ML syndex':
+        code="""
+        # Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
+# Boto3 allows Python developer to write software that makes use of services like Amazon S3 and Amazon EC2
+
+import sagemaker
+import boto3
+from sagemaker import Session
+
+# Let's create a Sagemaker session
+sagemaker_session = sagemaker.Session()
+bucket = Session().default_bucket() 
+prefix = 'linear_learner' # prefix is the subfolder within the bucket.
+
+# Let's get the execution role for the notebook instance. 
+# This is the IAM role that you created when you created your notebook instance. You pass the role to the training job.
+# Note that AWS Identity and Access Management (IAM) role that Amazon SageMaker can assume to perform tasks on your behalf (for example, reading training results, called model artifacts, from the S3 bucket and writing training results to Amazon S3). 
+role = sagemaker.get_execution_role()
+print(role)
+        """
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
