@@ -1857,7 +1857,7 @@ with st.expander('9.Visualization'):
         """)
 
 with st.expander('10.Python'):
-    options = ["OOPS","overloading in Python","List","tuple()","List comprehension","lambda function","overloading in Python","overriding in Python","difference between a class method and an instance method","Python Basics","Control Flow",]
+    options = ["OOPS","overloading in Python","List","tuple()","List comprehension","lambda function","overloading in Python","overriding in Python","difference between a class method and an instance method","Python Basics","Control Flow","Functions","Data Structures","Modules and Packages","File Handling","Exception Handling","Regular Expressions","Python Libraries","Decorators and Generators"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="overloading in Python":
@@ -1872,26 +1872,45 @@ variable-length arguments.
         """)
     if selection=="OOPS":
         st.markdown("""
-Object-Oriented Programming (OOPS) is a
-programming paradigm that uses objects to
-represent real-world entities. In Python, OOPS is
-implemented through classes and objects. Classes
-are blueprints for creating objects, and objects are
-instances of a class.
+**40. What is object-oriented programming (OOP)?**
+- Answer: OOP is a programming paradigm that uses objects (instances of classes) to
+model real- world entities.
 
-The four principles of OOPS are:
- Encapsulation: bundling of data and methods that
-operate on that data within a single
-unit (class).
- Inheritance: ability of a class to inherit properties
-and methods from its parent class.
- Polymorphism: ability of an object to take on
-different forms or behaviors based on the
-context.
- Abstraction: representing essential features and
-hiding unnecessary details to simplify
-the
-complexity.
+**41. What is a class in Python, and how do you define one?**
+- Answer: A class is a blueprint for creating objects. You define one using the `class`
+keyword.
+
+**42. Explain the difference between a class and an object.**
+- Answer: A class is a template for objects, while an object is an instance of a class.
+
+**43. How do you create an instance (object) of a class in Python?**
+- Answer: You create an object by calling the class as if it were a function, e.g.,
+`my_obj = MyClass()`.
+
+**44. Describe encapsulation in Python's OOP.**
+- Answer: Encapsulation is the practice of bundling data (attributes) and methods
+(functions) that operate on the data into a single unit (class).
+
+**45. What is inheritance in OOP, and how does it work in Python?**
+- Answer: Inheritance allows a class to inherit attributes and methods from
+another class. It promotes code reuse and establishes a parent-child relationship.
+
+**46. Explain polymorphism in OOP, and provide an example in Python.**
+Answer: Polymorphism allows objects of different classes to be treated as objects of
+the same class. For example, you can use different classes with a common interface
+interchangeably
+
+**47. What is method overloading in Python, and how is it achieved?**
+- Answer: Python doesn't support method overloading like some other languages.
+Instead, you can use default argument values to achieve similar functionality.
+
+**48. Describe the concept of method overriding in OOP.**
+- Answer: Method overriding allows a subclass to provide a specific implementation of
+a method that is already defined in its parent class.
+
+**49. What is a constructor in Python, and how is it defined?**
+- Answer: A constructor is a special method that gets called when an object is created.
+In Python, the constructor is defined as ` init ()`.
         """)
     if selection=="overriding in Python":
         st.markdown("""
@@ -1971,29 +1990,38 @@ print 3 # Output: 9
 - Answer: Python is a high-level, interpreted programming language known for
 its simplicity and readability. It is popular for web development, data analysis,
 machine learning, and more.
+
 **2. How do you comment in Python?**
 - Answer: You can use `#` for single-line comments and `'''` or  for multi-line
 comments.
+
 **3. What is the difference between Python 2 and Python 3?**
 - Answer: Python 3 isthe latest version and has backward-incompatible changes
 from Python 2, with improved Unicode support and other enhancements.
+
 **4. Explain Python's main data types.**
 - Answer: Python's main data typesinclude int, float,str, bool, list, tuple,set, and
 dict.
+
 **5. How do you declare and assign a variable in Python?**
 - Answer: You declare a variable by assigning a value to it, e.g., `x = 10`.
+
 **6. What is a tuple, and how is it different from a list?**
 - Answer: A tuple is an ordered, immutable sequence of elements, while a list is
 mutable.
+
 **7. Explain list comprehension in Python.**
 - Answer: List comprehension is a concise way to create lists by applying an
 expression to each item in an iterable.
+
 **8. How do you swap the values of two variables without using a temporary**
 variable?
 - Answer: You can use tuple packing and unpacking: `a, b = b, a`.
+
 **9. Describe Python's garbage collection.**
 - Answer: Python uses automatic garbage collection to manage memory by
 deallocating objects no longer in use.
+
 **10. What is the `None` value in Python?**
 - Answer: `None` represents the absence of a value or a null value in Python.       
         """)
@@ -2012,53 +2040,247 @@ True if at least one operand is True.
 allowing alternative execution paths.
 
 **14. What is a "for" loop in Python?**
-
 - Answer: A `for` loop iterates over a sequence (e.g., a list) and executes a block
 of code for each item.
+
 **15. How do you terminate a loop prematurely in Python?**
 - Answer: You can use the `break` statement to exit a loop prematurely.
+
 **16. Explain the `range()` function in Python.**
 - Answer: `range()` generates a sequence of numbers, often used in for loops.
+
 **17. What is a "while" loop, and how is it different from a "for" loop?**
 - Answer: A `while` loop repeatedly executes a block of code while a condition
 is True, whereas a `for` loop iterates over a sequence.
+
 **18. How do you handle exceptions in Python?**
 - Answer: You can use a `try` and `except` block to catch and handle exceptions.
+
 **19. What is the purpose of the `finally` block in exception handling?**
 - Answer: The `finally` block is used to execute code regardless of
 whether an exception occurred or not.
+
 **20. Explain Python's `assert` statement.**
 - Answer: `assert` is used for debugging. It raises an error if a given condition is
 False.
         """)
-    if selection=="":
+    if selection=="Functions":
         st.markdown("""
+**21. How do you define a function in Python?**
+- Answer: You define a function using the `def` keyword, e.g., `def
+my_function():`.
+
+**22. What is the difference between parameters and arguments in a function?**
+- Answer: Parameters are variables in a function's definition, while arguments
+are values passed when calling the function.
+
+**23. Explain the concept of a "return" statement in Python functions.**
+- Answer: A `return` statement is used to specify the value a function should
+return when it's called.
+
+**24. How can you define default parameter values in Python functions?**
+- Answer: You can define default valuesin the function's parameter
+list, e.g., `def greet(name="Guest"):`.
+
+**25. What is a lambda function in Python?**
+- Answer: A lambda function is a small, anonymous function defined
+using the `lambda` keyword.
+
+**26. Explain the concept of function closures in Python.**
+- Answer: A closure is a function that remembers values in the enclosing scope
+even if they are not present in memory.
+
+**27. How do you pass a variable number of arguments to a function in Python?**
+- Answer: You can use `*args` for positional arguments and `**kwargs` for
+keyword arguments.
+
+**28. Describe the purpose of the `map()` and `filter()` functions in Python.**
+- Answer: `map()` applies a function to each item in an iterable, while
+`filter()` filters items based on a condition.
+
+**29. What is recursion in Python, and when is it useful?**
+Answer: Recursion is a technique where a function calls itself. It's useful for
+solving problems
+
+**30. Describe variable scope in Python.**
+- Answer: Variables defined in a function have local scope, while those
+defined outside have global scope.
+
         """)
-    if selection=="":
+    if selection=="Data Structures":
         st.markdown("""
+**31. What is a list in Python, and how do you create one?**
+- Answer: A list is an ordered collection of items. You create one using square
+brackets, e.g.,
+`my_list = [1, 2, 3]`.
+
+**32. Explain the difference between a shallow copy and a deep copy of a list.**
+- Answer: A shallow copy copies the list itself, while a deep copy copies both
+the list and its elements.
+
+**33. What is a dictionary in Python, and how do you create one?**
+- Answer: A dictionary is an unordered collection of key-value pairs. You create
+one using curly braces, e.g., `my_dict = {"key": "value"}`.
+
+**34. How do you access and modify dictionary elements in Python?**
+- Answer: You can access elements using keys and modify them by assigning
+new values to keys.
+
+**35. Describe the purpose of a set in Python.**
+- Answer: A set is an unordered collection of unique elements used for
+various mathematical operations.
+
+**36. Explain the difference between a set and a frozenset.**
+- Answer: A set is mutable, while a frozenset is immutable and can be used as a
+key in
+
+**37. What is a tuple in Python, and how do you create one?**
+- Answer: A tuple is an ordered, immutable collection of elements created
+using parentheses, e.g., `my_tuple = (1, 2, 3)`.
+
+**38. How do you add and remove items from a list in Python?**
+- Answer: You can use the `append()` method to add items and the `remove()`
+method to remove items from a list.
+
+**39. What are list comprehensions, and how do you use them?**
+- Answer: List comprehensions provide a concise way to create lists by applying
+an expression to each item in an iterable.
         """)
 
-    if selection=="":
+    if selection=="Modules and Packages":
         st.markdown("""
+**50. What is a module in Python?**
+- Answer: A module is a file containing Python code. It can define
+functions, classes, and variables.
+
+**51. How do you import a module in Python?**
+- Answer: You can import a module using the `import` statement, e.g., `import
+math`.
+
+**52. Explain the purpose of the `if name == " main ":` construct.**
+- Answer: This construct is used to check if a Python script is being run as the
+main program or if it's being imported as a module.
+
+**53. What is a package in Python, and how is it different from a module?**
+- Answer: A package is a collection of related modules organized in
+directories. It provides a way to structure and manage larger Python
+projects.
+
+**54. How do you create and use your own packages in Python?**
+- Answer: You create packages by organizing modules in directories with a
+special ` init .py` file. You can then import and use them like any other module.
+
         """)
-    if selection=="":
+    if selection=="File Handling":
         st.markdown("""
+**55. How do you open and close files in Python?**
+- Answer: You can open a file using the `open()` function and close it using the `close()`
+method or the `with` statement.
+
+**56. Explain the purpose of the "r", "w", and "a" modes when opening files.**
+- Answer: "r" is for reading, "w" is for writing (creates a new file or overwrites an
+existing one), and "a" is for appending to an existing file.
+
+**57. How do you read the contents of a file in Python?**
+- Answer: You can use methods like `read()`, `readline()`, or `readlines()` to read the
+contents
+
+**58. What is the purpose of the "with" statement in file handling?**
+- Answer: The `with` statement is used to ensure that a file is properly closed
+after its suite finishes executing.
         """)
 
-    if selection=="":
+    if selection=="Exception Handling":
         st.markdown("""
+**59. What is an exception in Python?**
+- Answer: An exception is an event that occurs during the execution of a
+program, disrupting the normal flow of instructions.
+
+**60. How do you handle exceptions in Python?**
+- Answer: You use a `try` and `except` block to catch and handle exceptions.
+
+**61. What is the purpose of the `finally` block in exception handling?**
+- Answer: The `finally` block is used to execute code regardless of
+whether an exception occurred or not.
+
+**62. How can you raise a custom exception in Python?**
+- Answer: You can raise a custom exception using the `raise`
+statement, e.g., `raise ValueError("Custom error message")`.
+
+**63. Describe common built-in exceptions in Python.**
+- Answer: Common exceptions include `ZeroDivisionError`, `ValueError`,
+`TypeError`,
+`FileNotFoundError`, and `KeyError`.
         """)
 
-    if selection=="":
+    if selection=="Regular Expressions":
         st.markdown("""
+**64. What are regular expressions (regex) in Python?**
+- Answer: Regular expressions are patterns used forsearching and matching text.
+
+**65. How do you use the `re` module for regular expressions in Python?**
+- Answer: You import the `re` module and use its functions like `search()`,
+`match()`, and
+`findall()` to work with regular expressions.
+
+**66. Explain the purpose of character classes in regular expressions.**
+- Answer: Character classes allow you to match sets of characters, e.g., `[0-9]`
+matches any digit.
+
+**67. What is the difference between `match()` and `search()` functions in the `re`
+module?**
+Answer: `match()` matches the pattern only at the beginning of the string, while
+`search()` searches for the pattern anywhere in the string.
         """)
 
-    if selection=="":
+    if selection=="Decorators and Generators":
         st.markdown("""
+**83. What is a decorator in Python?**
+- Answer: A decorator is a function that wraps another function to extend or
+modify its behavior.
+
+**84. How do you define and use decorators in Python?**
+- Answer: You define decorators by using the `@`symbol above a function and
+apply them to other functions.
+
+**85. What are generator functions in Python?**
+- Answer: Generatorfunctions are functionsthat use the `yield` keyword to yield
+values one at a time, allowing for efficient memory usage.
+
+**86. How do you create a generator object and iterate over its values?**
+- Answer: You create a generator object by calling a generator function. You can
+iterate over its values using a `for` loop or by calling `next()`.
+
+**87. Explain the difference between a generator and a regular function.**
+- Answer: A regular function runs to completion and returns a single value,
+while a generator function can yield multiple values and retains its state
+between calls.
         """)
 
-    if selection=="":
+    if selection=="Python Libraries":
         st.markdown("""
+**88. What is NumPy, and why is it important in data science?**
+- Answer: NumPy is a Python library for numerical computing. It
+provides arrays and mathematical functions crucial for data science
+and scientific computing.
+
+**89. Describe the purpose of the Pandas library in Python.**
+- Answer: Pandasis a library for data manipulation and analysis. It provides data
+structures like DataFrames and Series for handling tabular data.
+
+**90. How do you install and use Matplotlib for data visualization in Python?**
+- Answer: You install Matplotlib using `pip` and use it to create various types
+of plots, charts, and graphs.
+
+**91. What is the purpose of the scikit-learn library in Python?**
+- Answer: Scikit-learn is a machine learning library used for tasks like
+classification, regression, clustering, and model evaluation.
+
+**92. Explain the role of TensorFlow and PyTorch in Python's machine learning
+ecosystem.**
+- Answer: TensorFlow and PyTorch are deep learning frameworks used for
+developing and training neural networks.
+
         """)
     
     
