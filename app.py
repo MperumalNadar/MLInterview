@@ -243,7 +243,7 @@ Example: After deploying the model, you observe that it’s performing well init
         print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 =', adj_r2) 
         
         """)
-        if selection=='AWS ML syndex':
+    if selection=='AWS ML syndex':
         st.markdown("""
         # Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
 # Boto3 allows Python developer to write software that makes use of services like Amazon S3 and Amazon EC2
