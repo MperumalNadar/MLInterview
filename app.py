@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam","ML life cycle",'ML syndex']     
+    options = ["emails as spam or not spam","ML life cycle",'ML syndex','AWS ML syndex']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -183,19 +183,19 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('insurance.csv')#read CSV file
-# check if there are any Null values
+**check if there are any Null values**
 sns.heatmap(insurance_df.isnull(), yticklabels = False, cbar = False, cmap="Blues")
-# check if there are any Null values
+**check if there are any Null values**
 df.isnull().sum()
-# Check the dataframe info
+**Check the dataframe info**
 df.info()
-# Grouping by region to see any relationship between region and charges
-# Seems like south east region has the highest charges and body mass index
+**Grouping by region to see any relationship between region and charges**
+**Seems like south east region has the highest charges and body mass index**
 df_region = df.groupby(by='region').mean()
 df_region
-# Check unique values in the 'sex' column
+**Check unique values in the 'sex' column**
 insurance_df['sex'].unique()
-# convert categorical variable to numerical
+**convert categorical variable to numerical**
 insurance_df['sex'] = insurance_df['sex'].apply(lambda x: 0 if x == 'female' else 1)
 
 X = insurance_df.drop(columns =['charges'])
@@ -210,7 +210,7 @@ from sklearn.model_selection import train_test_split
 
 X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=42)
 
-#scaling the data before feeding the model
+**scaling the data before feeding the model**
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 scaler_x = StandardScaler()
@@ -221,7 +221,7 @@ scaler_y = StandardScaler()
 y_train = scaler_y.fit_transform(y_train)
 y_test = scaler_y.transform(y_test)
 
-# using linear regression model
+**using linear regression model**
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, accuracy_score
 
@@ -245,21 +245,23 @@ print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 
         """)
     if selection=='AWS ML syndex':
         st.markdown("""
-        # Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python
-# Boto3 allows Python developer to write software that makes use of services like Amazon S3 and Amazon EC2
+**Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python**
+**Boto3 allows Python developer to write software that makes use of services like Amazon S3 and Amazon EC2**
 
 import sagemaker
 import boto3
 from sagemaker import Session
 
-# Let's create a Sagemaker session
+**Let's create a Sagemaker session**
 sagemaker_session = sagemaker.Session()
 bucket = Session().default_bucket() 
 prefix = 'linear_learner' # prefix is the subfolder within the bucket.
 
-# Let's get the execution role for the notebook instance. 
-# This is the IAM role that you created when you created your notebook instance. You pass the role to the training job.
-# Note that AWS Identity and Access Management (IAM) role that Amazon SageMaker can assume to perform tasks on your behalf (for example, reading training results, called model artifacts, from the S3 bucket and writing training results to Amazon S3). 
+**Let's get the execution role for the notebook instance.**
+**This is the IAM role that you created when you created your notebook instance. You pass the role to the training job.**
+**Note that AWS Identity and Access Management (IAM) role that Amazon SageMaker 
+can assume to perform tasks on your behalf (for example, reading training results, called model artifacts, 
+from the S3 bucket and writing training results to Amazon S3).**
 role = sagemaker.get_execution_role()
 print(role)
         """)
