@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam","ML life cycle"]     
+    options = ["emails as spam or not spam","ML life cycle",'ML syndex']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -175,6 +175,14 @@ Objective: Monitor the model’s performance over time and retrain it as necessa
 
 Example: After deploying the model, you observe that it’s performing well initially, but after a few months, its predictions become less accurate. This could be due to changes in customer behavior or external factors. Therefore, you need to retrain the model with new data periodically to ensure it remains accurate.
         """)
+    if selection=='ML syndex':
+        code="""
+        import pandas as pd
+        import numpy as np
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        """
+        st.code(code,language='python')
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
 
