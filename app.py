@@ -184,18 +184,24 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv('insurance.csv')#read CSV file
 **check if there are any Null values**
+
 sns.heatmap(insurance_df.isnull(), yticklabels = False, cbar = False, cmap="Blues")
 **check if there are any Null values**
+
 df.isnull().sum()
 **Check the dataframe info**
+
 df.info()
 **Grouping by region to see any relationship between region and charges**
 **Seems like south east region has the highest charges and body mass index**
+
 df_region = df.groupby(by='region').mean()
 df_region
 **Check unique values in the 'sex' column**
+
 insurance_df['sex'].unique()
 **convert categorical variable to numerical**
+
 insurance_df['sex'] = insurance_df['sex'].apply(lambda x: 0 if x == 'female' else 1)
 
 X = insurance_df.drop(columns =['charges'])
@@ -211,6 +217,7 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=42)
 
 **scaling the data before feeding the model**
+
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
 scaler_x = StandardScaler()
@@ -253,6 +260,7 @@ import boto3
 from sagemaker import Session
 
 **Let's create a Sagemaker session**
+
 sagemaker_session = sagemaker.Session()
 bucket = Session().default_bucket() 
 prefix = 'linear_learner' # prefix is the subfolder within the bucket.
@@ -262,8 +270,116 @@ prefix = 'linear_learner' # prefix is the subfolder within the bucket.
 **Note that AWS Identity and Access Management (IAM) role that Amazon SageMaker 
 can assume to perform tasks on your behalf (for example, reading training results, called model artifacts, 
 from the S3 bucket and writing training results to Amazon S3).**
+
 role = sagemaker.get_execution_role()
 print(role)
+
+X_train.shape
+Y_train.shape
+
+import io # The io module allows for dealing with various types of I/O (text I/O, binary I/O and raw I/O). 
+import numpy as np
+import sagemaker.amazon.common as smac # sagemaker common libary
+
+**Code below converts the data in numpy array format to RecordIO format
+This is the format required by Sagemaker Linear Learner**
+
+buf = io.BytesIO() # create an in-memory byte array (buf is a buffer I will be writing to)
+smac.write_numpy_to_dense_tensor(buf, X_train, y_train.reshape(-1))
+buf.seek(0) 
+
+**When you write to in-memory byte arrays, it increments 1 every time you write to it
+Let's reset that back to zero**
+
+import os
+
+**Code to upload RecordIO data to S3
+ 
+Key refers to the name of the file**  
+key = 'linear-train-data'
+
+**The following code uploads the data in record-io format to S3 bucket to be accessed later for training**
+
+boto3.resource('s3').Bucket(bucket).Object(os.path.join(prefix, 'train', key)).upload_fileobj(buf)
+
+**Let's print out the training data location in s3**
+
+s3_train_data = 's3://{}/{}/train/{}'.format(bucket, prefix, key)
+print('uploaded training data location: {}'.format(s3_train_data))
+
+**create an output placeholder in S3 bucket to store the linear learner output**
+
+output_location = 's3://{}/{}/output'.format(bucket, prefix)
+print('Training artifacts will be uploaded to: {}'.format(output_location))
+
+
+**This code is used to get the training container of sagemaker built-in algorithms
+all we have to do is to specify the name of the algorithm, that we want to use
+
+Let's obtain a reference to the linearLearner container image
+Note that all regression models are named estimators
+You don't have to specify (hardcode) the region, get_image_uri will get the current region name using boto3.Session**
+
+
+from sagemaker.amazon.amazon_estimator import get_image_uri
+
+container = get_image_uri(boto3.Session().region_name, 'linear-learner')
+
+# We have pass in the container, the type of instance that we would like to use for training 
+# output path and sagemaker session into the Estimator. 
+# We can also specify how many instances we would like to use for training
+
+linear = sagemaker.estimator.Estimator(container,
+                                       role, 
+                                       train_instance_count = 1, 
+                                       train_instance_type = 'ml.c4.xlarge',
+                                       output_path = output_location,
+                                       sagemaker_session = sagemaker_session)
+
+
+**We can tune parameters like the number of features that we are passing in, type of predictor like 'regressor' or 
+'classifier', mini batch size, epochs
+**Train 32 different versions of the model and will get the best out of them (built-in parameters optimization!)
+
+linear.set_hyperparameters(feature_dim = 8,
+                           predictor_type = 'regressor',
+                           mini_batch_size = 100,
+                           epochs = 100,
+                           num_models = 32,
+                           loss = 'absolute_loss')
+
+**Now we are ready to pass in the training data from S3 to train the linear learner model**
+
+linear.fit({'train': s3_train_data})
+
+**Let's see the progress using cloudwatch logs**
+
+**Deploying the model to perform inference**
+
+linear_regressor = linear.deploy(initial_instance_count = 1,
+                                          instance_type = 'ml.m4.xlarge')
+
+**Since the result is in json format, we access the scores by iterating through the scores in the predictions**
+
+predictions = np.array([r['score'] for r in result['predictions']])
+
+y_predict_orig = scaler_y.inverse_transform(predictions)
+y_test_orig = scaler_y.inverse_transform(y_test)
+
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+from math import sqrt
+
+RMSE = float(format(np.sqrt(mean_squared_error(y_test_orig, y_predict_orig)),'.3f'))
+MSE = mean_squared_error(y_test_orig, y_predict_orig)
+MAE = mean_absolute_error(y_test_orig, y_predict_orig)
+r2 = r2_score(y_test_orig, y_predict_orig)
+adj_r2 = 1-(1-r2)*(n-1)/(n-k-1)
+
+print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 =', adj_r2) 
+
+**Delete the end-point**
+
+linear_regressor.delete_endpoint()
         """)
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL'):
