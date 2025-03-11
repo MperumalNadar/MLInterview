@@ -1857,7 +1857,7 @@ with st.expander('9.Visualization'):
         """)
 
 with st.expander('10.Python'):
-    options = ["OOPS","overloading in Python","List","tuple()","List comprehension","lambda function","overloading in Python","overriding in Python","difference between a class method and an instance method",]
+    options = ["OOPS","overloading in Python","List","tuple()","List comprehension","lambda function","overloading in Python","overriding in Python","difference between a class method and an instance method","Python Basics","Control Flow",]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="overloading in Python":
@@ -1964,6 +1964,101 @@ square = x: x**
 (square( ))
 lambda 2 
 print 3 # Output: 9
+        """)
+    if selection=="Python Basics":
+        st.markdown("""
+ **1. What is Python, and why is it popular?**
+- Answer: Python is a high-level, interpreted programming language known for
+its simplicity and readability. It is popular for web development, data analysis,
+machine learning, and more.
+**2. How do you comment in Python?**
+- Answer: You can use `#` for single-line comments and `'''` or  for multi-line
+comments.
+**3. What is the difference between Python 2 and Python 3?**
+- Answer: Python 3 isthe latest version and has backward-incompatible changes
+from Python 2, with improved Unicode support and other enhancements.
+**4. Explain Python's main data types.**
+- Answer: Python's main data typesinclude int, float,str, bool, list, tuple,set, and
+dict.
+**5. How do you declare and assign a variable in Python?**
+- Answer: You declare a variable by assigning a value to it, e.g., `x = 10`.
+**6. What is a tuple, and how is it different from a list?**
+- Answer: A tuple is an ordered, immutable sequence of elements, while a list is
+mutable.
+**7. Explain list comprehension in Python.**
+- Answer: List comprehension is a concise way to create lists by applying an
+expression to each item in an iterable.
+**8. How do you swap the values of two variables without using a temporary**
+variable?
+- Answer: You can use tuple packing and unpacking: `a, b = b, a`.
+**9. Describe Python's garbage collection.**
+- Answer: Python uses automatic garbage collection to manage memory by
+deallocating objects no longer in use.
+**10. What is the `None` value in Python?**
+- Answer: `None` represents the absence of a value or a null value in Python.       
+        """)
+    if selection=="Control Flow":
+        st.markdown("""
+**11. What is an if statement in Python?**
+- Answer: An if statement is used for conditional execution. It runs a block of
+code if a condition is True.
+
+**12. What are "and" and "or" operators used for in Python?**
+- Answer: `and` returns True if both operands are True, while `or` returns
+True if at least one operand is True.
+
+**13. Explain the purpose of the `elif` statement in Python.**
+- Answer: `elif` is used to specify multiple conditions in an if-elif-else block,
+allowing alternative execution paths.
+
+**14. What is a "for" loop in Python?**
+
+- Answer: A `for` loop iterates over a sequence (e.g., a list) and executes a block
+of code for each item.
+**15. How do you terminate a loop prematurely in Python?**
+- Answer: You can use the `break` statement to exit a loop prematurely.
+**16. Explain the `range()` function in Python.**
+- Answer: `range()` generates a sequence of numbers, often used in for loops.
+**17. What is a "while" loop, and how is it different from a "for" loop?**
+- Answer: A `while` loop repeatedly executes a block of code while a condition
+is True, whereas a `for` loop iterates over a sequence.
+**18. How do you handle exceptions in Python?**
+- Answer: You can use a `try` and `except` block to catch and handle exceptions.
+**19. What is the purpose of the `finally` block in exception handling?**
+- Answer: The `finally` block is used to execute code regardless of
+whether an exception occurred or not.
+**20. Explain Python's `assert` statement.**
+- Answer: `assert` is used for debugging. It raises an error if a given condition is
+False.
+        """)
+    if selection=="":
+        st.markdown("""
+        """)
+    if selection=="":
+        st.markdown("""
+        """)
+
+    if selection=="":
+        st.markdown("""
+        """)
+    if selection=="":
+        st.markdown("""
+        """)
+
+    if selection=="":
+        st.markdown("""
+        """)
+
+    if selection=="":
+        st.markdown("""
+        """)
+
+    if selection=="":
+        st.markdown("""
+        """)
+
+    if selection=="":
+        st.markdown("""
         """)
     
     
