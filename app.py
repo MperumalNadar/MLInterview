@@ -1396,16 +1396,16 @@ with st.expander('7.ML Algorithms'):
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""
-        It separates data points into categories by drawing the "best possible line" (or boundary).
+It separates data points into categories by drawing the "best possible line" (or boundary).
 
-        Works well for both simple and complex data.
+Works well for both simple and complex data.
 
-        The algorithm chooses the line that leaves the largest gap (margin) between data points of different categories.
+The algorithm chooses the line that leaves the largest gap (margin) between data points of different categories.
 
-        The data points closest to the boundary are called support vectors, and they influence where the line is drawn.
+The data points closest to the boundary are called support vectors, and they influence where the line is drawn.
 
-        If data can't be separated with a straight line, SVM uses mathematical functions (kernels) 
-        to transform it into a higher dimension where a boundary can be drawn
+If data can't be separated with a straight line, SVM uses mathematical functions (kernels) 
+to transform it into a higher dimension where a boundary can be drawn
 
 Commonly used kernels are:
                 - linear
