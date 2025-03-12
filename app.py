@@ -601,65 +601,41 @@ with st.expander('4.AWS'):
             """)
         if selectio=="Sagemaker_COMPONENTS":
             st.markdown("""
-            Two components are present in Amazon SageMaker: 
-                Model training 
-                Model deployment.
+Two components are present in Amazon SageMaker: 
+    Model training 
+    Model deployment.
                 
-            To start training an ML model using Amazon SageMaker, we will need to create a training job.
+To start training an ML model using Amazon SageMaker, we will need to create a training job.
             
-                Amazon S3 bucket URL (training data): where the training data is located.
-                Compute resources: Amazon SageMaker will train the model using instances managed by Amazon SageMaker.
-                Amazon S3 bucket URL (Output): this bucket will host the output from the training.
-                Amazon Elastic Container Registry path: where the training code is stored. 
+**Amazon S3 bucket URL (training data):** where the training data is located.
+**Compute resources:** Amazon SageMaker will train the model using instances managed by Amazon SageMaker.
+**Amazon S3 bucket URL (Output):** this bucket will host the output from the training.
+**Amazon Elastic Container Registry path:** where the training code is stored. 
                 
-            SageMaker launches an ML compute instances once a training job is initiated. 
-            SageMaker uses: (1) training code and (2) training dataset to train the model. 
-            SageMaker saves the trained model artifacts in an S3 bucket.
+SageMaker launches an ML compute instances once a training job is initiated. 
+SageMaker uses: (1) training code and (2) training dataset to train the model. 
+SageMaker saves the trained model artifacts in an S3 bucket.
             """)
         if selectio=="AWS S3":
             st.markdown("""
-            AWS S3 (Simple storage services)
-* AWS s3 is a most popular storage services most of the organisation they uses. as storage of S3
-Use Cases
+Amazon Simple Storage Service (Amazon S3) is a storage service that allows enterprises/individuals 
+to store and protect any amount of data.
 
-1 Data Backup and archiving: 
+Amazon S3 offers numerous enhanced features such as:
 
-s3 is commonly used for data backup and long-term archiving due to its durability and reliability.
-organisations can store backup copies of their data to protect against data loss
+(1) Scalability
 
-2 Data storage for Application :-
+(2) Data availability
 
-S3 serves as a data repository for application, enabling them to store and.
-retrieve files, assets, and other resovaces.
-  This can include content for websites, mobile apps, and software.
+(3) Security
 
-3) Log and Event storage. :-
+(4) Performance
 
-Application and systems can use S3 to Store logs, events, and telemetry data.
-This data can later be analyzed for monitoring, purposes. , troubleshooting, and compliance purpose.
+Amazon S3 is extremely easy to use and allows enterprises to organize their data and configure finely-tuned access controls.
 
-4) media storage and streaming:
+Amazon S3 extremely durable to 99.999999999% (11 9's).
 
-S3 is used to store media files Such as video and audio that need to be accessed and streamed by users globally.
-
-        Question and ANS 
-      
-1)S3 is global service but why do we require region selection?
-
-Ans
-
-it is the global service, for fastes performance and low letergy.
-
-2) S3 can we upload - 10TB data at one time if it allows unlimited data upload.
-
-Ans
-
-No, we can upload 5 TB at one time
-
-3) How many Bucket we can create in aws account ?
-
-Ans
-1oo, bucket we can create in l aws account , But that we can extend with raise the ticket with from AWS.
+Amazon S3 is 99.9% available.
             """)
         if selectio=="S3 Type":
             st.markdown("""
