@@ -9,7 +9,7 @@ with st.expander('1.Self introduction'):
         and I hold an AWS Machine Learning certification.
 
         I have been working as an IT Analyst at TCS for the past two years, 
-        bringing over 7 years of experience in the IT field.
+        bringing over 6 years of experience in the IT field.
         
         In my current role, I handle the Parle Application Rollout, which involves both Desktop and Mobile application services
         which is targeted to the Distributors in the Client market.
@@ -125,11 +125,20 @@ Objective: Clean and transform raw data into a format that can be used for machi
 
 Steps in Preprocessing:
 
-Data cleaning: Remove or handle missing values, outliers, or duplicate data.
-Data transformation: Normalize or scale features to ensure the model works efficiently.
-Feature engineering: Create new features from existing data, like “Sales in the last week,” “Holiday season,” etc.
-Categorical encoding: Convert categorical features (like the type of product) into numerical values (e.g., using one-hot encoding).
-Example: You might notice some missing values in weather data for certain days, so you handle this by filling them with the mean temperature of the previous days. You also convert the holiday information from a binary (yes/no) format to a numerical value.
+**Data cleaning:** 
+Remove or handle missing values, outliers, or duplicate data.
+**Data transformation:**
+Normalize or scale features to ensure the model works efficiently.
+
+**Feature engineering:**
+Create new features from existing data, like “Sales in the last week,” “Holiday season,” etc.
+
+**Categorical encoding:**
+Convert categorical features (like the type of product) into numerical values (e.g., using one-hot encoding).
+
+Example: You might notice some missing values in weather data for certain days, 
+so you handle this by filling them with the mean temperature of the previous days.
+You also convert the holiday information from a binary (yes/no) format to a numerical value.
 
 4. Model Selection
 
