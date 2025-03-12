@@ -8,8 +8,8 @@ with st.expander('1.Self introduction'):
         Good morning! My name is Murugan. I completed my Bachelor’s Degree in Commerce from Mumbai University in 2016, 
         and I hold an AWS Machine Learning certification.
 
-        I have been working as an IT Analyst at TCS for the past two and a half years, 
-        bringing with me over 6+ years of experience in the IT field.
+        I have been working as an IT Analyst at TCS for the past two years, 
+        bringing over 7 years of experience in the IT field.
         
         In my current role, I handle the Parle Application Rollout, which involves both Desktop and Mobile application services
         which is targeted to the Distributors in the Client market.
