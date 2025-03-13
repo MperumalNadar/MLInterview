@@ -2267,7 +2267,21 @@ ecosystem.**
 developing and training neural networks.
 
         """)
-    
+
+
+with st.expander('11.code'):
+    options = ["happy numbers"]
+        
+    selection = st.segmented_control("", options, selection_mode="single")
+    if selection=="happy numbers":
+        code = '''
+        import numpy as np
+        def generate_array(size):
+        return np.random.rand(size)
+        array = generate_array(10)
+        print(array)
+        '''
+        st.code(code, language='python')
     
 
 
