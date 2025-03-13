@@ -392,7 +392,7 @@ linear_regressor.delete_endpoint()
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
 
-    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict']
+    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict','DL','streamlit']
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='DS':
