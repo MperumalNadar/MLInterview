@@ -539,7 +539,7 @@ Convert Python scripts into web apps in minutes.
 Supports Pandas, Matplotlib, Plotly, Scikit-learn, TensorFlow, etc.
 Interactive widgets: Sliders, buttons, text inputs, file uploaders, etc.
         """)
-     if selection=='DL':
+    if selection=='DL':
         st.markdown("""
  Deep Learning is a subset of machine learning that uses artificial neural networks with multiple layers to model
  complex patterns in data. It is the foundation of modern AI and is widely used in computer vision, 
