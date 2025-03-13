@@ -2324,38 +2324,38 @@ with st.expander('11.code'):
     if selection=="leap":
         code='''
         year = int(input("Enter a year: "))
-if (year % 400 == 0) and (year % 100 == 0):
+        if (year % 400 == 0) and (year % 100 == 0):
 
- print("{0} is a leap year".format(year))
+         print("{0} is a leap year".format(year))
 
-elif (year % 4 ==0) and (year % 100 != 0):
+         elif (year % 4 ==0) and (year % 100 != 0):
 
- print("{0} is a leap year".format(year)
+          print("{0} is a leap year".format(year)
 
-else:
+           else:
 
- print("{0} is not a leap year".format(year))
+           print("{0} is not a leap year".format(year))
         '''
         st.code(code, language='python')
     if selection=="prime no":
         code = '''
         num = int(input("Enter a number: "))
 
-# define a flag variable
+        # define a flag variable
         flag = False
         if num == 1:
              print(f"{num}, is not a prime number")
        elif num > 1:
 
- # check for factors
+         # check for factors
              for i in range(2, num):
 
                  if (num % i) == 0:
 
                     flag = True # if factor is found, set flag to True
- # break out of loop
+         # break out of loop
                     break
- # check if flag is True
+         # check if flag is True
         if flag:
             print(f"{num}, is not a prime number")
          else:
