@@ -2275,11 +2275,21 @@ with st.expander('11.code'):
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="happy numbers":
         code = '''
-        import numpy as np
-        def generate_array(size):
-        return np.random.rand(size)
-        array = generate_array(10)
-        print(array)
+        def is_happy_number(num):
+            seen = set()
+            while num != 1 and num not in seen:
+                seen.add(num)
+                num = sum(int(i) ** 2 for i in str(num))
+            return num == 1
+       happy_numbers = []
+       for num in range(1, 101):
+          if is_happy_number(num):
+
+             happy_numbers.append(num)
+
+        print("Happy Numbers between 1 and 100:")
+
+        print(happy_numbers)
         '''
         st.code(code, language='python')
     
