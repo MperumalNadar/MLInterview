@@ -2305,7 +2305,7 @@ with st.expander('11.code'):
         '''
         st.code(code, language='python')
     if selection=="area of a triangle":
-        st.markdown ('''
+        code='''
         base = float(input("Enter the length of the base of the triangle: "))
 
         height = float(input("Enter the height of the triangle: "))
@@ -2318,31 +2318,19 @@ with st.expander('11.code'):
 
         print(f"The area of the triangle is: {area}")
         
-        ''')
+        '''
+        st.code(code, language='python')
      
     if selection=="leap":
         st.markdown('''
         year = int(input("Enter a year: "))
-
-# divided by 100 means century year (ending with 00)
-
-# century year divided by 400 is leap year
-
 if (year % 400 == 0) and (year % 100 == 0):
 
  print("{0} is a leap year".format(year))
 
-# not divided by 100 means not a century year
-
-# year divided by 4 is a leap year
-
 elif (year % 4 ==0) and (year % 100 != 0):
 
- print("{0} is a leap year".format(year))
-
-# if not divided by both 400 (century year) and 4 (not century year)
-
-# year is not leap year
+ print("{0} is a leap year".format(year)
 
 else:
 
