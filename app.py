@@ -2270,7 +2270,7 @@ developing and training neural networks.
 
 
 with st.expander('11.code'):
-    options = ["happy numbers","even num",'area of a triangle','leap']
+    options = ["happy numbers","even num",'area of a triangle','leap',"prime no","factorial"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="happy numbers":
@@ -2322,7 +2322,7 @@ with st.expander('11.code'):
         st.code(code, language='python')
      
     if selection=="leap":
-        st.markdown('''
+        code='''
         year = int(input("Enter a year: "))
 if (year % 400 == 0) and (year % 100 == 0):
 
@@ -2335,16 +2335,46 @@ elif (year % 4 ==0) and (year % 100 != 0):
 else:
 
  print("{0} is not a leap year".format(year))
-        ''')
+        '''
         st.code(code, language='python')
-    if selection==" ":
+    if selection=="prime no":
         code = '''
+        num = int(input("Enter a number: "))
+
+# define a flag variable
+        flag = False
+        if num == 1:
+             print(f"{num}, is not a prime number")
+       elif num > 1:
+
+ # check for factors
+             for i in range(2, num):
+
+                 if (num % i) == 0:
+
+                    flag = True # if factor is found, set flag to True
+ # break out of loop
+                    break
+ # check if flag is True
+        if flag:
+            print(f"{num}, is not a prime number")
+         else:
+           print(f"{num}, is a prime number")
         
         '''
         st.code(code, language='python')
-    if selection==" ":
+    if selection=="factorial":
         code = '''
-        
+        num = int(input("Enter a number: "))
+        factorial = 1
+        if num <0:
+           print("Factirial does not exist for negative numbers")
+        elif num == 0:
+             print("Factorial of 0 is 1")
+        else:
+            for i in range(1, num+1):
+                factorial = factorial*i
+            print(f'The factorial of {num} is {factorial}')
         '''
         st.code(code, language='python')
     if selection==" ":
