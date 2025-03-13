@@ -390,7 +390,7 @@ print('RMSE =',RMSE, '\nMSE =',MSE, '\nMAE =',MAE, '\nR2 =', r2, '\nAdjusted R2 
 linear_regressor.delete_endpoint()
         """)
 #####################################################################################
-with st.expander('3.Defination Python,ML,DL,DL,NL'):
+with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
 
     options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict']
         
@@ -521,6 +521,30 @@ predict() method. For example:
 model = LinearRegression() 
 model.fit(X_train, y_train) 
 predictions = model.predict(X_test)
+        """)
+    if selection=='streamlit':
+        st.markdown("""
+Streamlit is an open-source Python framework for building interactive web applications for machine learning and data science projects.
+It allows you to create web-based user interfaces with just a few lines of Python code.
+
+**Why Use Streamlit?**
+
+**Easy to use:** 
+No need for frontend development (HTML, CSS, JavaScript).
+
+**Fast development:** 
+Convert Python scripts into web apps in minutes.
+
+**Integration with ML & Data Science:** 
+Supports Pandas, Matplotlib, Plotly, Scikit-learn, TensorFlow, etc.
+Interactive widgets: Sliders, buttons, text inputs, file uploaders, etc.
+        """)
+     if selection=='DL':
+        st.markdown("""
+ Deep Learning is a subset of machine learning that uses artificial neural networks with multiple layers to model
+ complex patterns in data. It is the foundation of modern AI and is widely used in computer vision, 
+ natural language processing (NLP), speech recognition, and autonomous systems.
+ 
         """)
 #####################################################################################
 with st.expander('4.AWS'):
