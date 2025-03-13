@@ -2293,7 +2293,7 @@ with st.expander('11.code'):
         '''
         st.code(code, language='python')
 
-     if selection=="even num":
+    if selection=="even num":
         code = '''
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
