@@ -593,23 +593,24 @@ with st.expander('4.AWS'):
             """)
         if selectio=="Sagemaker":
             st.markdown("""
-            Amazon SageMaker is a fully-managed machine learning workflow platform that provides services on data labeling, 
-            model building, training, tuning and deployment.
+    Amazon SageMaker is a fully-managed machine learning workflow platform that provides services on data labeling, 
+    model building, training, tuning and deployment.
             
-            SageMaker allows data scientists and developers to build scalable AI/ML models easily and efficiently.
+    SageMaker allows data scientists and developers to build scalable AI/ML models easily and efficiently.
             
-            Models could be deployed in production at a much faster rate and with a fraction of the cost. 
+    Models could be deployed in production at a much faster rate and with a fraction of the cost. 
 
     
-        Key features include:
+    key features include:
         
-        1. Model Building: 
+    **1. Model Building:**
         
         * SageMaker offers data labeling service
 
-        * Prebuilt available notebooks with state of the art algorithms on AWS marketplace
+        * Prebuilt available notebooks with state of the art algorithms 
+        on AWS marketplace
         
-        2. Model Training: 
+    **2. Model Training:**
         
         * Train models using EC2 instances (on-demand and spot)
 
@@ -618,17 +619,17 @@ with st.expander('4.AWS'):
         * Hyperparameters optimization for model tuning
 
     
-        3. Model Deployment:
+   **3. Model Deployment:**
         
         * Easily deploy and scale models
 
         * Autoscaling with 75% savings
         
     
-        Additionally, SageMaker includes features like model monitoring, explainability tools, and 
-        support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
+ Additionally, SageMaker includes features like model monitoring, explainability tools, and 
+ support for custom machine learning frameworks such as TensorFlow, PyTorch, and Scikit-learn.
     
-    It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
+ It streamlines the end-to-end machine learning workflow, enabling faster and more efficient production deployments.
     
             
             """)
