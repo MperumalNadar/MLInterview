@@ -2270,7 +2270,7 @@ developing and training neural networks.
 
 
 with st.expander('11.code'):
-    options = ["happy numbers"]
+    options = ["happy numbers","even num"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="happy numbers":
@@ -2290,6 +2290,21 @@ with st.expander('11.code'):
         print("Happy Numbers between 1 and 100:")
 
         print(happy_numbers)
+        '''
+        st.code(code, language='python')
+
+     if selection=="even num":
+        code = '''
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Using a list comprehension to filter even numbers
+
+even_numbers = [num for num in numbers if num % 2 != 0]
+
+# Print the even numbers
+
+print("Odd numbers in the list:", even_numbers)
         '''
         st.code(code, language='python')
     
