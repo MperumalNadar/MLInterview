@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning',"ML life cycle",'ML syndex','AWS ML syndex']     
+    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -253,6 +253,99 @@ A: No, consistently beating the market is extremely difficult due to the Efficie
 While ML can help detect patterns, 
 it cannot guarantee future performance, especially after transaction costs and market shifts.
 """)
+    if selection=='crop recommendation':
+        st.markdown("""
+Q1. What is crop recommendation using machine learning?
+A: Crop recommendation is a supervised machine learning task where a model suggests the most suitable crop to grow based on input features like soil nutrients, temperature, humidity, rainfall, and pH level.
+
+---
+Q2. What kind of machine learning task is crop recommendation?
+A: It is a multi-class classification problem where the model selects one crop from multiple categories based on environmental and soil features.
+
+---
+Q3. Which Python libraries are used in crop recommendation projects?
+
+pandas – for data handling
+
+numpy – for numerical operations
+
+scikit-learn – for ML algorithms
+
+matplotlib / seaborn – for visualization
+
+joblib – to save/load models
+
+Flask or Streamlit – for deployment
+---
+✅ Data & Features
+Q4. What are typical features used for crop recommendation?
+A:
+
+N – Nitrogen level in soil
+
+P – Phosphorus
+
+K – Potassium
+
+Temperature – in °C
+
+Humidity – in %
+
+pH – soil acidity
+
+Rainfall – in mm
+---
+Q5. Where can you get crop recommendation datasets?
+A: Common sources include:
+
+Kaggle (Crop Recommendation Dataset)
+
+Government agricultural APIs
+
+ICAR (Indian Council of Agricultural Research)
+
+FAO datasets
+Or, synthetic data can be generated for prototyping.
+
+✅ Modeling & Evaluation
+Q6. Which ML models are suitable for crop recommendation?
+A:
+
+Decision Tree
+
+Random Forest (most commonly used)
+
+Naive Bayes
+
+K-Nearest Neighbors (KNN)
+
+Support Vector Machines (SVM)
+
+Neural Networks (for advanced use)
+---
+Q7. How do you evaluate your crop recommendation model?
+A:
+
+Accuracy
+
+Confusion Matrix (to check per-crop performance)
+
+Classification Report (Precision, Recall, F1-score)
+
+Cross-validation (to avoid overfitting)
+---
+Q8. Why is Random Forest a good model for crop recommendation?
+A:
+
+Handles non-linearity well
+
+Works with both small and large datasets
+
+Reduces overfitting through ensemble voting
+
+Provides feature importance
+---
+        """)
     if selection=="ML life cycle":
         st.markdown("""
 1. Problem Definition
