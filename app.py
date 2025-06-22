@@ -252,7 +252,7 @@ Q12. Is it possible to consistently beat the stock market with ML?
 A: No, consistently beating the market is extremely difficult due to the Efficient Market Hypothesis (EMH).
 While ML can help detect patterns, 
 it cannot guarantee future performance, especially after transaction costs and market shifts.
-        """)
+""")
     if selection=="ML life cycle":
         st.markdown("""
 1. Problem Definition
