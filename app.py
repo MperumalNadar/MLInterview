@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'Netflix Recommentation ',"ML life cycle",'ML syndex','AWS ML syndex']     
+    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning',"ML life cycle",'ML syndex','AWS ML syndex']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -201,6 +201,57 @@ Bias: Overfitting popular items
 "In a previous project, I worked on building a book recommendation system. 
 We used collaborative filtering to understand user preferences and combined it with metadata like genre and author for content filtering.
 We improved the CTR (click-through rate) by 20% over three months."
+        """)
+    if selection=='stock trend prediction in machine learning':
+        st.markdown("""
+
+Q1. What is stock trend prediction in machine learning?
+A: Stock trend prediction is the process of forecasting the future movement (upward/downward) of a stock price based on historical data
+using machine learning techniques. 
+It typically focuses on predicting trends (direction) rather than exact prices.
+
+---
+
+Q2. What type of machine learning is used for stock prediction?
+
+Supervised Learning (e.g., classification for trend, regression for price)
+
+Unsupervised Learning (e.g., clustering stocks)
+
+Time-Series Forecasting (e.g., ARIMA, LSTM for sequential prediction)
+
+Reinforcement Learning (e.g., for trading strategies)
+---
+
+Q4. What are the most important features for predicting stock trends?
+A:
+
+Historical prices (Open, High, Low, Close, Volume)
+
+Technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands)
+
+Lagged features (previous N-day prices)
+
+Sentiment scores (if using news or tweets)
+
+Macroeconomic indicators
+
+---
+Q11. What are the main challenges in stock trend prediction?
+
+High noise and volatility in the data
+
+Overfitting due to small datasets
+
+Market sentiment and external factors (news, policy changes)
+
+Time lag between prediction and action
+
+---
+Q12. Is it possible to consistently beat the stock market with ML?
+A: No, consistently beating the market is extremely difficult due to the Efficient Market Hypothesis (EMH).
+While ML can help detect patterns, 
+it cannot guarantee future performance, especially after transaction costs and market shifts.
         """)
     if selection=="ML life cycle":
         st.markdown("""
