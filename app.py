@@ -345,7 +345,7 @@ Reduces overfitting through ensemble voting
 
 Provides feature importance
 ---
-        """)
+""")
     if selection=="ML life cycle":
         st.markdown("""
 1. Problem Definition
