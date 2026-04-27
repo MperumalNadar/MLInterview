@@ -1126,23 +1126,21 @@ with st.expander('5.Data Analysis(pandas,Numpy)'):
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Python':
         st.markdown("""
-        Python is a high-level programming language known for its simplicity and readability.
-        It's widely used in data analytics due to its rich ecosystem of libraries such as Pandas,
-        NumPy, and Matplotlib, which make data manipulation, analysis, and visualization more
-        accessible.
+        Python is a simple and powerful programming language used to write code for many tasks like automation, web apps, and Machine Learning.
+        It is easy to learn because its syntax is close to normal English.
         """)
     if selection=='Pandas':
         st.markdown("""
-        Pandas is a Python library used for data manipulation and analysis. It provides data
-        structures like DataFrame and Series, which allow for easy handling and analysis of
-        tabular data.
+        Pandas is a Python library used for data analysis and data manipulation.
+        It provides DataFrame and Series to work with structured data like Excel.
+        We use it to clean, filter, and analyze data for insights.
 
         """)
     if selection=='NumPy':
         st.markdown("""
-        NumPy is a Python library used for numerical computing. It provides support for large,
-        multi-dimensional arrays and matrices, along with a collection of mathematical functions
-        to operate on these arrays efficiently.
+        NumPy is a Python library used for numerical computations.
+        It provides fast array operations and supports mathematical functions.
+        It is widely used in machine learning for handling large datasets efficiently.
         """)
     if selection=='DataFrame and a Series':
         st.markdown("""
@@ -1192,9 +1190,17 @@ with st.expander('5.Data Analysis(pandas,Numpy)'):
         """)
     if selection=='one-hot encoding':
         st.markdown("""
-        One-hot encoding in Pandas can be performed using the get_dummies() function,
-        which converts categorical variables into dummy/indicator variables, where each
-        category is represented as a binary feature.
+        Interview answer (3 lines)
+One Hot Encoding is used to convert categorical data into binary format.
+Each category becomes a separate column with 0 and 1 values.
+It helps machine learning models process non-numeric data correctly.
+5. Why we use it and when
+Why:
+ML models cannot understand text
+Avoids wrong relationships (like 1 < 2 confusion)
+When:
+When data is categorical (nominal) like city, product type, color
+When categories have no order
                     """)
     if selection=='map() function':
         st.markdown("""
