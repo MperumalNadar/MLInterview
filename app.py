@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex']     
+    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -102,6 +102,23 @@ we gained insights into evaluating models effectively using precision, recall, a
 
      "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
 
+        """)
+    if selection=='Coffee Shop Sales':
+        st.markdown("""
+    In my role as an IT Analyst in FMCG, I worked with sales data.
+I built a small ML model to predict daily coffee sales using Python.
+
+I used Excel/CSV data from stores
+Cleaned data using Pandas
+Built a Linear Regression model
+Deployed using Streamlit for managers
+👉 Result:
+Helped team plan stock better
+Reduced product shortage during peak hours
+4. Interview Answer (3 lines – Simple English)
+The coffee shop sales project is used to analyze and predict sales using past data.
+I cleaned the data, did analysis, and built a regression model to forecast sales.
+This helps the business improve stock planning and increase profit.
         """)
     if selection=='Netflix Recommentation ':
         st.markdown("""
