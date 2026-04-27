@@ -109,16 +109,20 @@ we gained insights into evaluating models effectively using precision, recall, a
 I built a small ML model to predict daily coffee sales using Python.
 
 I used Excel/CSV data from stores
+
 Cleaned data using Pandas
+
 Built a Linear Regression model
+
 Deployed using Streamlit for managers
+
 👉 Result:
-Helped team plan stock better
-Reduced product shortage during peak hours
+
 4. Interview Answer (3 lines – Simple English)
-The coffee shop sales project is used to analyze and predict sales using past data.
-I cleaned the data, did analysis, and built a regression model to forecast sales.
-This helps the business improve stock planning and increase profit.
+
+I built a machine learning model to predict coffee shop sales using historical data like date, weather, and promotions.
+I cleaned data, created features, and used regression models to train and predict future sales.
+This helps the business plan inventory and improve profit.
         """)
     if selection=='Netflix Recommentation ':
         st.markdown("""
