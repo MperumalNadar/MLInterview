@@ -1335,49 +1335,25 @@ or using advanced methods like multiple imputation or K-Nearest Neighbors imputa
          """)
     if selection=='Cross-validation':
 
-        st.markdown("""Cross-validation is a technique used in machine learning to evaluate how well a model performs on unseen data.
-                It helps ensure that the model isn't just memorizing the training data but can generalize to new data.
-                
-???????How It Works:???????
-
-1.Split the Data: 
-The entire dataset is divided into several parts or "folds." A common choice is 5 or 10 folds.
-                
-2.Training and Testing:              
-In each iteration, one fold is used for testing, and the remaining folds are used for training.
-This process repeats until each fold has been used as a test set.
-                
-3.Evaluation: 
-The performance scores from each fold are averaged to get a more reliable measure of how well the model will perform.
-                
-?????? Example: ??????
-
-If you use 5-fold cross-validation:
-                
-The data is split into 5 parts.
-The model trains on 4 parts and tests on the 1 remaining part.
-This repeats 5 times, rotating the test set each time.
-
-??????Why Use It???????
-
-1.Better Model Evaluation: 
-It gives a more accurate estimate of the model's performance compared to a simple train-test split.
-                
-2.Reduces Overfitting: 
-By testing the model on different portions of data, it ensures the model isn't too tuned to just one dataset.
-                
-?????Types of Cross-Validation:????
-k-Fold Cross-Validation: Most common type.
-Stratified k-Fold: Ensures each fold has a similar distribution of target classes.
-Leave-One-Out (LOOCV): Each data point becomes a test set once.
+        st.markdown("""Cross Validationi technique to evaluate a machine lear..
+        model by training and testing it multiple times on different parts of the data.
+        It gives a more reliable performance than testing only once.
                          """)
     if selection=='REGULARIZATION L1 L2':
         st.markdown("""
-        Regularization is a technique used to prevent overfitting by adding a penalty to the model's complexity during training.
+        
+        Regularization is a technique used to prevent overfitting.
+        It controls the model so it does not learn too much from the training data. 
+        This helps the model work better on new data. 
+        There are two types: L1 and L2.
+        L1 (LASSO) removes unimportant features by making some coefficients zero.
+        L2 (RIDGE) keeps all features but makes their coefficients smaller. 
+        I use L1 when some features are not important, and 
+        I use L2 when all features are important but I want to reduce overfitting.
 
-        Regularization helps the model generalize better to new data.
-
-        their is two type Regularization is L1 and L2.
+        what is the Albha?
+        Alpha is the regularization strength. A larger alpha means a stronger penalty,
+        which makes the model simpler. A smaller alpha means a weaker penalty
 
         When to choose L1 LASSO REGRESSION ? 
         
