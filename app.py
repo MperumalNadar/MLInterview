@@ -1552,36 +1552,35 @@ with st.expander('7.ML Algorithms'):
     selection1 = st.segmented_control("3.Decision Trea", options1, selection_mode="single")
     if selection1=='Decision Tree':
         st.markdown("""
-        A decision tree Algorithm is a supervised Learning Algorithms,
-        is a flowchart-like model that makes decisions by asking questions based on data features,
-        leading to clear outcomes at the end. 
-        It's a simple and intuitive tool used in machine learning for classification and regression tasks.
+        A Decision Tree is a supervised machine learning algorithm that makes predictions by asking a series of simple questions. 
+        It starts with the full dataset, splits the data based on the best feature, and continues splitting until it reaches a final prediction.
+        It is easy to understand and works for both classification and regression problems.
+        The main drawback is that it can overfit the data, which is why ensemble methods like Random Forest are often used.
         """)
  
     if selection1=='Real_Word eg':
         st.markdown("""
-        In the Decion Tree we can classify the data in different like the FLOWERS with DIFFERENT features
-        like sample length red length to classify the Data to different groups
+        A Decision Tree works like a human making decisions.
+        It asks simple questions step by step, and each answer helps it reach the final prediction.
         """)
     if selection1=='Advantage and DisAdvantage':
         st.markdown("""
                     Advantages
-                    - Simple and easy to understand: Decision Tree looks like simple if-else statements which are very easy to understand
-                    - Decision Tree can be used for both classification and regression problems.
-                    - Decision Tree can handle both continuous and categorical variables.
-                    - No feature scaling required: like(standardization and normalization) required in case of Decision Tree as it uses rule based approach instead of distance calculation.
-                    - Decision Tree can automatically handle missing values.
-                    - Decision Tree is usually robust to outliers and can handle them automatically.
-                    - Training period is less as compared to Random Forest because it generates only one tree unlike forest of trees in the Random Forest.
+                    - The main advantages of a Decision Tree are that it is easy to understand, 
+                    works for both classification and regression,
+                    handles numerical and categorical data,
+                    does not require feature scaling,
+                    can handle missing values and outliers,
+                    and trains faster than Random Forest because it builds only one tree.
         """)
         st.markdown("""
                     Disadvantages of Decision Trees
-                    - Decision trees sometimes become complex, which do not generalize well and leads to overfitting.
-                    Overfitting can be addressed by placing the least number of samples needed at a leaf node or placing the highest depth of the tree.
-
-                    -If data size is large, then one single tree may grow complex and lead to overfitting. 
-                    So in this case, we should use Random Forest instead of a single Decision Tree.
+                    - "One disadvantage of a Decision Tree is overfitting. Sometimes the tree becomes too large and learns the training data too well, including noise. 
+                    Because of this, it may not perform well on new data.
                     
+                    - We can reduce overfitting by limiting the maximum depth of the tree or by setting a minimum number of samples required in each leaf node.
+                    - Also, when the dataset is very large, a single Decision Tree can become very complex.
+                    In that case, we usually use Random Forest because it combines many Decision Trees, reduces overfitting, and gives better accuracy.
         """)
 
     if selection1=='How Choose Root Node':
