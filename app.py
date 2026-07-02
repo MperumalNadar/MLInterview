@@ -1451,44 +1451,24 @@ Remove data points below the lower bound or above the upper bound.
     if selection=='Ensemble learning':
         st.markdown("""
     
-        Ensemble learning involves combining multiple individual models 
-        to improve the overall performance and predictive power of the learning algorithm.
+        Ensemble learning means combining multiple models to improve prediction accuracy.
         """)
     if selection=='Bagging & boosting':
         st.markdown("""
         What is Bagging ?
-        。Stands for Bootstrap Aggregating.
-
-        。Creates multiple models by training them on different random 
-        subsets of the data (with replacement).
-
-        。Each model makes a prediction, and their results are averaged (for regression) 
-        or voted on (for classification).
-
-        **Example:** 
-         imagine you dividing your classroom into group and giving each group a problem. 
-         and whatever answer each group comes up with . you average their answers
-         this method is going to reduce the variance and it is also going to make final model most stable .
-         Random forest is a classic example of bagging .
+        。Bagging trains multiple models independently and in parallel using different samples of the data.
+        The final output is made by combining their predictions.
+        Example: Random Forest
+        Bagging mainly helps reduce variance and avoids overfitting.
 
                   
         """)
         st.markdown("""
         What is Bootinng 
         
-        。Combines models sequentially, where each model corrects 
-        the errors of the previous one.
-
-        。Focuses more on hard-to-predict data points.
-
-        。 Models are trained one after another, with more weight given 
-        to data points that were previously misclassified.
-
-        where a teacher is helping the students. who struggle the most in the last test. 
-        now in the boosting is going to be a very great way of correcting the bias and weak models .right
-        so whichever the student  struggled in the last test . 
-        are going to be train separately. and help improve in the next exam .
-        Gradient Boosting, AdaBoost. is the example of boosting .
+        。Boosting trains models sequentially.
+        Each new model tries to correct the mistakes made by the previous model.
+        Example: AdaBoost, Gradient Boosting, XGBoost, LightGBM Boosting mainly helps reduce bias and improves model performance.
         """)
     if selection=='Hyperparameter tuning':
         st.markdown("""
