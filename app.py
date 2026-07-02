@@ -1449,7 +1449,7 @@ Remove data points below the lower bound or above the upper bound.
     if selection=='Hyperparameter tuning':
         st.markdown("""
         Hyperparameter tuning involves finding the best set of hyperparameters 
-        for a machine learning model to optimise its performance and generalisation.
+        for a machine learning model to improve its performance and generalisation.
         
         """)
 with st.expander('7.ML Algorithms'):    
