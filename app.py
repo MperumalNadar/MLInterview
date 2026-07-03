@@ -1121,7 +1121,7 @@ Supposed real time data coming and based on that certain analysis in that kind o
             """)
 #####################################################################################  
 with st.expander('5.Data Analysis(pandas,Numpy)'):
-    options = ['Python','Pandas','NumPy','DataFrame and a Series','Matplotlib','data cleaning','histogram','data cleaning','data visualization','loc and iloc','one-hot encoding','map() function',"Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning']
+    options = ['Python','Pandas','NumPy','DataFrame and a Series','Matplotlib','data cleaning','histogram','data cleaning','data visualization','loc and iloc','one-hot encoding','map() function',"Bias & Varience", "Balancen & Imbalance", "FEATURE SCALING NORMALI-STANDARDIZATION",'Underfitting & Overfitting','Missing Data','Cross-validation','REGULARIZATION L1 L2','outliers','Bagging & boosting','Ensemble learning','Hyperparameter tuning','Feature enginnering']
     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='Python':
@@ -1342,7 +1342,7 @@ or using advanced methods like multiple imputation or K-Nearest Neighbors imputa
     if selection=='REGULARIZATION L1 L2':
         st.markdown("""
         
-        Regularization is a technique used to prevent overfitting.
+        Regularization is a technique used to avoid overfitting.
         It controls the model so it does not learn too much from the training data. 
         This helps the model work better on new data. 
         There are two types: L1 and L2.
@@ -1452,6 +1452,14 @@ Remove data points below the lower bound or above the upper bound.
         for a machine learning model to improve its performance and generalisation.
         
         """)
+    if selection=='Feature enginnering':
+        st.markdown("""
+        What is Feature Engineering?
+
+         Feature Engineering is the process of selecting, transforming, 
+         and creating meaningful features from raw data to improve model performance.
+        """)
+    
 with st.expander('7.ML Algorithms'):    
     st.markdown("""
     Classification is used to predict discrete categories 
