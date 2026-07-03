@@ -1566,10 +1566,13 @@ with st.expander('7.ML Algorithms'):
     selection1 = st.segmented_control("3.Decision Trea", options1, selection_mode="single")
     if selection1=='Decision Tree':
         st.markdown("""
-        A Decision Tree is a supervised machine learning algorithm that makes predictions by asking a series of simple questions. 
-        It starts with the full dataset, splits the data based on the best feature, and continues splitting until it reaches a final prediction.
-        It is easy to understand and works for both classification and regression problems.
-        The main drawback is that it can overfit the data, which is why ensemble methods like Random Forest are often used.
+        A Decision Tree is a supervised machine learning algorithm used for both classification and regression.
+        It makes predictions by asking a series of questions about the data. Each question splits the dataset into smaller groups based on the feature that gives the best split. 
+        This process continues until the model reaches a leaf node, which gives the final prediction.
+        -You can think of it like a flowchart where every decision leads closer to the final answer
+
+        
+
         """)
  
     if selection1=='Real_Word eg':
@@ -1580,21 +1583,15 @@ with st.expander('7.ML Algorithms'):
     if selection1=='Advantage and DisAdvantage':
         st.markdown("""
                     Advantages
-                    - The main advantages of a Decision Tree are that it is easy to understand, 
-                    works for both classification and regression,
-                    handles numerical and categorical data,
-                    does not require feature scaling,
-                    can handle missing values and outliers,
-                    and trains faster than Random Forest because it builds only one tree.
+                    - Easy to understand and visualize.
+                    - Works with both numerical and categorical data.
+                    - Requires very little data preprocessing.
         """)
         st.markdown("""
                     Disadvantages of Decision Trees
-                    - "One disadvantage of a Decision Tree is overfitting. Sometimes the tree becomes too large and learns the training data too well, including noise. 
-                    Because of this, it may not perform well on new data.
-                    
-                    - We can reduce overfitting by limiting the maximum depth of the tree or by setting a minimum number of samples required in each leaf node.
-                    - Also, when the dataset is very large, a single Decision Tree can become very complex.
-                    In that case, we usually use Random Forest because it combines many Decision Trees, reduces overfitting, and gives better accuracy.
+                    - It can easily overfit if the tree becomes too deep.
+                    - Small changes in the data can produce a different tree.
+                    - A single Decision Tree is usually less accurate than ensemble methods like Random Forest.
         """)
 
     if selection1=='How Choose Root Node':
@@ -1614,17 +1611,13 @@ with st.expander('7.ML Algorithms'):
     selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
         st.markdown("""
-                    A Random Forest is a powerful and versatile machine learning algorithm 
-                    mainly used for classification and regression tasks. 
-                    It's based on the concept of "ensemble learning,
-                    " where multiple models are combined to produce better results than individual models.
-            
-                    Real-World Example:
-                    Imagine a bank wants to predict if a customer will default on a loan. 
-                    One decision tree might focus heavily on income, another on credit history, 
-                    and a third on spending patterns. 
-                    The Random Forest combines all these perspectives to give a more accurate and reliable prediction.
-        """)
+                    "Random Forest is a supervised machine learning algorithm that combines multiple Decision Trees to make a prediction. 
+                    Instead of depending on one tree, it builds many trees using different random samples of the data and features.
+
+                    - For classification, it takes the majority vote from all the trees. 
+                    - For regression, it takes the average of all the predictions.
+                    
+                       """)
     if selection2=='Advantage and DisAdvantage':
         st.markdown("""
                      Advantages
@@ -1669,34 +1662,29 @@ with st.expander('7.ML Algorithms'):
     selection2 = st.segmented_control("5.Support Vector Machines (SVMs)", options2, selection_mode="single")
     if selection2=='SVM':
         st.markdown("""
-It separates data points into categories by drawing the "best possible line" (or boundary).
+        SVM is a supervised machine learning algorithm used for classification and regression. 
+        It finds the best boundary to separate different classes. 
+        It keeps the maximum distance between the classes, which helps improve accuracy and reduce mistakes on new data.
 
-Works well for both simple and complex data.
-
-The algorithm chooses the line that leaves the largest gap (margin) between data points of different categories.
-
-The data points closest to the boundary are called support vectors, and they influence where the line is drawn.
-
-If data can't be separated with a straight line, SVM uses mathematical functions (kernels) 
-to transform it into a higher dimension where a boundary can be drawn
-
-Commonly used kernels are:
-                - linear
-                - polynomial
-                - rbf
-                - sigmoid
+        Linear SVM
+         - Best for linearly separable data.
+        Non-Linear SVM
+         - Uses the kernel trick to separate data that is not linearly separable.
+         
+        Commonly used kernels are:
+                - linear:- Used when data is linearly separable.
+                - polynomial :-Useful for capturing curved boundaries.
+                - rbf. :- Most popular kernel. Works well for complex data.
+                - sigmoid :- Similar to neural networks activation.
         """)
     if selection2=='Advantage and DisAdvantage':
         st.markdown("""
                     Advantages of SVMs
-                    - SVM can distinguish the classes in a higher dimensional space.
-
-                    - SVM algorithms are memory efficient.
-
-                    - SVMs are versatile, and a different kernel can be used by a decision function.
-
-                    - Works well with even unstructured and semi structured data like text, Images and trees.
-                    - Risk of over-fitting is less in SVM.
+                    - Effective for high-dimensional datasets.
+                    - Works well with clear class separation.
+                    - Memory efficient.
+                    - Robust and accurate for many classification problems.
+                    - Supports different kernel functions.
                     """)
         st.markdown("""
                     Disadvantages of SVMs
