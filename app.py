@@ -1458,6 +1458,12 @@ Remove data points below the lower bound or above the upper bound.
 
          Feature Engineering is the process of selecting, transforming, 
          and creating meaningful features from raw data to improve model performance.
+
+         WHY IS IT IMPORTANT?
+         -Models learn faster
+         -Predictions become
+         -Reduces overfitting
+         -Improves generalization
         """)
     
 with st.expander('7.ML Algorithms'):    
