@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'Netflix Recommentation ','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
+    options = ["emails as spam or not spam",'Movie Hit or Flop Prediction','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='emails as spam or not spam':
         st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
@@ -124,104 +124,18 @@ I built a machine learning model to predict coffee shop sales using historical d
 I cleaned data, created features, and used regression models to train and predict future sales.
 This helps the business plan inventory and improve profit.
         """)
-    if selection=='Netflix Recommentation ':
+    if selection=='Movie Hit or Flop Prediction':
         st.markdown("""
-Definition (Start Simple)
+        - My project is about predicting whether a movie will be a Hit or a Flop before its release. This is a Machine Learning classification project."
+        - First, I cleaned the data. I removed duplicate rows and unwanted columns like movie ID. I converted important columns into numbers. I also handled missing values, removed negative values, and reduced outliers using the IQR method."
+        - Next, I created the target column. If the movie revenue was greater than the budget, I marked it as Hit. Otherwise, I marked it as Flop. Then I removed the budget and revenue columns because they were used to create the target."
+        - After that, I prepared the data for machine learning. I took the year, month, and day from the release date. I converted text data into numbers using Label Encoding. For columns like genres, keywords, production companies, and spoken languages, I used MultiLabelBinarizer."
+        - Then, I split the data into 80% for training and 20% for testing. I selected the important features using Random Forest Feature Importance and SelectKBest. After that, I scaled the data using StandardScaler."
+        - Next, I trained three models: Logistic Regression, Random Forest, and XGBoost. I compared their performance using Accuracy, Precision, Recall, and F1-score. I also used Cross Validation and RandomizedSearchCV to improve the model."
+        - Finally, I selected the best model, checked its performance using a confusion matrix, and saved the model using Joblib. This model can help movie producers and investors know whether a movie is likely to become a Hit or a Flop before its release."
 
-"A recommendation system is an algorithm that suggests relevant items to users based on their preferences or behavior. 
-It’s used in many applications like Netflix recommending movies, 
-Amazon suggesting products, or Spotify offering music playlists."
-
-
----
-
-2. Types of Recommendation Systems
-
-There are mainly three types:
-
-a) Content-Based Filtering
-
-Recommends items similar to what the user liked in the past.
-
-Based on features like genre, keywords, price, etc.
-
-Example: If you watched action movies, it suggests other action movies.
-
-
-b) Collaborative Filtering
-
-Uses the behavior and preferences of similar users.
-
-Two approaches:
-
-User-based: Users like you also liked X
-
-Item-based: People who liked this item also liked Y
-
-
-Example: Amazon’s "Customers who bought this also bought..."
-
-
-c) Hybrid Systems
-
-Combines both content-based and collaborative filtering
-
-Improves accuracy and solves cold start problems
-
-Example: Netflix uses hybrid models
-
-
-
----
-
-3. Key Components or Workflow (High-Level)
-
-Data Collection: User behavior, item metadata, ratings
-
-Preprocessing: Cleaning, encoding, normalization
-
-Modeling: Using ML or deep learning algorithms
-
-Prediction: Generate ranked list of recommendations
-
-Evaluation: Using metrics like Precision, Recall, RMSE
-
-
-
----
-
-4. Common Algorithms (for technical roles)
-
-Matrix Factorization (SVD, ALS)
-
-KNN (for item or user similarity)
-
-Deep Learning models (Autoencoders, RNNs)
-
-Ranking models like XGBoost, LightGBM in hybrid systems
-
-Graph-based approaches using Neo4j or NetworkX
-
----
-
-5. Challenges in Building a Recommender System
-
-Cold start: New user or new item
-
-Sparsity: Very few ratings compared to all possible interactions
-
-Scalability: Large-scale datasets
-
-Bias: Overfitting popular items
-
-
----
-
-6. Real-World Application Example (Customize this)
-
-"In a previous project, I worked on building a book recommendation system. 
-We used collaborative filtering to understand user preferences and combined it with metadata like genre and author for content filtering.
-We improved the CTR (click-through rate) by 20% over three months."
+        "What was your role?"
+            - I did the complete project by myself. I cleaned the data, prepared the features, trained the models, compared the results, improved the best model, and saved the final model."
         """)
     if selection=='stock trend prediction in machine learning':
         st.markdown("""
