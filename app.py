@@ -105,24 +105,10 @@ we gained insights into evaluating models effectively using precision, recall, a
         """)
     if selection=='Coffee Shop Sales':
         st.markdown("""
-    In my role as an IT Analyst in FMCG, I worked with sales data.
-I built a small ML model to predict daily coffee sales using Python.
-
-I used Excel/CSV data from stores
-
-Cleaned data using Pandas
-
-Built a Linear Regression model
-
-Deployed using Streamlit for managers
-
-👉 Result:
-
-4. Interview Answer (3 lines – Simple English)
-
-I built a machine learning model to predict coffee shop sales using historical data like date, weather, and promotions.
-I cleaned data, created features, and used regression models to train and predict future sales.
-This helps the business plan inventory and improve profit.
+        - I developed a Linear Regression model to predict the daily revenue of a coffee shop. 
+        - I cleaned the data, engineered date features, encoded categorical variables, scaled the features, selected the top 15 features using SelectKBest, and trained the model. 
+        - I evaluated it using R², MAE, MSE, and RMSE. The model achieved about 95.7% R² on training and 94.7% R² on testing, showing good prediction accuracy and generalization. 
+        - The solution can help the business improve inventory planning, staffing, and promotional decisions."
         """)
     if selection=='Movie Hit or Flop Prediction':
         st.markdown("""
