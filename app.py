@@ -1356,9 +1356,20 @@ Generalize better on unseen data
         """)
     if selection=='Hyperparameter tuning':
         st.markdown("""
-        Hyperparameter tuning involves finding the best set of hyperparameters 
-        for a machine learning model to improve its performance and generalisation.
+        Hyperparameters are settings that control how a Machine Learning algorithm learns. 
+        Unlike model parameters, they are set before training and are not learned from the data.
+
+
+        - Grid Search is a hyperparameter tuning method. 
+        We give it a list of different values for the hyperparameters, and it tries every possible combination. 
+        After testing all combinations, it selects the one that gives the best model performance. 
+        The advantage is that it usually finds the best combination, but the disadvantage is that it takes more time and requires more computing power."
         
+        - Random Search is also a hyperparameter tuning method.
+        it randomly selects and tests only some combinations. 
+        This makes it much faster than Grid Search. 
+        It works well when there are many hyperparameters, 
+        but it may not always find the absolute best combination."
         """)
     if selection=='Feature enginnering':
         st.markdown("""
