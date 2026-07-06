@@ -1914,19 +1914,24 @@ and 95 people don't have one. In this case we can use Accuracy .
                     """)
     if selection=="precision and recall":
         st.markdown("""
-        Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
+        **precision**
+        "Precision is a classification evaluation metric. 
+        It tells us, out of all the positive predictions made by the model,
+        how many were actually correct.
         
-        ratio of true positives to the sum of true Positive and false positives
+        **The formula is:** Precision = True Positives / (True Positives + False Positives).
+        - We use precision when the cost of a false positive is high.
 
-        Recall is a measure of how many of the actual positive instances in the dataset were correctly predicted by the model.
-        
-        ratio of true positives to the sum of true positives and false negatives.
+        **Recall**
+        Recall is a classification evaluation metric.
+        It tells us, out of all the actual positive cases, how many the model correctly identified.
+        **The formula is:** Recall = True Positives / (True Positives + False Negatives).
+        - We use recall when missing a positive case is very costly.
         """)
     if selection=="F1 score":
         st.markdown("""
-        The F1 score is a metric that combines precision and recall into a single number.
-
-        It provides a balance between precision and recall
+        F1-Score is the balance between Precision and Recall. 
+        We use it when both false positives and false negatives are important, especially for imbalanced datasets.
 
         The F1 score ranges from 0 to 1, where 1 indicates perfect precision and recall.
 
