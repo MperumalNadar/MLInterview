@@ -1873,13 +1873,13 @@ with st.expander('7.ML Algorithms'):
 
 with st.expander('8.Evaluation'):
     st.markdown("""
-                **True Positive(TP):** In this case, the prediction outcome is true, and it is true in reality, also.
+                **True Positive(TP):** Model correctly predicts a positive class.
                 
-                **True Negative(TN):** in this case, the prediction outcome is false, and it is false in reality, also.
+                **True Negative(TN):** Model correctly predicts a negative class.
                 
-                **False Positive(FP):** In this case, prediction outcomes are true, but they are false in actuality.
+                **False Positive(FP):** Model predicts positive when it is actually negative.
                 
-                **False Negative(FN):** In this case, predictions are false, and they are true in actuality.
+                **False Negative(FN):** Model predicts negative when it is actually positive..
                 """)
     options = ["Accuracy","confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
         
@@ -1905,13 +1905,12 @@ and 95 people don't have one. In this case we can use Accuracy .
                     """)
     if selection=="confusion matrix":
         st.markdown("""
-                    A confusion matrix is a table used to evaluate the performance of a classification model. 
-                    It shows the counts of true positives, true negatives, false positives, and false negatives.
+        - A Confusion Matrix is a table used to evaluate the performance of a classification model by comparing actual values with predicted values.
+        - It helps us understand where the model is making correct predictions and where it is making mistakes.
+        Why is it Important?
 
-                    It shows correct and incorrect predictions in an organized way.
-
-                    Useful for understanding the types of mistakes the model makes
-        """)
+        - Instead of looking only at Accuracy, the Confusion Matrix gives a deeper understanding of model performance.
+                    """)
     if selection=="precision and recall":
         st.markdown("""
         Precision is a measure of how many of the positive predictions made by a classification model were actually correct.
