@@ -1885,10 +1885,12 @@ with st.expander('8.Evaluation'):
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Accuracy":
-        st.markdown("""The accuracy metric is one of the simplest Classification metrics to implement, 
-                    and it can be determined as the number of correct predictions to the total number of predictions.
-
+        st.markdown(""""
+        Accuracy measures the percentage of correct predictions.
+        It works well for balanced datasets but is not reliable for imbalanced datasets."
 from sklearn metrics import accuracy score
+
+Accuracy =TP+TN / TP+TN+FP+FN
         
 **When to Use Accuracy?**
 when the target variable classes in data are approximately balanced. 
@@ -1896,8 +1898,7 @@ For example, if 60% of classes in a fruit dataset are of Apple,
 40% are Mango.In this Case we can use Accuracy 
         
 **When not to use Accuracy?**
-when the target variable majorly belongs to one class. 
-For example, 
+
 Suppose there is a model for a disease prediction in which, 
 out of 100 people, only five people have a disease, 
 and 95 people don't have one. In this case we can use Accuracy .
