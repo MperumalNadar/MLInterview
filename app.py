@@ -1113,32 +1113,24 @@ When categories have no order
 
     if selection=='Bias & Varience':
         st.markdown("""
-        The bias-variance trade-off is the balance between two sources of error in machine learning models: bias and variance.
-
-        As bias decreases, variance increases, and vice versa.
-
-        The goal is to find a balance where both bias and variance are minimized for the best generalization.
-
-        --Too Simple (High Bias): 
-        Poor training and test performance.
-
-        --Too Complex (High Variance):
-        Good training but poor test performance.
-        """)
-        st.markdown("""
+        Bias 
         
-        BIAS
-
-In a machine learning model, bias means the model consistently predicts values or outcomes that are differentnd Grow from the true values in the data. 
-A model with high bias might be too simple or have wrong assumptions,
- causing it to underperform and make inaccurate predictions.
+        Bias happens when the model is too simple. 
+        It cannot learn the important patterns from the data.
+        This is called underfitting
         """)
         st.markdown("""
         VARIANCE
+        
+        Variance happens when the model is too complex. 
+        It learns the training data too well, including the noise, so it performs poorly on new data. 
+        This is called overfitting.
+        """)
+        st.markdown("""
+        Bias-Variance Tradeoff
 
-In a machine learning model, high variance means that it's sensitive to the specific data it's trained on. 
-If you give it slightly different datasets, it might give wildly different predictions. 
-A model with high variance is often too complex and has learned the training data's noise rather than the true patterns.
+        
+        Bias-Variance Tradeoff means balancing underfitting and overfitting so that the model works well on both training data and new data."
         """)
     if selection=='Underfitting & Overfitting':
         st.markdown("""UNDERFITTING
@@ -1339,7 +1331,7 @@ Generalize better on unseen data
     if selection=='Bagging & boosting':
         st.markdown("""
         What is Bagging ?
-        。Bagging trains multiple models independently and in parallel using different samples of the data.
+        Bagging trains multiple models independently and in parallel using different samples of the data.
         The final output is made by combining their predictions.
         Example: Random Forest
         Bagging mainly helps reduce variance and avoids overfitting.
@@ -1349,7 +1341,7 @@ Generalize better on unseen data
         st.markdown("""
         What is Bootinng 
         
-        。Boosting trains models sequentially.
+        Boosting trains models sequentially.
         Each new model tries to correct the mistakes made by the previous model.
         Example: AdaBoost, Gradient Boosting, XGBoost, LightGBM Boosting mainly helps reduce bias and improves model performance.
         """)
