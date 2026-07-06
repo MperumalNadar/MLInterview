@@ -1327,7 +1327,15 @@ Remove data points below the lower bound or above the upper bound.
     if selection=='Ensemble learning':
         st.markdown("""
     
-        Ensemble learning means combining multiple models to improve prediction accuracy.
+        Ensemble Learning is the process of combining predictions from multiple Machine Learning models to produce a more accurate and robust final prediction.
+
+        Ensemble methods help to:
+
+        - Improve prediction accuracy
+        - Reduce overfitting 
+        - Increase model stability
+
+Generalize better on unseen data
         """)
     if selection=='Bagging & boosting':
         st.markdown("""
