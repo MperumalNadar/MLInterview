@@ -591,17 +591,16 @@ with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
 
         """)
     if selection=='Supervised & Unsupervised learning':
-        st.markdown("""*Supervised learning algorithms are trained using labeled data.
-*Supervised learning model predicts the output.
-*Supervised learning can be categorized in Classification and Regression problems.
-*It includes various algorithms such as 
+        st.markdown("""
+        - In Supervised Learning, the model learns from labeled data, where the correct output is already known.
+        - Supervised learning can be categorized in Classification and Regression problems.
+        - It includes various algorithms such as 
 Linear Regression, Logistic Regression, Support Vector Machine, Multi-class Classification, Decision tree, 
-Bayesian Logic, etc.
-
-*Unsupervised learning algorithms are trained using unlabeled data.
-*Unsupervised learning model finds the hidden patterns in data.
-*Unsupervised Learning can be classified in Clustering and Associations problems.
-*it includes various algorithms such as Clustering, KNN, and Apriori algorithm.
+.
+        **Unsupervised Learning**
+       - In Unsupervised Learning, the model learns from unlabeled data and discovers hidden patterns.
+       - Unsupervised Learning can be classified in Clustering and Associations problems.
+       - it includes various algorithms such as Clustering, KNN, and Apriori algorithm.
 
         """)
     if selection=='PYTHON':
@@ -1915,7 +1914,8 @@ and 95 people don't have one. In this case we can use Accuracy .
     if selection=="precision and recall":
         st.markdown("""
         **precision**
-        "Precision is a classification evaluation metric. 
+        
+        Precision is a classification evaluation metric. 
         It tells us, out of all the positive predictions made by the model,
         how many were actually correct.
         
@@ -1923,6 +1923,7 @@ and 95 people don't have one. In this case we can use Accuracy .
         - We use precision when the cost of a false positive is high.
 
         **Recall**
+       
         Recall is a classification evaluation metric.
         It tells us, out of all the actual positive cases, how many the model correctly identified.
         **The formula is:** Recall = True Positives / (True Positives + False Negatives).
