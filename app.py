@@ -1872,7 +1872,7 @@ with st.expander('8.Evaluation'):
                 
                 **False Negative(FN):** Model predicts negative when it is actually positive..
                 """)
-    options = ["Accuracy","confusion matrix","precision and recall","F1 score","R-squared","AOC & AUC","Root Mean Square Error"]
+    options = ["Accuracy","confusion matrix","precision and recall","F1 score","R2-squared","MAE","MSE","Root Mean Square Error","AOC & AUC"]
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Accuracy":
@@ -1933,16 +1933,32 @@ and 95 people don't have one. In this case we can use Accuracy .
            F1= --------------------
                 precision +recall
         """)
-    if selection=="R-squared":
-        st.markdown("""R-squared is a statistical measure that represents the proportion of the variance for a dependent variable that is explained by an independent variable in a regression model.""")
+    if selection=="R2-squared":
+        st.markdown("""Measures how much variance in the data is explained by the model.
+
+        - Closer to 1 = Better Fit
+        - Higher R2 and Lower MAE/MSE = Better Model.""")
     if selection=="AOC & AUC":
         st.markdown("""The ROC curve is a graphical representation of a classifier's performance, 
         plotting the true positive rate against the false positive rate. 
         AUC (Area Under the Curve) measures the entire two-dimensional area underneath the ROC curve.
         """)
     if selection=="Root Mean Square Error":
-        st.markdown("""The Root Mean Square Error is a commonly used metric for evaluating the accuracy of a regression model by measuring the differences between the predicted values and the actual values.
+        st.markdown("""
+        - Square root of MSE.
+        - Easy to interpret because it's in the same unit as the target variable.
         """)
+    if selection=="MAE":
+        st.markdown("""
+        **Mean Absolute Error - MAE** ⟶ 
+        - average of absolute differences between actual and predicted values.
+        """)
+    if selection=="MSE":
+        st.markdown("""
+        **Mean Absolute Error - MSE** ⟶ 
+        - average of squared differences between actual and predicted values.
+        """)
+        
 with st.expander('9.Visualization'):
     
     options = ["Bar Graphs","Line Chart","Pie Chart","Scatter Chart","Histogram","Heatmap"]
