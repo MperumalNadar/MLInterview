@@ -1877,11 +1877,11 @@ with st.expander('8.Evaluation'):
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="Accuracy":
         st.markdown(""""
-        Accuracy measures the percentage of correct predictions.
-        It works well for balanced datasets but is not reliable for imbalanced datasets."
-from sklearn metrics import accuracy score
+        - how many total predictions are correct.
+        - It works well for balanced datasets but is not reliable for imbalanced datasets."
+        ** from sklearn metrics import accuracy score**
 
-Accuracy =TP+TN / TP+TN+FP+FN
+        **Accuracy =TP+TN / TP+TN+FP+FN**
         
 **When to Use Accuracy?**
 when the target variable classes in data are approximately balanced. 
