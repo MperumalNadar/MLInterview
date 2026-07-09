@@ -1368,18 +1368,25 @@ Generalize better on unseen data
         Hyperparameters are settings that control how a Machine Learning algorithm learns. 
         Unlike model parameters, they are set before training and are not learned from the data.
 
+        **Why is Hyperparameter Tuning Important?**Choosing the right hyperparameters can:
 
-        - Grid Search is a hyperparameter tuning method. 
-        We give it a list of different values for the hyperparameters, and it tries every possible combination. 
-        After testing all combinations, it selects the one that gives the best model performance. 
-        The advantage is that it usually finds the best combination, but the disadvantage is that it takes more time and requires more computing power."
-        
-        - Random Search is also a hyperparameter tuning method.
-        it randomly selects and tests only some combinations. 
-        This makes it much faster than Grid Search. 
-        It works well when there are many hyperparameters, 
-        but it may not always find the absolute best combination."
-        """)
+- Improve model accuracy
+- Reduce overfitting
+- Improve generalization
+- Build more reliable models
+
+**Common Hyperparameter Tuning Methods**
+
+**1 Grid Search** Tests every possible combination of hyperparameters.
+
+- Finds the best combination**
+- Computationally expensive
+
+**2 Random Search** Selects random combinations from the search space.
+
+- Faster than Grid Search
+- Works well for large search spaces
+  """)
     if selection=='Feature enginnering':
         st.markdown("""
         What is Feature Engineering?
