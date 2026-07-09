@@ -571,7 +571,7 @@ linear_regressor.delete_endpoint()
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
 
-    options = ["AI","ML", "DL", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict','streamlit']
+    options = ["AI","ML", "DL", "WHY ML","Supervised & Unsupervised learning",'Train-test','PYTHON','Numpy','Scikit-learn','joblib','predict','streamlit']
         
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='AI':
@@ -721,6 +721,10 @@ Convert Python scripts into web apps in minutes.
 **Integration with ML & Data Science:** 
 Supports Pandas, Matplotlib, Plotly, Scikit-learn, TensorFlow, etc.
 Interactive widgets: Sliders, buttons, text inputs, file uploaders, etc.
+        """)
+    if selection=='Train-test':
+        st.markdown("""
+        We split the data because using the same data for training and testing can cause overfitting. The training set (70–80%) is used to teach the model, and the test set (20–30%) is used to check how well the model predicts new, unseen data."
         """)
     
 #####################################################################################
