@@ -324,7 +324,7 @@ Improve model performance.
 - XGBoost
 
 **Goal:**
-- Learn patterns from the data.
+ Learn patterns from the data.
 
 **6 Model Evaluation**
 - Measure model performance using evaluation metrics.
@@ -344,7 +344,7 @@ Improve model performance.
 - R2 Score
 
 **Goal:**
-- Determine how well the model performs.
+ Determine how well the model performs.
 
 **7 Hyperparameter Tuning**
 - Optimize model settings to improve performance.
@@ -355,10 +355,13 @@ Improve model performance.
 - Random Search
 
 **Goal:**
-- Find the best model configuration.
+ Find the best model configuration.
 
 **8 Model Deployment**
 - Deploy the trained model for real-world usage.
+
+**9 Monitoring & Maintenance**
+- Track model performance after deployment and retrain when necessary.
      """)
     if selection=='ML syndex':
         st.markdown("""
