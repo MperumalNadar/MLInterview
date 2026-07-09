@@ -291,7 +291,7 @@ Clean and prepare the data before training.
 Convert raw data into a usable format.        
 
 **3 Exploratory Data Analysis (EDA)**
-Analyze and visualize data to understand patterns and relationships.
+- Analyze and visualize data to understand patterns and relationships.
 
 **Common Tools:**
 - Matplotlib
@@ -302,7 +302,7 @@ Analyze and visualize data to understand patterns and relationships.
 find useful information and identify possible problems."
 
 **4 Feature Engineering**
-Create or select the most useful features for the model.
+- Create or select the most useful features for the model.
 
 **Examples:**
 - Feature Selection
@@ -311,6 +311,54 @@ Create or select the most useful features for the model.
 
 **Goal:**
 Improve model performance.
+
+**5 Model Training**
+- Train a Machine Learning algorithm using the prepared dataset.
+
+**Common Algorithms:**
+
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- XGBoost
+
+**Goal:**
+- Learn patterns from the data.
+
+**6 Model Evaluation**
+- Measure model performance using evaluation metrics.
+
+**Classification Metrics:**
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+
+**Regression Metrics:**
+
+- MAE
+- MSE
+- RMSE
+- R2 Score
+
+**Goal:**
+- Determine how well the model performs.
+
+**7 Hyperparameter Tuning**
+- Optimize model settings to improve performance.
+
+**Common Methods:**
+
+- Grid Search
+- Random Search
+
+**Goal:**
+- Find the best model configuration.
+
+**8 Model Deployment**
+- Deploy the trained model for real-world usage.
      """)
     if selection=='ML syndex':
         st.markdown("""
