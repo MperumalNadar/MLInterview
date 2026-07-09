@@ -299,7 +299,8 @@ Then, we improve the model by finding the best hyperparameter values using Grid 
 
 **8. Model Deployment**
 Once the model performs well, we deploy it so users or applications can use it in the real world.
-9. Monitoring and Maintenance
+
+**9. Monitoring and Maintenance**
 Finally, we monitor the model after deployment. If the performance drops because of new data, we retrain or update the model.
      """)
     if selection=='ML syndex':
