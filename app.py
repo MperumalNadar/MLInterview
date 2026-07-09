@@ -269,51 +269,35 @@ Provides feature importance
 """)
     if selection=="ML life cycle":
         st.markdown("""
-        **1.Data Collection**
-        - Gather relevant data from various sources such as databases, APIs, sensors, surveys, or websites.
-        **Goal**
-        - Collect high-quality data that represents the problem accurately.
-        **2 Data Preprocessing**
-        - Clean and prepare the data before training.
-        **Tasks include:**
-           - Handling Missing Values
-           - Removing Duplicates
-           - Feature Scaling
-           - Encoding Categorical Variables
-           - Outlier Detection
-        **Goal:**
-        - Convert raw data into a usable format.
-
-3 Exploratory Data Analysis (EDA)
-
+**1 Data Collection**
+Collect the required data from different sources. such as databases, APIs, sensors, surveys, or websites.
+**Goal:**
+Collect high-quality data that represents the problem accurately.
+**2 Data Preprocessing**
+Clean and prepare the data before training.
+**Tasks include:**
+Handling Missing Values
+Removing Duplicates
+Feature Scaling
+Encoding Categorical Variables
+Outlier Detection
+**Goal:**
+Convert raw data into a usable format.        
+**3 Exploratory Data Analysis (EDA)**
 Analyze and visualize data to understand patterns and relationships.
-
-Common Tools:
-
+**Common Tools:**
 Matplotlib
-
 Seaborn
-
 Pandas
-
-Goal:
-
-Discover insights and identify potential issues.
-
-4 Feature Engineering
-
+**Goal:**
+find useful information and identify possible problems."
+**4 Feature Engineering**
 Create or select the most useful features for the model.
-
-Examples:
-
+**Examples:**
 Feature Selection
-
 Feature Extraction
-
 Creating New Features
-
-Goal:
-
+**Goal:**
 Improve model performance.
      """)
     if selection=='ML syndex':
