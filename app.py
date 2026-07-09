@@ -269,85 +269,53 @@ Provides feature importance
 """)
     if selection=="ML life cycle":
         st.markdown("""
-1. Problem Definition
+        **1.Data Collection**
+        - Gather relevant data from various sources such as databases, APIs, sensors, surveys, or websites.
+        **Goal**
+        - Collect high-quality data that represents the problem accurately.
+        **2 Data Preprocessing**
+        - Clean and prepare the data before training.
+        **Tasks include:**
+           - Handling Missing Values
+           - Removing Duplicates
+           - Feature Scaling
+           - Encoding Categorical Variables
+           - Outlier Detection
+        **Goal:**
+        - Convert raw data into a usable format.
 
-Example: Let's working on a sales prediction for a retail company. The goal is to predict the sales of a particular product based on factors like time of year, promotions, and weather.
+3 Exploratory Data Analysis (EDA)
 
-2. Data Collection
+Analyze and visualize data to understand patterns and relationships.
 
-Objective: Gather data that will help in solving the problem.
-Example: For the sales prediction task,  collect data on:
-Historical sales data.
-Promotional events (discounts, ads).
-Weather data (as weather can impact shopping behavior).
-Holiday information (sales spikes during holidays).
-Customer demographics.
+Common Tools:
 
-3. Data Preprocessing
+Matplotlib
 
-Objective: Clean and transform raw data into a format that can be used for machine learning models.
+Seaborn
 
-Steps in Preprocessing:
+Pandas
 
-**Data cleaning:** 
-Remove or handle missing values, outliers, or duplicate data.
-**Data transformation:**
-Normalize or scale features to ensure the model works efficiently.
+Goal:
 
-**Feature engineering:**
-Create new features from existing data, like “Sales in the last week,” “Holiday season,” etc.
+Discover insights and identify potential issues.
 
-**Categorical encoding:**
-Convert categorical features (like the type of product) into numerical values (e.g., using one-hot encoding).
+4 Feature Engineering
 
-Example: You might notice some missing values in weather data for certain days, 
-so you handle this by filling them with the mean temperature of the previous days.
-You also convert the holiday information from a binary (yes/no) format to a numerical value.
+Create or select the most useful features for the model.
 
-4. Model Selection
+Examples:
 
-Objective: Choose the right machine learning algorithm based on the problem
-.
-Example: Since you're predicting a continuous variable (sales), you might choose a regression model like:
-Linear regression
-Decision tree regression
-Random forest regression
-XGBoost The choice depends on how complex you expect the relationships to be in your data.
+Feature Selection
 
-5. Model Training
+Feature Extraction
 
-Objective: Train the model using the prepared data.
+Creating New Features
 
-Example: You split the data into two sets: training and testing (often 80-20 or 70-30). You use the training set to train your model. If you select a Random Forest model, you provide it with the training data and it will learn the relationship between the features (like promotions, weather, etc.) and sales.
+Goal:
 
-6. Model Evaluation
-
-Objective: Assess the model's performance to ensure it meets the desired goals.
-
-Example: After training, you use the testing data (the data not used during training) to evaluate your model’s predictions. Common metrics for regression include:
-Mean Absolute Error (MAE)
-Mean Squared Error (MSE)
-Root Mean Squared Error (RMSE)
-If the model's predictions for sales are close to the actual sales values in the testing set, the model is likely to perform well in production.
-
-7. Model Tuning
-
-Objective: Fine-tune the model for better performance.
-
-Example: You notice that your initial Random Forest model isn't performing as well as expected. You may tweak the model’s hyperparameters (like the number of trees, depth of the trees, etc.) or even try different algorithms. You can use techniques like cross-validation to avoid overfitting.
-
-8. Model Deployment
-
-Objective: Deploy the trained model into a production environment where it can make real-time predictions.
-
-Example: Once you’re satisfied with the model’s performance, you integrate it into the company’s sales system. The model may predict daily or weekly sales, and this data can then inform decisions like inventory management, promotions, and staffing.
-
-9. Monitoring and Maintenance
-
-Objective: Monitor the model’s performance over time and retrain it as necessary.
-
-Example: After deploying the model, you observe that it’s performing well initially, but after a few months, its predictions become less accurate. This could be due to changes in customer behavior or external factors. Therefore, you need to retrain the model with new data periodically to ensure it remains accurate.
-        """)
+Improve model performance.
+     """)
     if selection=='ML syndex':
         st.markdown("""
 import pandas as pd
