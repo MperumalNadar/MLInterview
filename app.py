@@ -271,33 +271,33 @@ Provides feature importance
         st.markdown("""
 
 
-1. Data Collection
+**1. Data Collection**
 First, we collect data from different sources like databases, APIs, websites, sensors, or surveys.
-Goal: To collect good-quality data that represents the business problem.
-2. Data Preprocessing
+
+**2. Data Preprocessing**
 Next, we clean and prepare the data.
 We handle missing values, remove duplicates, encode categorical data, scale numerical values, and detect outliers.
-Goal: To convert raw data into a clean format that the model can use.
-3. Exploratory Data Analysis (EDA)
+
+**3. Exploratory Data Analysis (EDA)**
 Then, we analyze the data to understand patterns, trends, and relationships.
 We use tools like Pandas, Matplotlib, and Seaborn for visualization.
-Goal: To understand the data and identify any problems before training.
-4. Feature Engineering
+
+**4. Feature Engineering**
 Next, we select the most important features or create new features from existing data.
-Goal: To improve the model's performance.
-5. Model Training
+
+**5. Model Training**
 Now, we train the Machine Learning model using the prepared data.
 We can use algorithms like Linear Regression, Logistic Regression, Decision Tree, Random Forest, or XGBoost.
-Goal: To help the model learn patterns from the data.
-6. Model Evaluation
+
+**6. Model Evaluation**
 After training, we check how well the model performs using evaluation metrics.
 For classification, we use Accuracy, Precision, Recall, and F1-score.
 For regression, we use MAE, MSE, RMSE, and R² Score.
-Goal: To measure the model's performance.
-7. Hyperparameter Tuning
+
+**7. Hyperparameter Tuning**
 Then, we improve the model by finding the best hyperparameter values using Grid Search or Random Search.
-Goal: To get better accuracy and performance.
-8. Model Deployment
+
+**8. Model Deployment**
 Once the model performs well, we deploy it so users or applications can use it in the real world.
 9. Monitoring and Maintenance
 Finally, we monitor the model after deployment. If the performance drops because of new data, we retrain or update the model.
