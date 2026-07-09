@@ -292,18 +292,23 @@ Convert raw data into a usable format.
 
 **3 Exploratory Data Analysis (EDA)**
 Analyze and visualize data to understand patterns and relationships.
+
 **Common Tools:**
-Matplotlib
-Seaborn
-Pandas
+- Matplotlib
+- Seaborn
+- Pandas
+
 **Goal:**
 find useful information and identify possible problems."
+
 **4 Feature Engineering**
 Create or select the most useful features for the model.
+
 **Examples:**
-Feature Selection
-Feature Extraction
-Creating New Features
+- Feature Selection
+- Feature Extraction
+- Creating New Features
+
 **Goal:**
 Improve model performance.
      """)
