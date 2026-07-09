@@ -571,24 +571,21 @@ linear_regressor.delete_endpoint()
 #####################################################################################
 with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
 
-    options = ["DS", "ML", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict','DL','streamlit']
+    options = ["AI","ML", "DL", "WHY ML","Supervised & Unsupervised learning",'PYTHON','Numpy','Scikit-learn','joblib','predict','streamlit']
         
     selection = st.segmented_control("", options, selection_mode="single")
-    if selection=='DS':
+    if selection=='AI':
         st.markdown("""
-                    - Data Science is an interdisciplinary field 
-                    - focused on extracting knowledge and insights from data
-                    - using scientific methods, algorithms, and systems. 
-                    - It combines aspects of statistics, computer science, and domain expertise.
+        Al is the broad field of creating systems that can perform tasks requiring human intelligence such as reasoning, decision-making, problem-solving, and language understanding.
         """)
+    if selection=='DL':
+        st.markdown("""
+        Deep Learning is a subset of Machine Learning that uses Artificial Neural Networks with multiple layers to automatically learn complex patterns from large amounts of data.
+                      """)
     if selection=='ML':
         st.markdown("""
-                    - Machine Learning (ML) is a branch of artificial intelligence (Al) 
-                    - that focuses on developing algorithms 
-                    - that allow computers to learn from and make decisions or predictions based on data. 
-                    - Instead of being explicitly programmed to perform a task, 
-                    - ML algorithms use patterns and insights from data to improve performance over time.
-        """)
+        Machine Learning is a subset of AI that enables systems to learn from data and improve their performance without being explicitly programmed.
+                       """)
     if selection=='WHY ML':
         st.markdown("""
         machine learning is basically teaching computers to learn on their own. right
@@ -725,13 +722,7 @@ Convert Python scripts into web apps in minutes.
 Supports Pandas, Matplotlib, Plotly, Scikit-learn, TensorFlow, etc.
 Interactive widgets: Sliders, buttons, text inputs, file uploaders, etc.
         """)
-    if selection=='DL':
-        st.markdown("""
- Deep Learning is a subset of machine learning that uses artificial neural networks with multiple layers to model
- complex patterns in data. It is the foundation of modern AI and is widely used in computer vision, 
- natural language processing (NLP), speech recognition, and autonomous systems.
- 
-        """)
+    
 #####################################################################################
 with st.expander('4.AWS'):
         options3 = ["Sagemaker","Sagemaker_COMPONENTS","What is AWS","What is cloud computing ","WHAT IS A REGION?","AVAILABILITY ZONE","AWS S3","S3 Type","AWS IAM","AWS Lambda","AWS Athena","AWS kinesis"]
