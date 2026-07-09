@@ -608,20 +608,20 @@ with st.expander('3.Defination Python,ML,DL,DL,NL''streamlit'):
     if selection=='Supervised & Unsupervised learning':
         st.markdown("""
         - In Supervised Learning, the model learns from labeled data, where the correct output is already known.
-        
         - Supervised learning can be categorized in Classification and Regression problems.
+       
         **It includes various algorithms such as**
         
 - Linear Regression, 
 - Logistic Regression, 
 - Support Vector Machine,
 - Decision tree, and etc.
-.
+
         **Unsupervised Learning**
         
        - In Unsupervised Learning, the model learns from unlabeled data and discovers hidden patterns.
-      
        - Unsupervised Learning can be classified in Clustering and Associations problems.
+      
        **it includes various algorithms such as**
        Clustering, KNN,PCA.
 
