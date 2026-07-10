@@ -1486,11 +1486,14 @@ with st.expander('7.ML Algorithms'):
     selection2 = st.segmented_control("4.Random Forest", options2, selection_mode="single")
     if selection2=='Random Forest':
         st.markdown("""
-                    "Random Forest is a supervised machine learning algorithm that combines multiple Decision Trees to make a prediction. 
-                    Instead of depending on one tree, it builds many trees using different random samples of the data and features.
+                    "Random Forest is a supervised machine learning algorithm that builds many Decision Trees and combines their predictions.
+                
+                     - For classification, it uses majority voting, and
+                     - for regression, it takes the average prediction.
+                It is popular because it gives high accuracy, reduces overfitting, and works well for many real-world problems like fraud detection and disease prediction."
 
-                    - For classification, it takes the majority vote from all the trees. 
-                    - For regression, it takes the average of all the predictions.
+                Why do we use Random Forest?
+"We use Random Forest because it gives better accuracy than a single Decision Tree. It reduces overfitting, works well with large datasets, and can be used for both classification and regression."
                     
                        """)
     if selection2=='Advantage and DisAdvantage':
