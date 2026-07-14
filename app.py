@@ -1656,15 +1656,17 @@ print("Probability:", probability)
         """)
     if selection2=='Linear SVM':
         st.markdown("""
-                    A Linear Support Vector Machine (SVM) is a supervised learning algorithm primarily used for classification tasks. 
-                    It finds the optimal hyperplane that separates data points into distinct classes by maximizing the margin between them.
-
+                    Support Vector Machine is a supervised learning algorithm mainly used for classification.
+                    It finds the best decision boundary, called a hyperplane, that separates different classes with the maximum margin.
+                    The nearest data points are called support vectors, and they help define the boundary. 
+                    
                     How It Works
                     - 1 Hyperplane: In a 2D space, it's a straight line that separates the classes; in higher dimensions,
                     it's a hyperplane.
                     - 2 Support Vectors: Data points closest to the hyperplane that determine its position.
                     - 3 Margin Maximization: SVM seeks to maximize the distance between the support vectors and the hyperplane.
 
+                    '''python
                     from sklearn.model_selection import train_test_split
                     from sklearn.svm import SVC
                     from sklearn.metrics import accuracy_score
@@ -1681,6 +1683,7 @@ print("Probability:", probability)
                     
                     # Accuracy
                     print("Accuracy:", accuracy_score(y_test, y_pred))
+                    '''
         """)
     if selection2=='non_linear SVM':
         st.markdown("""
@@ -1722,7 +1725,7 @@ print("Probability:", probability)
         
         Instead of testing every possible combination, random search randomly samples hyperparameters from the grid.
         It’s faster and sometimes effective at finding the right set of parameters.
-
+            '''python
             from sklearn.model_selection import GridSearchCV
             from sklearn.svm import SVC
             
@@ -1744,6 +1747,7 @@ print("Probability:", probability)
             
             # Print the best parameters
             print("Best parameters:", grid_search.best_params_)
+            '''
 
         """)
         
