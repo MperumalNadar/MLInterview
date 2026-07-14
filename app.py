@@ -1427,16 +1427,59 @@ print("Predicted Score:", new_score)
     
     if selection=='Logistic regression':
         st.markdown("""
-        Logistic Regression is a popular machine learning algorithm used for binary classification tasks, 
-        where the goal is to predict one of two possible outcomes, 
-        such as whether an email is spam or not, or whether a customer will churn or stay.
+        "Logistic Regression is a supervised learning algorithm used for classification. 
+        It predicts the probability that an input belongs to a class using the Sigmoid function. 
+        If the probability is 0.5 or more, it predicts Class 1; otherwise, it predicts Class 0. 
 
-        "Real-World Example:"  
-        
-        Imagine predicting whether a customer will buy a product (yes/no). 
-        Logistic regression would take features like age, income, and browsing behavior and
-        output the probability of the customer making a purchase. 
-        If the probability is greater than a threshold (say 0.7), we predict they will buy the product.
+        What is the Sigmoid Function?
+"The Sigmoid function converts any value into a probability between 0 and 1."
+Close to 1 → High chance of the positive class.
+Close to 0 → High chance of the negative class.
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+# Load dataset
+df = pd.read_csv("data.csv")
+
+# Input features (X) and Target (y)
+X = df[["Age", "Income"]]
+y = df["Purchased"]    # 0 = No, 1 = Yes
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Create model
+model = LogisticRegression()
+
+# Train model
+model.fit(X_train, y_train)
+
+# Predict class
+y_pred = model.predict(X_test)
+
+# Predict probability
+y_prob = model.predict_proba(X_test)
+
+# Evaluate model
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+print("Classification Report:\n", classification_report(y_test, y_pred))
+
+# Predict new customer
+new_customer = [[30, 50000]]
+prediction = model.predict(new_customer)
+probability = model.predict_proba(new_customer)
+
+print("Prediction:", prediction)
+print("Probability:", probability)
+```
+
         
         """)
     if selection=='Advantage and DisAdvantage':
