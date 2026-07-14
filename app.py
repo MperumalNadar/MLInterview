@@ -1352,15 +1352,53 @@ with st.expander('7.ML Algorithms'):
  
     if selection=='Linear regression':
         st.markdown("""
-        Linear regression is a method to find the best straight line that fits data points. 
-        It helps us understand how one variable changes with another. 
-        This line allows us to make predictions and see the overall trend in the data.
-        """)
+        Linear Regression is a supervised learning algorithm used to predict continuous values. 
+        It finds the best-fit straight line between input features and the target variable using the equation Y = mX + c.   """)
         st.write('#########')
         st.markdown("""
-        With the line equation (Y = 10x + 50), we can make predictions. 
-        For example, if a student studies for 6 hours (X = 6), 
-        we can estimate their exam score by plugging the value into the equation: Y = 10 * 6 + 50 = 110.
+        Y = mX + c
+Y = Predicted value
+X = Input feature
+m = Slope (how much Y changes when X changes)
+c = Intercept (starting value)
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_absolute_error
+
+# Load dataset
+df = pd.read_csv("data.csv")
+
+# Input feature (X) and Target (y)
+X = df[["Hours_Studied"]]
+y = df["Exam_Score"]
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Create model
+model = LinearRegression()
+
+# Train model
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("R2 Score:", r2_score(y_test, y_pred))
+print("MAE:", mean_absolute_error(y_test, y_pred))
+
+# Predict new value
+new_score = model.predict([[8]])
+print("Predicted Score:", new_score)
+```
+
+
         """)
     if selection=='Advantage and DisAdvantage':
         st.markdown("""
