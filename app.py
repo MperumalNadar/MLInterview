@@ -2210,9 +2210,7 @@ print 3 # Output: 9
     if selection=="Python Basics":
         st.markdown("""
  **1. What is Python, and why is it popular?**
-- Answer: Python is a high-level, interpreted programming language known for
-its simplicity and readability. It is popular for web development, data analysis,
-machine learning, and more.
+- Answer: Python is a high-level, interpreted programming language.It is easy to read, easy to write, and easy to learn.It is used in web development, data analysis, automation, Machine Learning, and AI
 
 **2. How do you comment in Python?**
 - Answer: You can use `#` for single-line comments and `'''` or  for multi-line
