@@ -2251,31 +2251,64 @@ deallocating objects no longer in use.
 **11. What is an if statement in Python?**
 - Answer: An if statement is used for conditional execution. It runs a block of
 code if a condition is True.
+```python
+age = 18
 
+if age >= 18:
+    print("You can vote")
+```
 **12. What are "and" and "or" operators used for in Python?**
 - Answer: `and` returns True if both operands are True, while `or` returns
 True if at least one operand is True.
 
 **13. Explain the purpose of the `elif` statement in Python.**
-- Answer: `elif` is used to specify multiple conditions in an if-elif-else block,
-allowing alternative execution paths.
+- Answer:`elif`  is used to check another condition when the previous if condition is False. It helps us handle multiple conditions in a program.
+```python
+marks = 75
 
+if marks >= 90:
+    print("Grade A")
+elif marks >= 60:
+    print("Grade B")
+else:
+    print("Grade C")
+```
 **14. What is a "for" loop in Python?**
-- Answer: A `for` loop iterates over a sequence (e.g., a list) and executes a block
-of code for each item.
+- Answer: A 'for' loop is used to repeat a block of code for each item in a sequence, such as a list, tuple, or string.
+```python
+fruits = ["Apple", "Banana", "Mango"]
 
+for fruit in fruits:
+    print(fruit)
+```
 **15. How do you terminate a loop prematurely in Python?**
 - Answer: You can use the `break` statement to exit a loop prematurely.
 
 **16. Explain the `range()` function in Python.**
-- Answer: `range()` generates a sequence of numbers, often used in for loops.
-
+- Answer: 'range()' is used to generate a sequence of numbers. It is commonly used with a 'for' loop to repeat a block of code a specific number of times.
+```python
+for i in range(5):
+    print(i)
+```
 **17. What is a "while" loop, and how is it different from a "for" loop?**
-- Answer: A `while` loop repeatedly executes a block of code while a condition
-is True, whereas a `for` loop iterates over a sequence.
+- Answer: A 'while' loop runs as long as a condition is True. A 'for' loop runs through each item in a sequence.
+```python
+# while loop
+count = 1
+
+while count <= 3:
+    print(count)
+    count += 1
+```
 
 **18. How do you handle exceptions in Python?**
-- Answer: You can use a `try` and `except` block to catch and handle exceptions.
+- Answer: 'try' and except are used to handle errors. If an error occurs in the try block, the 'except' block executes instead of stopping the program.
+```python
+try:
+    num = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
 
 **19. What is the purpose of the `finally` block in exception handling?**
 - Answer: The `finally` block is used to execute code regardless of
