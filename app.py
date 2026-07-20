@@ -59,49 +59,26 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["emails as spam or not spam",'Movie Hit or Flop Prediction','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
+    options = ["FMCG Inventory Segmentation",'Movie Hit or Flop Prediction','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
     selection = st.segmented_control("", options, selection_mode="single")
-    if selection=='emails as spam or not spam':
-        st.markdown("""Project is a Spam Email Classification System, developed using Python, ad Scikit-learn, techniques. 
-        
-My role involved designing and implementing the machine learning pipeline
-including data preprocessing, feature extraction, training and evaluating models, and fine-tuning them for better accuracy.
-        
-Key challenges we solved include dealing with the imbalance between spam and non-spam emails
-handling noisy and unstructured email content, and improving the efficiency of the model without compromising on false positives.
-        
-We learned the importance of feature selection and engineering in improving model performance and 
-how to fine-tune algorithms like Naive Bayes and Random Forest for better classification. Additionally
-we gained insights into evaluating models effectively using precision, recall, and F1-score metrics to ensure optimal email filtering for users.
-        
-1. Start with the Problem Statement
+    if selection=='FMCG Inventory Segmentation':
+        st.markdown("""My project is AI-Based FMCG Inventory Segmentation Using K-Means Clustering.
 
-    "The goal of my project was to build a model to classify emails as spam or not spam to improve email filtering efficiency for users."
+In an FMCG company, there are thousands of products stored in warehouses.
+Some products sell very quickly, while others sell slowly.
+If the company keeps too much stock, money is blocked in inventory.
+If the company keeps too little stock, products go out of stock and sales are lost.
+The goal of my project is to identify Fast Moving, Medium Moving, Slow Moving, and Dead Stock products so that inventory can be managed more effectively."
 
-2. Explain the Dataset
+- First, I cleaned the data. I checked for missing values, duplicate records, and corrected the data types. Then I explored the data to understand sales, stock, and profit using charts and graphs.
 
-    "I used a labeled dataset containing 5,000 emails, with features like subject line, word frequencies, and sender details. The data was collected from public repositories."
+- Next, I created some new business features like Profit Margin, Stock-to-Sales Ratio, and Inventory Value. These features help the model understand the products better.
 
-3. Describe Your Approach
+- After that, I used StandardScaler to scale the data because K-Means works better when all features are on the same scale.
 
-    "I chose a Naive Bayes classifier because it's fast, works well with text data, and is effective for binary classification."
+- Then I used the Elbow Method and Silhouette Score to find the best number of clusters.
 
-4. Mention Challenges and Solutions
-
-     "One challenge was handling imbalanced data since there were more non-spam emails than spam. I used techniques like oversampling the minority class to balance the dataset."
-
-5. Share Results and Impact
-
-    "The model achieved 95% accuracy with a precision of 92% and recall of 90%. This significantly reduced false positives, ensuring users didn’t miss important emails."
-
-6. Highlight Tools and Skills Used
-
-    "I used Python, libraries like pandas and scikit-learn for preprocessing and modeling, and matplotlib for visualizing results."
-
-7. Relate it to Real-World Use
-
-     "This project is relevant to industries like email services or customer communication platforms, where automated filtering improves efficiency and user satisfaction."
-
+- Finally, I trained the K-Means model. After the model created the clusters, I studied each cluster and gave business names like Fast Moving, Medium Moving, Slow Moving, and Dead Stock based on sales, stock, and inventory turnover.       
         """)
     if selection=='Coffee Shop Sales':
         st.markdown("""
