@@ -2258,9 +2258,14 @@ if age >= 18:
     print("You can vote")
 ```
 **12. What are "and" and "or" operators used for in Python?**
-- Answer: `and` returns True if both operands are True, while `or` returns
-True if at least one operand is True.
+- Answer: 'and' returns True only when both conditions are True. 'or' returns True if at least one condition is True.
+```python
+age = 20
+has_id = True
 
+print(age >= 18 and has_id)   # True
+print(age < 18 or has_id)     # True
+```
 **13. Explain the purpose of the `elif` statement in Python.**
 - Answer:`elif`  is used to check another condition when the previous if condition is False. It helps us handle multiple conditions in a program.
 ```python
@@ -2321,45 +2326,113 @@ False.
     if selection=="Functions":
         st.markdown("""
 **21. How do you define a function in Python?**
-- Answer: You define a function using the `def` keyword, e.g., `def
-my_function():`.
+- Answer: We use the def keyword to define a function in Python. A function is a reusable block of code that performs a specific task.
+```python
+def greet():
+    print("Hello")
 
+greet()
+
+```
 **22. What is the difference between parameters and arguments in a function?**
-- Answer: Parameters are variables in a function's definition, while arguments
-are values passed when calling the function.
+- Answer: Parameters are variables defined in a function. Arguments are the actual values passed to the function when it is called.
+```python
+def greet(name):    # name → Parameter
+    print("Hello", name)
+
+greet("Muruga")     # "Muruga" → Argument
+```
 
 **23. Explain the concept of a "return" statement in Python functions.**
-- Answer: A `return` statement is used to specify the value a function should
-return when it's called.
+- Answer: The return statement sends a value back from a function to the place where the function was called.
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+```
 
 **24. How can you define default parameter values in Python functions?**
 - Answer: You can define default valuesin the function's parameter
 list, e.g., `def greet(name="Guest"):`.
 
 **25. What is a lambda function in Python?**
-- Answer: A lambda function is a small, anonymous function defined
-using the `lambda` keyword.
+- Answer:A lambda function is a small, anonymous function created using the lambda keyword. It is mainly used for simple, one-line operations.
+```python
+add = lambda a, b: a + b
 
+print(add(5, 3))
+```
 **26. Explain the concept of function closures in Python.**
-- Answer: A closure is a function that remembers values in the enclosing scope
-even if they are not present in memory.
+- Answer: A closure is a function that remembers the variables from its outer function, even after the outer function has finished executing.
+```python
+def outer():
+    message = "Hello"
+
+    def inner():
+        return message
+
+    return inner
+
+func = outer()
+print(func())
+```
 
 **27. How do you pass a variable number of arguments to a function in Python?**
-- Answer: You can use `*args` for positional arguments and `**kwargs` for
-keyword arguments.
+- Answer:  *args is used to pass multiple positional arguments to a function. **kwargs is used to pass multiple keyword arguments (key=value) to a function.
+```python
+def add(*args):
+    print(args)
+
+add(10, 20, 30)
+(10, 20, 30)
+def details(**kwargs):
+    print(kwargs)
+
+details(name="Muruga", age=30)
+
+{'name': 'Muruga', 'age': 30}
+```
 
 **28. Describe the purpose of the `map()` and `filter()` functions in Python.**
 - Answer: `map()` applies a function to each item in an iterable, while
 `filter()` filters items based on a condition.
+```python
+numbers = [1, 2, 3]
 
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+numbers = [1, 2, 3, 4, 5]
+
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result)
+```
 **29. What is recursion in Python, and when is it useful?**
-Answer: Recursion is a technique where a function calls itself. It's useful for
-solving problems
+Answer: Recursion is a technique where a function calls itself to solve a problem. It continues until a stopping condition (base case) is reached.
+```python
+def countdown(n):
+    if n == 0:
+        return
+    print(n)
+    countdown(n - 1)
 
+countdown(3)
+```
 **30. Describe variable scope in Python.**
-- Answer: Variables defined in a function have local scope, while those
-defined outside have global scope.
+- Answer:A local variable is created inside a function and can be used only within that function. A global variable is created outside a function and can be accessed throughout the program.
+```python
+x = 10      # Global variable
 
+def test():
+    y = 20  # Local variable
+    print(x)
+    print(y)
+
+test()
+print(x)
+```
         """)
     if selection=="Data Structures":
         st.markdown("""
