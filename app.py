@@ -59,7 +59,7 @@ with st.expander('1.Self introduction'):
         """)
 
 with st.expander('2.Project Explanation'):
-    options = ["FMCG Inventory Segmentation",'Movie Hit or Flop Prediction','stock trend prediction in machine learning','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
+    options = ["FMCG Inventory Segmentation",'Movie Hit or Flop Prediction','Demand Forecasting','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=='FMCG Inventory Segmentation':
         st.markdown("""My project is AI-Based FMCG Inventory Segmentation Using K-Means Clustering.
@@ -100,56 +100,27 @@ The goal of my project is to identify Fast Moving, Medium Moving, Slow Moving, a
         "What was your role?"
             - I did the complete project by myself. I cleaned the data, prepared the features, trained the models, compared the results, improved the best model, and saved the final model."
         """)
-    if selection=='stock trend prediction in machine learning':
+    if selection=='Demand Forecasting':
         st.markdown("""
+"The project name is Demand Forecasting for the FMCG domain. I built this project because FMCG companies sell thousands of products every day through distributors and retailers. The company needs to know how much stock will be required in the future. If the forecast is wrong, it can cause stock shortages or excess inventory.
+To solve this problem, I developed a machine learning model that predicts future product sales using historical sales data.
 
-Q1. What is stock trend prediction in machine learning?
-A: Stock trend prediction is the process of forecasting the future movement (upward/downward) of a stock price based on historical data
-using machine learning techniques. 
-It typically focuses on predicting trends (direction) rather than exact prices.
+- First, I collected sales data from systems such as DMS, SFA, and SQL databases. The data included the date, distributor, product, city, quantity sold, and price.
 
----
+- Next, I cleaned the data by removing duplicate records, handling missing values, and converting the date column into the correct format. This improved the quality of the data.
 
-Q2. What type of machine learning is used for stock prediction?
+- Then, I performed Exploratory Data Analysis (EDA) to understand sales trends, identify the top-selling products, analyze distributor performance, and find seasonal patterns.
 
-Supervised Learning (e.g., classification for trend, regression for price)
+- After that, I performed feature engineering. I created features like year, month, day of the week, weekend, previous day's sales (lag feature), and 7-day rolling average. These features help the model learn sales patterns more effectively.
 
-Unsupervised Learning (e.g., clustering stocks)
+- Next, I split the data into training and testing datasets and trained an XGBoost Regression model. I selected XGBoost because it works very well with structured business data and usually provides good prediction accuracy.
 
-Time-Series Forecasting (e.g., ARIMA, LSTM for sequential prediction)
+- After training, I evaluated the model using MAE, RMSE, and R². Once I was satisfied with the performance, I saved the trained model.
 
-Reinforcement Learning (e.g., for trading strategies)
----
+-Then, I deployed the model using Amazon SageMaker so it could provide real-time predictions. I also built a Streamlit dashboard where users can enter input details and get predicted sales instantly.
 
-Q4. What are the most important features for predicting stock trends?
-A:
-
-Historical prices (Open, High, Low, Close, Volume)
-
-Technical indicators (SMA, EMA, RSI, MACD, Bollinger Bands)
-
-Lagged features (previous N-day prices)
-
-Sentiment scores (if using news or tweets)
-
-Macroeconomic indicators
-
----
-Q11. What are the main challenges in stock trend prediction?
-
-High noise and volatility in the data
-
-Overfitting due to small datasets
-
-Market sentiment and external factors (news, policy changes)
-
-Time lag between prediction and action
-
----
-Q12. Is it possible to consistently beat the stock market with ML?
-A: No, consistently beating the market is extremely difficult due to the Efficient Market Hypothesis (EMH).
-While ML can help detect patterns, 
-it cannot guarantee future performance, especially after transaction costs and market shifts.
+The prediction results help the sales team, supply chain team, production team, warehouse team, and management. They can plan production, distribute stock to the right locations, reduce stock shortages, avoid overstock, and improve customer satisfaction.
+Overall, this project demonstrates an end-to-end machine learning solution, from data collection and model development to deployment and business use."
 """)
     if selection=='crop recommendation':
         st.markdown("""
