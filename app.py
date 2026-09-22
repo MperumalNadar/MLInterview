@@ -6,12 +6,15 @@ with st.expander('1.Self introduction'):
     if selection=="introduction":
         st.markdown("""
         My name is Murugan. I have more than 8 years of IT experience, and currently I am working with TCS as a Machine Learning Engineer.
-In my current role, I work on FMCG business use cases such as sales forecasting, demand prediction, customer segmentation, inventory optimization, and customer churn prediction.
-My core technical skills include Python, Pandas, NumPy, Scikit-learn, and machine learning. I have experience in data preprocessing, EDA, feature engineering, model training, evaluation, and hyperparameter tuning.
-I also have experience with AWS services such as SageMaker, S3, Lambda, EC2, IAM, and CloudWatch, and I have worked with FastAPI for developing REST APIs and serving machine learning models. These skills are reflected in my resume. �
+* In my current role, I work on FMCG business use cases such as sales forecasting, demand prediction, customer segmentation, inventory optimization, and customer churn prediction.
 
-Recently, I also participated in a TCS AI Fridays challenge, where I worked on an Earnings Call Summarization AI-Agent using LangChain and OpenAI. The solution processes long earnings-call transcripts and generates structured summaries for analysts.
-I am now looking for an AI Engineer opportunity where I can apply my machine learning, Python, AWS, and Generative AI knowledge to build practical business solutions.
+* My core technical skills include Python, Pandas, NumPy, Scikit-learn, and machine learning. I have experience in data preprocessing, EDA, feature engineering, model training, evaluation, and hyperparameter tuning.
+
+* I also have experience with AWS services such as SageMaker, S3, Lambda, EC2, IAM, and CloudWatch, and I have worked with FastAPI for developing REST APIs and serving machine learning models. These skills are reflected in my resume. �
+
+*Recently, I also participated in a TCS AI Fridays challenge, where I worked on an Earnings Call Summarization AI-Agent using LangChain and OpenAI. The solution processes long earnings-call transcripts and generates structured summaries for analysts.
+
+* I am now looking for an AI Engineer opportunity where I can apply my machine learning, Python, AWS, and Generative AI knowledge to build practical business solutions.
 
         """)
     if selection=="Roles & Responsibilities":
