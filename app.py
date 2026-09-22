@@ -71,25 +71,25 @@ with st.expander('1.Self introduction'):
         * I have hands-on experience with Python, ML, AWS, FastAPI and Generative AI. 
         * I am also willing to learn new technologies quickly and contribute to practical AI solutions.
         """)
-        if selection=="What is LLM":
+    if selection=="What is LLM":
             st.markdown("""
             * LLM stands for Large Language Model. It is an AI model trained on a large amount of text data. 
             * It can understand user questions and generate human-like responses. 
             * Examples include GPT, Claude, and Gemini.
             """)
-        if selection=="Vector DB":
+    if selection=="Vector DB":
             st.markdown("""
             * A Vector Database is a database used to store and search vector embeddings. 
             * In RAG applications, we convert documents into embeddings and store them in a vector database. 
             * When the user asks a question, we convert the question into an embedding and search for the most similar documents
             """)
-        if selection=="What is MCP":
+    if selection=="What is MCP":
             st.markdown("""
             * MCP stands for Model Context Protocol. 
             * It provides a standard way for an AI application to connect with external tools and data sources.
             * For example, an LLM can use an MCP server to access a database, files, APIs, or business tools.
             """)
-        if selection=="What is Prompt Engineering?":
+    if selection=="What is Prompt Engineering?":
             st.markdown("""
             Prompt engineering is the process of designing and optimizing prompts to get accurate, relevant, and consistent responses from an LLM.
             * Zero-shot: Give a task without examples.
@@ -97,7 +97,7 @@ with st.expander('1.Self introduction'):
 * Role prompting: Tell the model to act as a particular role.
 * Structured prompting: Specify the required output format.
             """)
-        if selection=="What is Tool Calling":
+    if selection=="What is Tool Calling":
             st.markdown("""
             Tool Calling (or Function Calling) allows AI models to not just answer, but also take action by using external tools, APIS, or functions.
             * for ex:You ask: "Book a flight from Delhi to Mumbai tomorrow."AI uses the Flight APIto search, compares prices, and shows you the best option.
