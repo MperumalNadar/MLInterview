@@ -5,30 +5,14 @@ with st.expander('1.Self introduction'):
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
-        Good morning! My name is Murugan. I completed my Bachelor’s Degree in Commerce from Mumbai University in 2016, 
-        and I hold an AWS Machine Learning certification.
+        My name is Murugan. I have more than 8 years of IT experience, and currently I am working with TCS as a Machine Learning Engineer.
+In my current role, I work on FMCG business use cases such as sales forecasting, demand prediction, customer segmentation, inventory optimization, and customer churn prediction.
+My core technical skills include Python, Pandas, NumPy, Scikit-learn, and machine learning. I have experience in data preprocessing, EDA, feature engineering, model training, evaluation, and hyperparameter tuning.
+I also have experience with AWS services such as SageMaker, S3, Lambda, EC2, IAM, and CloudWatch, and I have worked with FastAPI for developing REST APIs and serving machine learning models. These skills are reflected in my resume. �
 
-        I have been working as an IT Analyst at TCS for the past two years, 
-        bringing over 6 years of experience in the IT field.
-        
-        In my current role, I handle the Parle Application Rollout, which involves both Desktop and Mobile application services
-        which is targeted to the Distributors in the Client market.
-        As Desktop application holds the Database sequences and make the Product 
-        distribution hierarchy smoother with the resellers data. Also having the DMS consoles, 
-        Database installation procedure to help out client market process. Mobile application used to collect market data and 
-        to proceed it to DMS application.
-        
-        I have good knowledge in the ML Algorithms ,Python Pandas,Data pre-processing and MySQL . 
-        
-        My key strengths are leadership skills, time management and I tend to be team oriented .
-        
-        In my personal time, I enjoy reading books and playing cricket. I am fluent in Tamil, English, Hindi, and Marathi, 
-        which allows me to communicate effectively across different groups.
-        
-        I’m currently looking for an opportunity to further develop my career in the Machine Learning field, 
-        which is why I’ve selected Wings2 Machine Learning Job Path.
-        
-        That's a brief about me, and thanks for this opportunity.
+Recently, I also participated in a TCS AI Fridays challenge, where I worked on an Earnings Call Summarization AI-Agent using LangChain and OpenAI. The solution processes long earnings-call transcripts and generates structured summaries for analysts.
+I am now looking for an AI Engineer opportunity where I can apply my machine learning, Python, AWS, and Generative AI knowledge to build practical business solutions.
+
         """)
     if selection=="Roles & Responsibilities":
         st.markdown("""
