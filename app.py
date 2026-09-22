@@ -44,7 +44,7 @@ with st.expander('1.Self introduction'):
         * First, we retrieve relevant information from a knowledge base, and then we provide that information to the LLM to generate a grounded answer
 
         """)
-        if selection=="What is Generative":
+    if selection=="What is Generative":
         st.markdown("""
         * Generative AI is a type of AI that can generate new content such as text, images, code, or summaries based on the input provided.
 
