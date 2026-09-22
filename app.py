@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB" ]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB","What is MCP","What is Prompt Engineering?","What is Prompt Engineering?" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -83,6 +83,26 @@ with st.expander('1.Self introduction'):
             * In RAG applications, we convert documents into embeddings and store them in a vector database. 
             * When the user asks a question, we convert the question into an embedding and search for the most similar documents
             """)
+        if selection=="What is MCP":
+            st.markdown("""
+            * MCP stands for Model Context Protocol. 
+            * It provides a standard way for an AI application to connect with external tools and data sources.
+            * For example, an LLM can use an MCP server to access a database, files, APIs, or business tools.
+            """)
+        if selection=="What is Prompt Engineering?":
+            st.markdown("""
+            Prompt engineering is the process of designing and optimizing prompts to get accurate, relevant, and consistent responses from an LLM.
+            * Zero-shot: Give a task without examples.
+* Few-shot: Give a few examples before asking the task.
+* Role prompting: Tell the model to act as a particular role.
+* Structured prompting: Specify the required output format.
+            """)
+        if selection=="What is Prompt Engineering?":
+            st.markdown("""
+            Tool Calling (or Function Calling) allows AI models to not just answer, but also take action by using external tools, APIS, or functions.
+            * for ex:You ask: "Book a flight from Delhi to Mumbai tomorrow."AI uses the Flight APIto search, compares prices, and shows you the best option.
+            """)
+
             
         
     
