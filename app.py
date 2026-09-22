@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB","What is MCP","What is Prompt Engineering?","What is Tool Calling" ]     
+    options = ["introduction","roles and responsibilities","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB","What is MCP","What is Prompt Engineering?","What is Tool Calling" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -17,6 +17,25 @@ with st.expander('1.Self introduction'):
 * I am now looking for an AI Engineer opportunity where I can apply my machine learning, Python, AWS, and Generative AI knowledge to build practical business solutions.
 
         """)
+    if selection=="roles and responsibilities":
+        st.markdown("""
+
+    * Developed machine learning solutions for sales forecasting, demand prediction, customer segmentation, and inventory optimization across FMCG product categories.
+    * Performed data extraction, cleaning, preprocessing, transformation, EDA, and feature engineering using Python, Pandas, and NumPy.
+    * Built customer segmentation models using K-Means clustering to identify purchasing behavior and support targeted marketing initiatives.
+    * Trained, validated, tuned, and evaluated machine learning models using Scikit-learn and TensorFlow.
+    * Developed recommendation-system use cases to support cross-selling and upselling opportunities.
+    * Designed inventory optimization use cases to help reduce stock-outs and excess inventory.
+    * Built customer churn prediction use cases using supervised machine learning to identify at-risk customers.
+    * Developed REST APIs using FastAPI to serve machine learning models for real-time predictions.
+    * Deployed machine learning models on AWS SageMaker and integrated S3, Lambda, EC2, and IAM for cloud-based solutions.
+    * Implemented model monitoring and logging using Amazon CloudWatch to track model performance and business KPIs.
+    * Automated ETL, model inference, and reporting workflows using Python and AWS cloud services.
+    * Created Power BI dashboards and reports to support business analysis and decision-making.
+    * Collaborated with business stakeholders, sales teams, and data engineers to gather requirements and deliver data-driven solutions.
+    * Managed source code using Git and GitHub.
+
+""")
     if selection=="Earnings Call Summarization AI Agent":
         st.markdown("""
         
