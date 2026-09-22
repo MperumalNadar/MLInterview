@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative" ]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -49,6 +49,17 @@ with st.expander('1.Self introduction'):
         * Generative AI is a type of AI that can generate new content such as text, images, code, or summaries based on the input provided.
 
         """)
+    if selection=="What is chunking in RAG?":
+        st.markdown("""
+        * Chunking means splitting a large document into smaller pieces before creating embeddings. 
+        * Smaller chunks make it easier to retrieve the relevant information
+        """)
+    if selection=="What is an embedding?":
+        st.markdown("""
+        * An embedding converts text into a numerical vector that represents its semantic meaning. 
+        * Similar text gets similar vector representations.”
+        """)
+    
 
 
 
