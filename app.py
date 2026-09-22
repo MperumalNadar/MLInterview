@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?"  ]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -71,6 +71,19 @@ with st.expander('1.Self introduction'):
         * I have hands-on experience with Python, ML, AWS, FastAPI and Generative AI. 
         * I am also willing to learn new technologies quickly and contribute to practical AI solutions.
         """)
+        if selection=="What is LLM":
+            st.markdown("""
+            * LLM stands for Large Language Model. It is an AI model trained on a large amount of text data. 
+            * It can understand user questions and generate human-like responses. 
+            * Examples include GPT, Claude, and Gemini.
+            """)
+        if selection=="Vector DB":
+            st.markdown("""
+            * A Vector Database is a database used to store and search vector embeddings. 
+            * In RAG applications, we convert documents into embeddings and store them in a vector database. 
+            * When the user asks a question, we convert the question into an embedding and search for the most similar documents
+            """)
+            
         
     
 
