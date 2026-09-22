@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB","What is MCP","What is Prompt Engineering?","What is Prompt Engineering?" ]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?","What is LLM","Vector DB","What is MCP","What is Prompt Engineering?","What is Tool Calling" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -97,7 +97,7 @@ with st.expander('1.Self introduction'):
 * Role prompting: Tell the model to act as a particular role.
 * Structured prompting: Specify the required output format.
             """)
-        if selection=="What is Prompt Engineering?":
+        if selection=="What is Tool Calling":
             st.markdown("""
             Tool Calling (or Function Calling) allows AI models to not just answer, but also take action by using external tools, APIS, or functions.
             * for ex:You ask: "Book a flight from Delhi to Mumbai tomorrow."AI uses the Flight APIto search, compares prices, and shows you the best option.
