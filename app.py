@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?" ]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative","What is chunking in RAG?","What is an embedding?","What is LangChain?","Why should we hire you?"  ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -59,6 +59,18 @@ with st.expander('1.Self introduction'):
         * An embedding converts text into a numerical vector that represents its semantic meaning. 
         * Similar text gets similar vector representations.”
         """)
+    if selection=="What is LangChain?":
+        st.markdown("""
+        * LangChain is a framework used to build applications around Large Language Models.
+        * It provides components for prompts, chains, document loaders, retrievers, tools, agents and memory.
+        """)
+    if selection=="Why should we hire you?":
+        st.markdown("""
+        * I have a combination of strong IT experience and Machine Learning knowledge.
+        * I understand both the technical side and the business side because I have worked on real FMCG use cases. 
+        * I have hands-on experience with Python, ML, AWS, FastAPI and Generative AI. 
+        * I am also willing to learn new technologies quickly and contribute to practical AI solutions.
+        
     
 
 
