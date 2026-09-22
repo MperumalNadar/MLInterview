@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Roles & Responsibilities","Why ML selected"]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent"]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -17,32 +17,25 @@ with st.expander('1.Self introduction'):
 * I am now looking for an AI Engineer opportunity where I can apply my machine learning, Python, AWS, and Generative AI knowledge to build practical business solutions.
 
         """)
-    if selection=="Roles & Responsibilities":
+    if selection=="Earnings Call Summarization AI Agent":
         st.markdown("""
         
+* I worked on an Earnings Call Summarization AI Agent as part of the TCS AI Fridays challenge.
+* The business problem was that earnings-call transcripts are very long, so analysts need to spend significant time reading them.
+* Our objective was to automatically process the transcript and generate a structured summary.
+* We used LangChain and OpenAI. The transcript was processed and passed through an LLM-based workflow. We designed prompts to extract important information such as business performance, revenue-related highlights, risks, management commentary and future outlook.
+* The final output was presented as a structured summary, making it easier for analysts to understand the important points quickly.
 
-* Providing Solutions to the Customer regarding Database Issues with MySQL
-
-* Including DB Recovery, DB Suspect, DB Purging as well as ensuring smooth connectivity between SFA and DMS Application.
-
-* Debugging between Mobile and DMS applications with the help of MySQL Database and some console apps like Xnapp server.
-
-* Also includes the scratch installation for MySQL database and the DB connection with both applications. In some cases, DB purging tool was used for purging the Database to smooth working with high efficiency.
-
-* Managing the application backups with the AWS server and restoration wherever required due to system corrupt Troubleshooting the bugs within the application and finding the best way to solve thase
-
-* for easy application run. Creating the SQL. scripts to automate some procedures to make time afficiency
-
-* Suggesting the new version deploy ideas for better user experience
-        
        """ )
     if selection=="Why ML selected":
         st.markdown("""
         I enjoy working with data, finding patterns, and building models that make accurate predictions or automate tasks. 
         The challenge of constantly learning new algorithms and techniques keeps me engaged. Additionally, 
-        the impact of my work can often lead to meaningful solutions that improve user experiences or decision-making processes.
-        
-        
+        the impact of my work can often lead to meaningful solutions that improve user experiences or decision-making processes. 
+        """)
+    if selection=="What is AI Agent":
+        st.markdown("""
+        An AI Agent is an application where an LLM can understand a task, decide what action or tool is required, execute the tool, and use the result to produce the final response
         """)
 
 with st.expander('2.Project Explanation'):
