@@ -70,6 +70,7 @@ with st.expander('1.Self introduction'):
         * I understand both the technical side and the business side because I have worked on real FMCG use cases. 
         * I have hands-on experience with Python, ML, AWS, FastAPI and Generative AI. 
         * I am also willing to learn new technologies quickly and contribute to practical AI solutions.
+        """)
         
     
 
