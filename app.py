@@ -1,7 +1,7 @@
 import streamlit as st
 
 with st.expander('1.Self introduction'):
-    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent"]     
+    options = ["introduction","Earnings Call Summarization AI Agent","Why ML selected","What is AI Agent","What is RAG","What is Generative" ]     
     selection = st.segmented_control("", options, selection_mode="single")
     if selection=="introduction":
         st.markdown("""
@@ -37,6 +37,20 @@ with st.expander('1.Self introduction'):
         st.markdown("""
         An AI Agent is an application where an LLM can understand a task, decide what action or tool is required, execute the tool, and use the result to produce the final response
         """)
+    if selection=="What is RAG":
+        st.markdown("""
+        * RAG stands for Retrieval-Augmented Generation. 
+        * It combines information retrieval with a Large Language Model. 
+        * First, we retrieve relevant information from a knowledge base, and then we provide that information to the LLM to generate a grounded answer
+
+        """)
+        if selection=="What is Generative":
+        st.markdown("""
+        * Generative AI is a type of AI that can generate new content such as text, images, code, or summaries based on the input provided.
+
+        """)
+
+
 
 with st.expander('2.Project Explanation'):
     options = ["FMCG Inventory Segmentation",'Movie Hit or Flop Prediction','Demand Forecasting','crop recommendation',"ML life cycle",'ML syndex','AWS ML syndex','Coffee Shop Sales']     
